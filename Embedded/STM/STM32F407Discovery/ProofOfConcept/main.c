@@ -80,7 +80,7 @@ void idle_task(void)
 {
 	while(1)
 	{
-		printf("Idle!!!\n");
+		//printf("Idle!!!\n");
 	}
 }
 
@@ -378,19 +378,19 @@ void task_delay(uint32_t tick_count)
 //2. implement the fault handlers
 void HardFault_Handler(void)
 {
-	printf("Exception : Hardfault\n");
+	//printf("Exception : Hardfault\n");
 	while(1);
 }
 
 
 void MemManage_Handler(void)
 {
-	printf("Exception : MemManage\n");
+	//printf("Exception : MemManage\n");
 	while(1);
 }
 
 void BusFault_Handler(void)
 {
-	printf("Exception : BusFault\n");
+	//printf("Exception : BusFault\n");
 	while(1);
 }

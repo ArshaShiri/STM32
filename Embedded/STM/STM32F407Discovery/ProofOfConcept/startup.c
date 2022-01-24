@@ -202,7 +202,7 @@ uint32_t vectors[] __attribute__ ((section(".isr_vector"))) = {
 };
 
 // First function that is executed.
-void Reset_handler(void) {
+void Reset_Handler(void) {
     // Copy data section in SRAM
 
     // Initialize the .bss section to zero in SRAM
