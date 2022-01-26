@@ -1,7 +1,7 @@
 CC=arm-none-eabi-gcc
 MACHINE=cortex-m4
 CFLAGS=-c -mcpu=$(MACHINE) -mthumb -std=gnu11 -Wall -O0
-LDFLAGS=-nostdlib -T linkerScript.ld
+LDFLAGS=-nostdlib -T linkerScript.ld -Wl,-Map=final.map
 
 all:main.o led.o startup.o final.elf
 
@@ -19,4 +19,4 @@ final.elf:main.o led.o startup.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 clean:
-	rm -rf *.o *.elf
+	rm -rf *.o *.elf *.map
