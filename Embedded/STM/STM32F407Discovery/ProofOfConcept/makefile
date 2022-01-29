@@ -20,3 +20,6 @@ final.elf:main.o led.o startup.o
 
 clean:
 	rm -rf *.o *.elf *.map
+
+load:
+	openocd -f board/stm32f4discovery.cfg
