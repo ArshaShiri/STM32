@@ -57,12 +57,19 @@ __attribute ((naked)) void switch_sp_to_psp(void);
 
 void task_delay(uint32_t tick_count);
 
+// Semihosting init function.
+extern void initialise_monitor_handles();
+
 int main(void)
 {
 	enable_processor_faults();
 	init_scheduler_stack(SCHEDULER_STACK_START);
 
     init_tasks_control_block();
+
+	initialise_monitor_handles();
+
+	printf("Implementation of simple task scheduler\n");
 
 	init_tasks_stack();
 
@@ -88,6 +95,7 @@ void task1_handler(void)
 {
 	while (1)
 	{
+		printf("Task 1 is executing.\n");
 		led_on(LED_GREEN);
 		task_delay(TICK_HZ);
 		led_off(LED_GREEN);
@@ -99,6 +107,7 @@ void task2_handler(void)
 {
 	while (1)
 	{
+		printf("Task 2 is executing.\n");
 		led_on(LED_ORANGE);
 		task_delay(TICK_HZ / 2);
 		led_off(LED_ORANGE);
@@ -110,6 +119,7 @@ void task3_handler(void)
 {
 	while (1)
 	{
+		printf("Task 3 is executing.\n");
 		led_on(LED_BLUE);
 		task_delay(TICK_HZ / 4);
 		led_off(LED_BLUE);
@@ -121,6 +131,7 @@ void task4_handler(void)
 {
 	while (1)
 	{
+		printf("Task 4 is executing.\n");
 		led_on(LED_RED);
 		task_delay(TICK_HZ / 8);
 		led_off(LED_RED);
@@ -378,19 +389,19 @@ void task_delay(uint32_t tick_count)
 //2. implement the fault handlers
 void HardFault_Handler(void)
 {
-	//printf("Exception : Hardfault\n");
+	printf("Exception : Hardfault\n");
 	while(1);
 }
 
 
 void MemManage_Handler(void)
 {
-	//printf("Exception : MemManage\n");
+	printf("Exception : MemManage\n");
 	while(1);
 }
 
 void BusFault_Handler(void)
 {
-	//printf("Exception : BusFault\n");
+	printf("Exception : BusFault\n");
 	while(1);
 }

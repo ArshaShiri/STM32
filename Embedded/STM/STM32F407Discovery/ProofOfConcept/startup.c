@@ -6,11 +6,14 @@
 
 #define STACK_START SRAM_END
 
+void __libc_init_array(void);
+
 extern uint32_t end_of_text;
 extern uint32_t start_of_data;
 extern uint32_t end_of_data;
 extern uint32_t start_of_bss;
 extern uint32_t end_of_bss;
+extern uint32_t load_address_of_data;
 
 int main(void);
 
@@ -216,7 +219,7 @@ void Reset_Handler(void)
   const uint32_t sizeOfDataSection = (uint32_t)&end_of_data - (uint32_t)&start_of_data;
 
   uint8_t* pDestination = (uint8_t*)&start_of_data; // SRAM
-  uint8_t* pSource = (uint8_t*)&end_of_text; // Flash
+  uint8_t* pSource = (uint8_t*)&load_address_of_data; // Flash
 
   for (uint32_t i = 0; i < sizeOfDataSection; i++) 
   {
@@ -233,6 +236,7 @@ void Reset_Handler(void)
   }  
 
   // Call init function of std if standart lib is used.
+  __libc_init_array();
 
   // Call main
   main();
