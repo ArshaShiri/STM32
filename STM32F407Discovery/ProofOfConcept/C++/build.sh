@@ -5,6 +5,6 @@ if [ ! -d "$buildDir" ]; then
 	mkdir $buildDir 
 fi
 
-cmake -S . -B $buildDir
+cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -S . -B $buildDir
 cd $buildDir
 make
