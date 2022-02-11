@@ -36,7 +36,7 @@ int main()
 
 
   /* Loop forever */
-  for (std::size_t i = 0; i > -1; ++i)
+  for (std::size_t i = 0; true; ++i)
   {
     // Add a very basic software LED toggle.
     const std::size_t randNumber = 10000;
