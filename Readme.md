@@ -3,3 +3,4 @@
 * clang-tidy
 * pre-commit
 * cmake-format
+* ST-link

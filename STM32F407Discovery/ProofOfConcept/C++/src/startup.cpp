@@ -6,12 +6,12 @@ static constexpr auto SRAM_SIZE = 128U * 1024U;
 static constexpr auto SRAM_END = SRAM_START + SRAM_SIZE;
 static constexpr auto STACK_START = SRAM_END;
 
-// extern std::uint32_t end_of_text;
-// extern std::uint32_t start_of_data;
-// extern std::uint32_t end_of_data;
-// extern std::uint32_t start_of_bss;
-// extern std::uint32_t end_of_bss;
-// extern std::uint32_t load_address_of_data;
+extern std::uint32_t end_of_text;// NOLINT
+extern std::uint32_t start_of_data;// NOLINT
+extern std::uint32_t end_of_data;// NOLINT
+extern std::uint32_t start_of_bss;// NOLINT
+extern std::uint32_t end_of_bss;// NOLINT
+extern std::uint32_t load_address_of_data;// NOLINT
 
 int main();
 
@@ -24,363 +24,633 @@ extern "C" void Reset_Handler() __attribute__((used, noinline));
 
 extern "C" void NMI_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void HardFault_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void MemManage_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void BusFault_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void UsageFault_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SVC_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DebugMon_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void PendSV_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SysTick_Handler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void WWDG_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void PVD_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TAMP_STAMP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void RTC_WKUP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void RCC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI0_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI4_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream0_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream4_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream5_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream6_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void ADC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN1_TX_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN1_RX0_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN1_RX1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN1_SCE_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI9_5_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM1_BRK_TIM9_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM1_UP_TIM10_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM1_TRG_COM_TIM11_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM1_CC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM4_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C1_EV_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C1_ER_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C2_EV_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C2_ER_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SPI1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SPI2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void USART1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void USART2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void USART3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void EXTI15_10_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void RTC_Alarm_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_FS_WKUP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM8_BRK_TIM12_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM8_UP_TIM13_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM8_TRG_COM_TIM14_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM8_CC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA1_Stream7_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void FSMC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SDIO_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM5_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void SPI3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void UART4_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void UART5_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM6_DAC_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void TIM7_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream0_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream2_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream3_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream4_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void ETH_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void ETH_WKUP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN2_TX_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN2_RX0_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN2_RX1_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CAN2_SCE_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_FS_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream5_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream6_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DMA2_Stream7_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void USART6_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C3_EV_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void I2C3_ER_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_HS_EP1_OUT_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_HS_EP1_IN_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_HS_WKUP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void OTG_HS_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void DCMI_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void CRYP_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void HASH_RNG_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 extern "C" void FPU_IRQHandler()
 {
-  for (;;) { asm volatile("nop"); }// NOLINT inline assembler
+  for (;;)
+  {
+    asm volatile("nop");// NOLINT inline assembler
+  }
 }
 
 namespace
@@ -494,23 +764,28 @@ extern "C" const volatile std::array<isr_type, number_of_interrupts> isr_vector
 // First function that is executed.
 void Reset_Handler()
 {
-  // // Copy data section in SRAM
-  // const stduint32_t sizeOfDataSection = &end_of_data - &start_of_data;
+  // Copy data section in SRAM
+  const std::uint32_t sizeOfDataSection = &end_of_data - &start_of_data;
 
-  // uint8_t *pDestination = (uint8_t *)&start_of_data;// SRAM
-  // uint8_t *pSource = (uint8_t *)&load_address_of_data;// Flash
+  std::uint8_t *pDestination = reinterpret_cast<std::uint8_t *>(&start_of_data);// // NOLINT  SRAM
+  std::uint8_t *pSource = reinterpret_cast<std::uint8_t *>(&load_address_of_data);// NOLINT Flash
 
-  // for (uint32_t i = 0; i < sizeOfDataSection; i++) { *pDestination++ = *pSource++; }
+  for (std::uint32_t i = 0; i < sizeOfDataSection; i++)
+  {
+    *pDestination++ = *pSource++;// NOLINT
+  }
 
-  // // Initialize the .bss section to zero in SRAM
-  // const uint32_t sizeOfBssSection = &end_of_bss - &start_of_bss;
-  // pDestination = (uint8_t *)&start_of_bss;
+  // Initialize the .bss section to zero in SRAM
+  const std::uint32_t sizeOfBssSection = &end_of_bss - &start_of_bss;
+  pDestination = reinterpret_cast<std::uint8_t *>(&start_of_bss);// NOLINT
 
-  // for (uint32_t i = 0; i < sizeOfBssSection; i++) { *pDestination++ = 0; }
-
-  // // Call init function of std if standart lib is used.
-  // __libc_init_array();
+  for (uint32_t i = 0; i < sizeOfBssSection; i++)
+  {
+    *pDestination++ = 0;// NOLINT
+  }
 
   // Call main
-  // main();
+  // Jump to main (and never return).
+  asm volatile("ldr r3, =main");// NOLINT
+  asm volatile("blx r3");// NOLINT
 }

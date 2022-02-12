@@ -1,0 +1,40 @@
+// Configure debug launch settings
+// Feel free to copy these and modify them for your debugger and MCU
+{
+    "version": "0.2.0",
+    "projectName": "test-f407vg",
+    "configurations": [
+        {
+            "name": "STlink launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/final.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stutil",
+            "device": "STM32F407VG ",
+            "interface": "swd",
+            "showDevDebugOutput": true,
+            "runToEntryPoint": "main", // else it starts at reset handler - not interested
+            // "preLaunchTask": "Build all", // configured in tasks.json
+            //"preLaunchCommands": ["echo pw"], // can be configured in tasks.json
+            "svdFile": "", // Include svd to watch device peripherals
+            "swoConfig": {} // currently (v1.7.0) not supported
+        },
+        {
+            "name": "STlink attach",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/final.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "stutil",
+            "device": "STM32F407VG",
+            "interface": "swd",
+            "showDevDebugOutput": true,
+            "runToEntryPoint": "main", // else it starts at reset handler - not interested
+            // "preLaunchTask": "Build all", // can be configured in tasks.json
+            //"preLaunchCommands": ["fsfmake -j8"],
+            "svdFile": "", // Include svd to watch device peripherals
+            "swoConfig": {} // currently (v1.7.0) not supported
+        },
+    ]
+}

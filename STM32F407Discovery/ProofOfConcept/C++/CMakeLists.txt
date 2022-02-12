@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(POC CXX)
+project(test CXX)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
@@ -29,12 +29,15 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
 ##############
 # C++ Standard
 ##############
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(COMMON_FLAGS "-mcpu=cortex-m4 -mthumb -mfloat-abi=soft")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_FLAGS} -std=c++14")
+set(LDFLAGS "${COMMON_FLAGS} -T ../linkerScript.ld -Wl,-Map=final.map")
 
 ###############
 # Flags
 ###############
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -specs=nosys.specs")
+set(CMAKE_EXE_LINKER_FLAGS "${LDFLAGS}")
 
 # get rid of -rdynamic
 set (CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)
@@ -44,5 +47,3 @@ set(CMAKE_EXECUTABLE_SUFFIX ".elf")
 set(src src/main.cpp src/startup.cpp)
 
 add_executable(${PROJECT_NAME} ${src})
-
-#set(target_with_suffix "${target}${CMAKE_EXECUTABLE_SUFFIX}")

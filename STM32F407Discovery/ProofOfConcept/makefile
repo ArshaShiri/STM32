@@ -1,6 +1,10 @@
 CC=arm-none-eabi-gcc
 MACHINE=cortex-m4
+DEBUG = 1
 CFLAGS=-c -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft -std=gnu11 -Wall -O0
+ifeq ($(DEBUG), 1)
+CFLAGS += -g3 -gdwarf-2 # original: -g
+endif
 LDFLAGS= -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft --specs=nano.specs -T linkerScript.ld -Wl,-Map=final.map
 LDFLAGSSEMIHOSTING= -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft --specs=rdimon.specs -T linkerScript.ld -Wl,-Map=final.map
 
