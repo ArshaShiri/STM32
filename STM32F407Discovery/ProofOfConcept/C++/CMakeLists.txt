@@ -15,7 +15,7 @@ set (CMAKE_ASM_COMPILER "${CROSS_COMPILE}as")
 ###########
 if (NOT CMAKE_BUILD_TYPE)
   ## set default to Release
-  set(CMAKE_BUILD_TYPE Release)  # override with -DCMAKE_BUILD_TYPE=Debug
+  set(CMAKE_BUILD_TYPE Debug)  # override with -DCMAKE_BUILD_TYPE=Debug
   message("==> CMAKE_BUILD_TYPE empty. Changing it to Release.")
 else()
   message("==> CMAKE_BUILD_TYPE == ${CMAKE_BUILD_TYPE}.")

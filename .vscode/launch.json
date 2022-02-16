@@ -7,7 +7,7 @@
         {
             "name": "STlink launch",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/final.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/C++/build/test.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stutil",
@@ -23,7 +23,7 @@
         {
             "name": "STlink attach",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/final.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/C++/build/test.elf",
             "request": "attach",
             "type": "cortex-debug",
             "servertype": "stutil",
