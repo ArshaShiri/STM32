@@ -1,14 +1,32 @@
 cmake_minimum_required(VERSION 3.2)
-project(STM32F407Discovery CXX)
-#enable_testing()
+project(STM32F407 CXX)
+enable_testing()
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED YES)
-set(CMAKE_CXX_EXTENSIONS NO)
 
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR ${target_arch})
+# Adding the target-specific CMake file.
+#include(target.cmake)
+
+#Setting up flags for the linker and compiler.
+set(CMAKE_CXX_FLAGS
+    "${CMAKE_CXX_FLAGS} ${TARGET_FLAGS}"
+    CACHE STRING "" FORCE)
+
+set(CMAKE_EXE_LINKER_FLAGS
+    "${CMAKE_EXE_LINKER_FLAGS} ${TARGET_FLAGS}"
+    CACHE STRING "" FORCE)
+
+# Adding the src:
+#add_subdirectory(src)
+
+# Adding the tests:
+option(BUILD_TESTS "Build tests" ON)
+if(BUILD_TESTS)
+  add_subdirectory(tst)
+endif()
 
 # # src/tests/CMakeLists.txt
 # include(ExternalProject)

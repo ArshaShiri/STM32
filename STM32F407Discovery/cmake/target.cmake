@@ -1,0 +1,7 @@
+set(CMAKE_EXECUTABLE_SUFFIX .elf)
+
+set(CMAKE_CXX_STANDARD_REQUIRED YES)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_EXTENSIONS NO)
+
+set(TARGET_FLAGS "-mcpu=cortex-m4 -mthumb -mfloat-abi=soft")

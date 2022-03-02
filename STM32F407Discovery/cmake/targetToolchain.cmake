@@ -27,4 +27,4 @@ set(READELF ${GCC_TOOLCHAIN_PREFIX}readelf)
 
 set(CMAKE_CXX_FLAGS_INIT "-Wall -Wextra -pedantic")
 set(LINKER_DEFINITION_FILE, "../linkerScript.ld")
-set(CMAKE_EXE_LINKER_FLAGS_INIT "${COMMON_FLAGS} -T ${LINKER_DEFINITION_FILE} -Wl,--gc-sections -Wl,-Map=final.map")
+set(CMAKE_EXE_LINKER_FLAGS_INIT "-T ${LINKER_DEFINITION_FILE} -Wl,--gc-sections -Wl,-Map=final.map")
