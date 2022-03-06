@@ -1,6 +1,9 @@
 set(CMAKE_SYSTEM_NAME "${CMAKE_HOST_SYSTEM_NAME}")
 
 set (CMAKE_CXX_COMPILER "g++")
+set(CMAKE_CXX_STANDARD_REQUIRED YES)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_EXTENSIONS NO)
 
-set(extraOpts "-Wall -Wextra")
+set(extraOpts "-Wall -Wextra -Werror")
 set(CMAKE_CXX_FLAGS_INIT "${extraOpts} -pedantic")

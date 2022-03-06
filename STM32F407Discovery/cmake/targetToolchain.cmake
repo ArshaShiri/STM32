@@ -25,6 +25,9 @@ set(OBJDUMP ${GCC_TOOLCHAIN_PREFIX}objdump)
 set(OBJCOPY ${GCC_TOOLCHAIN_PREFIX}objcopy)
 set(READELF ${GCC_TOOLCHAIN_PREFIX}readelf)
 
-set(CMAKE_CXX_FLAGS_INIT "-Wall -Wextra -pedantic")
+set(CMAKE_CXX_FLAGS_INIT
+    "-Wall -Wextra -pedantic -Werror -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough"
+)
+
 set(LINKER_DEFINITION_FILE, "../linkerScript.ld")
 set(CMAKE_EXE_LINKER_FLAGS_INIT "-T ${LINKER_DEFINITION_FILE} -Wl,--gc-sections -Wl,-Map=final.map")
