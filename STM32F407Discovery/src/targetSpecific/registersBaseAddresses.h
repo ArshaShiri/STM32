@@ -2,51 +2,48 @@
 #define REGISTERS
 
 #include "registerType.h"
-
-namespace
+class BaseAddresses
 {
-static constexpr RegisterType sizeOfSRam1KB = 112;
+private:
+  static constexpr RegisterType sizeOfSRam1KB = 112;
 
-namespace ahb1Offset
-{
-  static constexpr RegisterType gpioA = UINT32_C(0x0000);
-  static constexpr RegisterType gpioB = UINT32_C(0x0400);
-  static constexpr RegisterType gpioC = UINT32_C(0x0800);
-  static constexpr RegisterType gpioD = UINT32_C(0x0c00);
-  static constexpr RegisterType gpioE = UINT32_C(0x1000);
-  static constexpr RegisterType gpioF = UINT32_C(0x1400);
-  static constexpr RegisterType gpioG = UINT32_C(0x1800);
-  static constexpr RegisterType gpioH = UINT32_C(0x1c00);
-  static constexpr RegisterType gpioI = UINT32_C(0x2000);
-} // namespace ahb1Offset
+  struct ahb1Offset
+  {
+    static constexpr RegisterType gpioA = UINT32_C(0x0000);
+    static constexpr RegisterType gpioB = UINT32_C(0x0400);
+    static constexpr RegisterType gpioC = UINT32_C(0x0800);
+    static constexpr RegisterType gpioD = UINT32_C(0x0c00);
+    static constexpr RegisterType gpioE = UINT32_C(0x1000);
+    static constexpr RegisterType gpioF = UINT32_C(0x1400);
+    static constexpr RegisterType gpioG = UINT32_C(0x1800);
+    static constexpr RegisterType gpioH = UINT32_C(0x1c00);
+    static constexpr RegisterType gpioI = UINT32_C(0x2000);
+  };
 
-namespace apb1Offset
-{
-  static constexpr RegisterType spi2 = UINT32_C(0x3800);
-  static constexpr RegisterType spi3 = UINT32_C(0x3C00);
-  static constexpr RegisterType usart2 = UINT32_C(0x4400);
-  static constexpr RegisterType usart3 = UINT32_C(0x4800);
-  static constexpr RegisterType uart4 = UINT32_C(0x4C00);
-  static constexpr RegisterType uart5 = UINT32_C(0x5000);
+  struct apb1Offset
+  {
+    static constexpr RegisterType spi2 = UINT32_C(0x3800);
+    static constexpr RegisterType spi3 = UINT32_C(0x3C00);
+    static constexpr RegisterType usart2 = UINT32_C(0x4400);
+    static constexpr RegisterType usart3 = UINT32_C(0x4800);
+    static constexpr RegisterType uart4 = UINT32_C(0x4C00);
+    static constexpr RegisterType uart5 = UINT32_C(0x5000);
 
-  static constexpr RegisterType i2c1 = UINT32_C(0x5400);
-  static constexpr RegisterType i2c2 = UINT32_C(0x5800);
-  static constexpr RegisterType i2c3 = UINT32_C(0x5C00);
-} // namespace apb1Offset
+    static constexpr RegisterType i2c1 = UINT32_C(0x5400);
+    static constexpr RegisterType i2c2 = UINT32_C(0x5800);
+    static constexpr RegisterType i2c3 = UINT32_C(0x5C00);
+  };
 
-namespace apb2Offset
-{
-  static constexpr RegisterType usart1 = UINT32_C(0x1000);
-  static constexpr RegisterType usart6 = UINT32_C(0x1400);
-  static constexpr RegisterType spi1 = UINT32_C(0x3000);
-  static constexpr RegisterType syscfg = UINT32_C(0x3800);
-  static constexpr RegisterType exti = UINT32_C(0x3C00);
-} // namespace apb2Offset
+  class apb2Offset
+  {
+    static constexpr RegisterType usart1 = UINT32_C(0x1000);
+    static constexpr RegisterType usart6 = UINT32_C(0x1400);
+    static constexpr RegisterType spi1 = UINT32_C(0x3000);
+    static constexpr RegisterType syscfg = UINT32_C(0x3800);
+    static constexpr RegisterType exti = UINT32_C(0x3C00);
+  };
 
-} // namespace
-
-struct BaseAddresses
-{
+public:
   static constexpr RegisterType flash = UINT32_C(0x08000000);
   static constexpr RegisterType sRam1 = UINT32_C(0x20000000);
   static constexpr RegisterType sRam2 = UINT32_C(sRam1 + sizeOfSRam1KB * 1024);
