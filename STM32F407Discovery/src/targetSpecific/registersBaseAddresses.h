@@ -7,7 +7,7 @@ class BaseAddresses
 private:
   static constexpr RegisterType sizeOfSRam1KB = 112;
 
-  struct ahb1Offset
+  struct AHB1Offset
   {
     static constexpr RegisterType gpioA = UINT32_C(0x0000);
     static constexpr RegisterType gpioB = UINT32_C(0x0400);
@@ -20,7 +20,7 @@ private:
     static constexpr RegisterType gpioI = UINT32_C(0x2000);
   };
 
-  struct apb1Offset
+  struct APB1Offset
   {
     static constexpr RegisterType spi2 = UINT32_C(0x3800);
     static constexpr RegisterType spi3 = UINT32_C(0x3C00);
@@ -34,7 +34,7 @@ private:
     static constexpr RegisterType i2c3 = UINT32_C(0x5C00);
   };
 
-  class apb2Offset
+  struct APB2Offset
   {
     static constexpr RegisterType usart1 = UINT32_C(0x1000);
     static constexpr RegisterType usart6 = UINT32_C(0x1400);
@@ -56,32 +56,32 @@ public:
   static constexpr RegisterType ahb1 = UINT32_C(0x40020000);
   static constexpr RegisterType ahb2 = UINT32_C(0x50000000);
 
-  static constexpr RegisterType gpioA = ahb1 + ahb1Offset::gpioA;
-  static constexpr RegisterType gpioB = ahb1 + ahb1Offset::gpioB;
-  static constexpr RegisterType gpioC = ahb1 + ahb1Offset::gpioC;
-  static constexpr RegisterType gpioD = ahb1 + ahb1Offset::gpioD;
-  static constexpr RegisterType gpioE = ahb1 + ahb1Offset::gpioE;
-  static constexpr RegisterType gpioF = ahb1 + ahb1Offset::gpioF;
-  static constexpr RegisterType gpioG = ahb1 + ahb1Offset::gpioG;
-  static constexpr RegisterType gpioH = ahb1 + ahb1Offset::gpioH;
-  static constexpr RegisterType gpioI = ahb1 + ahb1Offset::gpioI;
+  static constexpr RegisterType gpioA = ahb1 + AHB1Offset::gpioA;
+  static constexpr RegisterType gpioB = ahb1 + AHB1Offset::gpioB;
+  static constexpr RegisterType gpioC = ahb1 + AHB1Offset::gpioC;
+  static constexpr RegisterType gpioD = ahb1 + AHB1Offset::gpioD;
+  static constexpr RegisterType gpioE = ahb1 + AHB1Offset::gpioE;
+  static constexpr RegisterType gpioF = ahb1 + AHB1Offset::gpioF;
+  static constexpr RegisterType gpioG = ahb1 + AHB1Offset::gpioG;
+  static constexpr RegisterType gpioH = ahb1 + AHB1Offset::gpioH;
+  static constexpr RegisterType gpioI = ahb1 + AHB1Offset::gpioI;
 
-  static constexpr RegisterType spi2 = apb1 + apb1Offset::spi2;
-  static constexpr RegisterType spi3 = apb1 + apb1Offset::spi3;
-  static constexpr RegisterType usart2 = apb1 + apb1Offset::usart2;
-  static constexpr RegisterType usart3 = apb1 + apb1Offset::usart3;
-  static constexpr RegisterType uart4 = apb1 + apb1Offset::uart4;
-  static constexpr RegisterType uart5 = apb1 + apb1Offset::uart5;
+  static constexpr RegisterType spi2 = apb1 + APB1Offset::spi2;
+  static constexpr RegisterType spi3 = apb1 + APB1Offset::spi3;
+  static constexpr RegisterType usart2 = apb1 + APB1Offset::usart2;
+  static constexpr RegisterType usart3 = apb1 + APB1Offset::usart3;
+  static constexpr RegisterType uart4 = apb1 + APB1Offset::uart4;
+  static constexpr RegisterType uart5 = apb1 + APB1Offset::uart5;
 
-  static constexpr RegisterType i2c1 = apb1 + apb1Offset::i2c1;
-  static constexpr RegisterType i2c2 = apb1 + apb1Offset::i2c2;
-  static constexpr RegisterType i2c3 = apb1 + apb1Offset::i2c3;
+  static constexpr RegisterType i2c1 = apb1 + APB1Offset::i2c1;
+  static constexpr RegisterType i2c2 = apb1 + APB1Offset::i2c2;
+  static constexpr RegisterType i2c3 = apb1 + APB1Offset::i2c3;
 
-  static constexpr RegisterType usart1 = apb2 + apb2Offset::usart1;
-  static constexpr RegisterType usart6 = apb2 + apb2Offset::usart6;
-  static constexpr RegisterType spi1 = apb2 + apb2Offset::spi1;
-  static constexpr RegisterType syscfg = apb2 + apb2Offset::syscfg;
-  static constexpr RegisterType exti = apb2 + apb2Offset::exti;
+  static constexpr RegisterType usart1 = apb2 + APB2Offset::usart1;
+  static constexpr RegisterType usart6 = apb2 + APB2Offset::usart6;
+  static constexpr RegisterType spi1 = apb2 + APB2Offset::spi1;
+  static constexpr RegisterType syscfg = apb2 + APB2Offset::syscfg;
+  static constexpr RegisterType exti = apb2 + APB2Offset::exti;
 };
 
 #endif /* REGISTERS */
