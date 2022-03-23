@@ -1,3 +1,4 @@
 STM32F407Discovery/ProofOfConcept/C++/build/
 *.bin
 STM32F407Discovery/.vscode/settings.json
+STM32F407Discovery/build/*
