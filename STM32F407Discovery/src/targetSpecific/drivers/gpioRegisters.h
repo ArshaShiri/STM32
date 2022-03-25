@@ -19,7 +19,7 @@ enum class PortMode
 template<typename RegisterAddressType>
 class GPIORegisters
 {
-  class Offsets
+  struct Offsets
   {
     static constexpr RegisterType moder = UINT32_C(0x00);
     static constexpr RegisterType otyper = UINT32_C(0x04);
@@ -42,7 +42,7 @@ public:
 
     const auto portModeValue = getPortModeValue<mode>();
     const auto numberOfShifts = pinNumber * 2;
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress,
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::moder,
                                                                      portModeValue << numberOfShifts);
   }
 
