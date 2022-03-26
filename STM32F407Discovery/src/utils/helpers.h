@@ -5,6 +5,7 @@
 #include <array>
 #include <stdexcept>
 
+// Thanks to C++ Weekly - Ep 233 - std::map vs constexpr map (huge perf difference!)
 template<typename Key, typename Value, std::size_t size>
 struct StaticMap
 {
