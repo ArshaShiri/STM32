@@ -9,48 +9,40 @@ struct RegisterAccess
   static void regSet(const RegisterAddressType address,
                      const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) = value;
+    memory(address) = value;
   }
 
   static void regAnd(const RegisterAddressType address,
                      const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) =
-      (*reinterpret_cast<volatile RegisterAddressType *>(address)) & value;
+    memory(address) = (memory(address)) & value;
   }
 
   static void regOr(const RegisterAddressType address,
                     const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) =
-      (*reinterpret_cast<volatile RegisterAddressType *>(address)) | value;
+    memory(address) = (memory(address)) | value;
   }
 
-  static RegisterValueType regGet(const RegisterAddressType address)
-  {
-    return *reinterpret_cast<volatile RegisterAddressType *>(address);
-  }
+  static RegisterValueType regGet(const RegisterAddressType address) { return memory(address); }
 
   static void regBitSet(const RegisterAddressType address,
                         const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) =
-      (*reinterpret_cast<volatile RegisterAddressType *>(address)) | static_cast<RegisterValueType>(1ULL << value);
+    memory(address) = (memory(address)) | static_cast<RegisterValueType>(1ULL << value);
   }
 
   static void regBitClear(const RegisterAddressType address,
                           const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) =
-      (*reinterpret_cast<volatile RegisterAddressType *>(address)) &
-      static_cast<RegisterValueType>(~static_cast<RegisterValueType>(1ULL << value));
+    memory(address) =
+      (memory(address)) & static_cast<RegisterValueType>(~static_cast<RegisterValueType>(1ULL << value));
   }
 
   static void regBitToggle(const RegisterAddressType address,
                            const RegisterValueType value = static_cast<RegisterValueType>(0))
   {
-    *reinterpret_cast<volatile RegisterAddressType *>(address) =
-      (*reinterpret_cast<volatile RegisterAddressType *>(address)) ^ static_cast<RegisterValueType>(1ULL << value);
+    memory(address) = (memory(address)) ^ static_cast<RegisterValueType>(1ULL << value);
   }
 
   static bool regBitGet(const RegisterAddressType address,
@@ -58,6 +50,12 @@ struct RegisterAccess
   {
     return (static_cast<volatile RegisterValueType>(
               (regGet(address) & static_cast<RegisterValueType>(1ULL << value))) != static_cast<RegisterValueType>(0U));
+  }
+
+private:
+  static volatile RegisterAddressType &memory(const RegisterAddressType address)
+  {
+    return *reinterpret_cast<volatile RegisterAddressType *>(address);
   }
 };
 
