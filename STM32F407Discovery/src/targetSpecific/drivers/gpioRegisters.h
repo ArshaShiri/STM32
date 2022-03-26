@@ -4,6 +4,7 @@
 #include "targetSpecific/registerType.h"
 #include "targetSpecific/registersBaseAddresses.h"
 
+#include "utils/helpers.h"
 #include "utils/registerAccess.h"
 
 enum class PortMode
@@ -38,25 +39,17 @@ public:
     static constexpr auto numberOfPins = 16;
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
-    const auto portModeValue = getPortModeValue<mode>();
+    const auto portModeValue = portModeToValue.at(mode);
     const auto numberOfShifts = pinNumber * 2;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::moder,
                                                                      portModeValue << numberOfShifts);
   }
 
 private:
-  template<PortMode mode>
-  static constexpr RegisterType getPortModeValue()
-  {
-    if constexpr (mode == PortMode::input)
-      return 0b00;
-    if constexpr (mode == PortMode::generalpurposeOutput)
-      return 0b01;
-    if constexpr (mode == PortMode::alternateFunction)
-      return 0b10;
-
-    return 0b11;
-  }
+  static constexpr StaticMap<PortMode, RegisterType, 4> portModeToValue{ { { { PortMode::input, 0b00 },
+                                                                             { PortMode::generalpurposeOutput, 0b01 },
+                                                                             { PortMode::alternateFunction, 0b10 },
+                                                                             { PortMode::analog, 0b11 } } } };
 };
 
 class GPIORegs
