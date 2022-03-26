@@ -17,7 +17,10 @@ enum class Peripheral
   GPIOF,
   GPIOG,
   GPIOH,
-  GPIOI
+  GPIOI,
+  I2C1,
+  I2C2,
+  I2C3
 };
 
 template<typename RegisterAddressType>
@@ -64,7 +67,7 @@ class RCCRegisters
   };
 
 public:
-  template<Peripheral peripheral>
+  template<Peripheral peripheral, bool set>
   static void enablePeripheralClock(const RegisterAddressType rccBaseAddress)
   {
     constexpr auto isOnAHB1 =
@@ -73,18 +76,41 @@ public:
       (peripheral == Peripheral::GPIOG) || (peripheral == Peripheral::GPIOH) || (peripheral == Peripheral::GPIOI);
 
     if constexpr (isOnAHB1)
-      enablePeripheralOnAHB1<peripheral>(rccBaseAddress);
+      peripheralOnAHB1Set<peripheral, set>(rccBaseAddress);
+
+    constexpr auto isOnAPB1 =
+      (peripheral == Peripheral::I2C1) || (peripheral == Peripheral::I2C2) || (peripheral == Peripheral::I2C3);
+
+    if constexpr (isOnAPB1)
+      peripheralOnAPB1<peripheral, set>(rccBaseAddress);
   }
 
 private:
-  template<Peripheral peripheral>
-  static void enablePeripheralOnAHB1(const RegisterAddressType rccBaseAddress)
+  template<Peripheral peripheral, bool set>
+  static void peripheralOnAHB1Set(const RegisterAddressType rccBaseAddress)
   {
-    constexpr RegisterAddressType bitNumber = gpioToBitNumber.at(peripheral);
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1enr, bitNumber);
+    constexpr RegisterAddressType bitNumber = ahb1ToBitNumber.at(peripheral);
+
+    if constexpr (set)
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1enr, bitNumber);
+    else
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::ahb1enr,
+                                                                            bitNumber);
   }
 
-  static constexpr StaticMap<Peripheral, RegisterType, 9> gpioToBitNumber{ { { { Peripheral::GPIOA, 0 },
+  template<Peripheral peripheral, bool set>
+  static void peripheralOnAPB1(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = apb1ToBitNumber.at(peripheral);
+
+    if constexpr (set)
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::apb1enr, bitNumber);
+    else
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::apb1enr,
+                                                                            bitNumber);
+  }
+
+  static constexpr StaticMap<Peripheral, RegisterType, 9> ahb1ToBitNumber{ { { { Peripheral::GPIOA, 0 },
                                                                                { Peripheral::GPIOB, 1 },
                                                                                { Peripheral::GPIOC, 2 },
                                                                                { Peripheral::GPIOD, 3 },
@@ -93,6 +119,10 @@ private:
                                                                                { Peripheral::GPIOG, 6 },
                                                                                { Peripheral::GPIOH, 7 },
                                                                                { Peripheral::GPIOI, 8 } } } };
+
+  static constexpr StaticMap<Peripheral, RegisterType, 3> apb1ToBitNumber{
+    { { { Peripheral::I2C1, 21 }, { Peripheral::I2C2, 22 }, { Peripheral::I2C3, 23 } } }
+  };
 };
 
 #endif /* RCCREGISTERS */
