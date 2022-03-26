@@ -30,7 +30,7 @@ TEST_F(GPIORegisterTest, setPinOneModeToInput) // NOLINT: Static storage warning
   const auto pinNumber = 0;
   GPIORegisters<RegisterTypeHost>::setPortMode<PortMode::input, pinNumber>(registerSetBaseAddressValue);
 
-  static constexpr auto expectedValue = UINT32_C(0b00);
+  const auto expectedValue = UINT32_C(0b00);
   EXPECT_EQ(getValueOfModeRegister(), expectedValue);
 }
 
@@ -62,10 +62,4 @@ TEST_F(GPIORegisterTest, setPinFifteenModeToAnalog) // NOLINT: Static storage wa
   const auto numberOfShifts = UINT32_C(pinNumber * 2);
   const auto expectedValue = UINT32_C(0b11) << numberOfShifts;
   EXPECT_EQ(getValueOfModeRegister(), expectedValue);
-}
-
-int main(int argc, char **argv)
-{
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
 }

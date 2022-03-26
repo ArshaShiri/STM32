@@ -1,0 +1,98 @@
+#ifndef RCCREGISTERS
+#define RCCREGISTERS
+
+#include "targetSpecific/registerType.h"
+#include "targetSpecific/registersBaseAddresses.h"
+
+#include "utils/helpers.h"
+#include "utils/registerAccess.h"
+
+enum class Peripheral
+{
+  GPIOA,
+  GPIOB,
+  GPIOC,
+  GPIOD,
+  GPIOE,
+  GPIOF,
+  GPIOG,
+  GPIOH,
+  GPIOI
+};
+
+template<typename RegisterAddressType>
+class RCCRegisters
+{
+  struct Offsets
+  {
+    static constexpr RegisterType CR = UINT32_C(0x00);
+    static constexpr RegisterType pllcfgr = UINT32_C(0x04);
+    static constexpr RegisterType cfgr = UINT32_C(0x08);
+    static constexpr RegisterType cir = UINT32_C(0x0C);
+    static constexpr RegisterType ahb1rstr = UINT32_C(0x10);
+    static constexpr RegisterType ahb2rstr = UINT32_C(0x14);
+    static constexpr RegisterType ahb3rstr = UINT32_C(0x18);
+    // 0x1C is reserved
+    static constexpr RegisterType apb1rstr = UINT32_C(0x20);
+    static constexpr RegisterType apb2rstr = UINT32_C(0x24);
+    // 0x28 is reserved
+    // 0x2C is reserved
+    static constexpr RegisterType ahb1enr = UINT32_C(0x30);
+    static constexpr RegisterType ahb2enr = UINT32_C(0x34);
+    static constexpr RegisterType ahb3enr = UINT32_C(0x38);
+    // 0x3C is reserved
+    static constexpr RegisterType apb1enr = UINT32_C(0x40);
+    static constexpr RegisterType apb2enr = UINT32_C(0x44);
+    // 0x48 is reserved
+    // 0x4C is reserved
+    static constexpr RegisterType ahb1lpenr = UINT32_C(0x50);
+    static constexpr RegisterType ahb2lpenr = UINT32_C(0x54);
+    static constexpr RegisterType ahb3lpenr = UINT32_C(0x58);
+    // 0x5C is reserved
+    static constexpr RegisterType apb1lpenr = UINT32_C(0x60);
+    static constexpr RegisterType apb2lpenr = UINT32_C(0x64);
+    // 0x68 is reserved
+    // 0x6C is reserved
+    static constexpr RegisterType bdcr = UINT32_C(0x70);
+    static constexpr RegisterType csr = UINT32_C(0x74);
+    // 0x78 is reserved
+    // 0x7C is reserved
+    static constexpr RegisterType sscgr = UINT32_C(0x80);
+    static constexpr RegisterType plli2scfgr = UINT32_C(0x84);
+    static constexpr RegisterType pllsaicfgr = UINT32_C(0x88);
+    static constexpr RegisterType dckcfgr = UINT32_C(0x8C);
+  };
+
+public:
+  template<Peripheral peripheral>
+  static void enablePeripheralClock(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr auto isOnAHB1 =
+      (peripheral == Peripheral::GPIOA) || (peripheral == Peripheral::GPIOB) || (peripheral == Peripheral::GPIOC) ||
+      (peripheral == Peripheral::GPIOD) || (peripheral == Peripheral::GPIOE) || (peripheral == Peripheral::GPIOF) ||
+      (peripheral == Peripheral::GPIOG) || (peripheral == Peripheral::GPIOH) || (peripheral == Peripheral::GPIOI);
+
+    if constexpr (isOnAHB1)
+      enablePeripheralOnAHB1<peripheral>(rccBaseAddress);
+  }
+
+private:
+  template<Peripheral peripheral>
+  static void enablePeripheralOnAHB1(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = gpioToBitNumber.at(peripheral);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1enr, bitNumber);
+  }
+
+  static constexpr StaticMap<Peripheral, RegisterType, 9> gpioToBitNumber{ { { { Peripheral::GPIOA, 0 },
+                                                                               { Peripheral::GPIOB, 1 },
+                                                                               { Peripheral::GPIOC, 2 },
+                                                                               { Peripheral::GPIOD, 3 },
+                                                                               { Peripheral::GPIOE, 4 },
+                                                                               { Peripheral::GPIOF, 5 },
+                                                                               { Peripheral::GPIOG, 6 },
+                                                                               { Peripheral::GPIOH, 7 },
+                                                                               { Peripheral::GPIOI, 8 } } } };
+};
+
+#endif /* RCCREGISTERS */
