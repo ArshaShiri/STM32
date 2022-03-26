@@ -68,7 +68,7 @@ class RCCRegisters
 
 public:
   template<Peripheral peripheral, bool set>
-  static void enablePeripheralClock(const RegisterAddressType rccBaseAddress)
+  static void peripheralClockSet(const RegisterAddressType rccBaseAddress)
   {
     constexpr auto isOnAHB1 =
       (peripheral == Peripheral::GPIOA) || (peripheral == Peripheral::GPIOB) || (peripheral == Peripheral::GPIOC) ||
