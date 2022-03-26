@@ -18,6 +18,7 @@ private:
     static constexpr RegisterType gpioG = UINT32_C(0x1800);
     static constexpr RegisterType gpioH = UINT32_C(0x1c00);
     static constexpr RegisterType gpioI = UINT32_C(0x2000);
+    static constexpr RegisterType rcc = UINT32_C(0x3800);
   };
 
   struct APB1Offset
@@ -65,6 +66,7 @@ public:
   static constexpr RegisterType gpioG = ahb1 + AHB1Offset::gpioG;
   static constexpr RegisterType gpioH = ahb1 + AHB1Offset::gpioH;
   static constexpr RegisterType gpioI = ahb1 + AHB1Offset::gpioI;
+  static constexpr RegisterType rcc = ahb1 + AHB1Offset::rcc;
 
   static constexpr RegisterType spi2 = apb1 + APB1Offset::spi2;
   static constexpr RegisterType spi3 = apb1 + APB1Offset::spi3;
