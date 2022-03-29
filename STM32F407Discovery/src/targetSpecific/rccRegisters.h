@@ -118,14 +118,14 @@ public:
   static void setPeripheralOnAHB1()
   {
     constexpr auto rccBaseAddress = BaseAddresses::rcc;
-    RCCRegisters<RegisterType>::setPeripheralOnAHB1<peripheral, set>();
+    RCCRegisters<RegisterType>::setPeripheralOnAHB1<peripheral, set>(rccBaseAddress);
   }
 
   template<PeripheralAPB1 peripheral, bool set>
   static void setPeripheralOnAPB1()
   {
     constexpr auto rccBaseAddress = BaseAddresses::rcc;
-    RCCRegisters<RegisterType>::setPeripheralOnAPB1<peripheral, set>();
+    RCCRegisters<RegisterType>::setPeripheralOnAPB1<peripheral, set>(rccBaseAddress);
   }
 };
 
