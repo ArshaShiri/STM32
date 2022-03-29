@@ -1,8 +1,8 @@
 #ifndef GPIOREGISTERS
 #define GPIOREGISTERS
 
-#include "targetSpecific/registerType.h"
-#include "targetSpecific/registersBaseAddresses.h"
+#include "registerType.h"
+#include "registersBaseAddresses.h"
 
 #include "utils/helpers.h"
 #include "utils/registerAccess.h"

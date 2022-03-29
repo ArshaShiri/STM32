@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-#include "targetSpecific/drivers/gpioRegisters.h"
+#include "targetSpecific/gpioRegisters.h"
 #include "targetSpecific/registerType.h"
 
 class GPIORegisterTest : public ::testing::Test

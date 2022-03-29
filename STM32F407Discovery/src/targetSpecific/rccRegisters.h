@@ -1,8 +1,8 @@
 #ifndef RCCREGISTERS
 #define RCCREGISTERS
 
-#include "targetSpecific/registerType.h"
-#include "targetSpecific/registersBaseAddresses.h"
+#include "registerType.h"
+#include "registersBaseAddresses.h"
 
 #include "utils/helpers.h"
 #include "utils/registerAccess.h"
@@ -92,7 +92,6 @@ private:
   {
     return (peripheral == Peripheral::I2C1) || (peripheral == Peripheral::I2C2) || (peripheral == Peripheral::I2C3);
   }
-
 
   template<Peripheral peripheral, bool set>
   static void peripheralOnAHB1Set(const RegisterAddressType rccBaseAddress)
