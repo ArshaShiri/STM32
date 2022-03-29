@@ -52,7 +52,7 @@ private:
                                                                              { PortMode::analog, 0b11 } } } };
 };
 
-class GPIORegs
+class GPIORegistersTarget
 {
 public:
   template<PortMode mode, PinType pinNumber>

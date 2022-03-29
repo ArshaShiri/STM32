@@ -70,22 +70,30 @@ public:
   template<Peripheral peripheral, bool set>
   static void peripheralClockSet(const RegisterAddressType rccBaseAddress)
   {
-    constexpr auto isOnAHB1 =
-      (peripheral == Peripheral::GPIOA) || (peripheral == Peripheral::GPIOB) || (peripheral == Peripheral::GPIOC) ||
-      (peripheral == Peripheral::GPIOD) || (peripheral == Peripheral::GPIOE) || (peripheral == Peripheral::GPIOF) ||
-      (peripheral == Peripheral::GPIOG) || (peripheral == Peripheral::GPIOH) || (peripheral == Peripheral::GPIOI);
-
-    if constexpr (isOnAHB1)
+    if constexpr (isPeripheralOnAHB1<peripheral>())
       peripheralOnAHB1Set<peripheral, set>(rccBaseAddress);
 
-    constexpr auto isOnAPB1 =
-      (peripheral == Peripheral::I2C1) || (peripheral == Peripheral::I2C2) || (peripheral == Peripheral::I2C3);
-
-    if constexpr (isOnAPB1)
+    if constexpr (isPeripheralOnAPB1<peripheral>())
       peripheralOnAPB1<peripheral, set>(rccBaseAddress);
   }
 
 private:
+  template<Peripheral peripheral>
+  static constexpr bool isPeripheralOnAHB1()
+  {
+    return (peripheral == Peripheral::GPIOA) || (peripheral == Peripheral::GPIOB) ||
+           (peripheral == Peripheral::GPIOC) || (peripheral == Peripheral::GPIOD) ||
+           (peripheral == Peripheral::GPIOE) || (peripheral == Peripheral::GPIOF) ||
+           (peripheral == Peripheral::GPIOG) || (peripheral == Peripheral::GPIOH) || (peripheral == Peripheral::GPIOI);
+  }
+
+  template<Peripheral peripheral>
+  static constexpr bool isPeripheralOnAPB1()
+  {
+    return (peripheral == Peripheral::I2C1) || (peripheral == Peripheral::I2C2) || (peripheral == Peripheral::I2C3);
+  }
+
+
   template<Peripheral peripheral, bool set>
   static void peripheralOnAHB1Set(const RegisterAddressType rccBaseAddress)
   {
@@ -123,6 +131,17 @@ private:
   static constexpr StaticMap<Peripheral, RegisterType, 3> apb1ToBitNumber{
     { { { Peripheral::I2C1, 21 }, { Peripheral::I2C2, 22 }, { Peripheral::I2C3, 23 } } }
   };
+};
+
+class RCCRegistersTarget
+{
+public:
+  template<Peripheral peripheral, bool set>
+  static void peripheralClockSet()
+  {
+    constexpr auto rccBaseAddress = BaseAddresses::rcc;
+    RCCRegisters<RegisterType>::peripheralClockSet<peripheral, set>();
+  }
 };
 
 #endif /* RCCREGISTERS */
