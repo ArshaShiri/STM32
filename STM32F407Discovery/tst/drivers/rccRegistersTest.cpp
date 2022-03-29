@@ -25,39 +25,39 @@ protected:
 
 TEST_F(RCCRegisterTest, enableDisableGPIOAClock) // NOLINT: Static storage warning.
 {
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::GPIOA, true>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAHB1<PeripheralAHB1::GPIOA, true>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(0);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::GPIOA, false>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAHB1<PeripheralAHB1::GPIOA, false>(registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 }
 
 TEST_F(RCCRegisterTest, enableDisableGPIOHClock) // NOLINT: Static storage warning.
 {
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::GPIOH, true>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAHB1<PeripheralAHB1::GPIOH, true>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(7);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::GPIOH, false>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAHB1<PeripheralAHB1::GPIOH, false>(registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 }
 
 TEST_F(RCCRegisterTest, enableDisableI2C3Clock) // NOLINT: Static storage warning.
 {
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::I2C3, true>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAPB1<PeripheralAPB1::I2C3, true>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(23);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfAPB1EnrRegister(), expectedValue);
 
-  RCCRegisters<RegisterTypeHost>::peripheralClockSet<Peripheral::I2C3, false>(registerSetBaseAddressValue);
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAPB1<PeripheralAPB1::I2C3, false>(registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 }
