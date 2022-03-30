@@ -100,6 +100,8 @@ public:
   {
     constexpr RegisterAddressType bitNumber = ahb1ToBitNumber.at(peripheral);
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1rstr, bitNumber);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::ahb1rstr,
+                                                                          bitNumber);
   }
 
   template<PeripheralAPB1 peripheral>
@@ -107,6 +109,8 @@ public:
   {
     constexpr RegisterAddressType bitNumber = apb1ToBitNumber.at(peripheral);
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::apb1rstr, bitNumber);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::apb1rstr,
+                                                                          bitNumber);
   }
 
 private:
@@ -140,6 +144,20 @@ public:
   {
     constexpr auto rccBaseAddress = BaseAddresses::rcc;
     RCCRegisters<RegisterType>::setPeripheralOnAPB1<peripheral, set>(rccBaseAddress);
+  }
+
+  template<PeripheralAHB1 peripheral>
+  static void resetPeripheralOnAHB1()
+  {
+    constexpr auto rccBaseAddress = BaseAddresses::rcc;
+    RCCRegisters<RegisterType>::resetPeripheralOnAHB1<peripheral>(rccBaseAddress);
+  }
+
+  template<PeripheralAPB1 peripheral>
+  static void resetPeripheralOnAPB1()
+  {
+    constexpr auto rccBaseAddress = BaseAddresses::rcc;
+    RCCRegisters<RegisterType>::resetPeripheralOnAPB1<peripheral>(rccBaseAddress);
   }
 };
 
