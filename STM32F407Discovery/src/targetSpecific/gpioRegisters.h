@@ -79,8 +79,9 @@ public:
   {
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
-    const auto portModeValue = portModeToValue.at(mode);
-    const auto numberOfShifts = pinNumber * 2;
+    constexpr auto portModeValue = portModeToValue.at(mode);
+    static constexpr auto shiftPerPin = 2;
+    constexpr auto numberOfShifts = pinNumber * shiftPerPin;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::moder,
                                                                      portModeValue << numberOfShifts);
   }
@@ -90,7 +91,7 @@ public:
   {
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
-    const auto outputTypeValue = outputTypeToValue.at(type);
+    constexpr auto outputTypeValue = outputTypeToValue.at(type);
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::otyper,
                                                                      outputTypeValue << pinNumber);
   }
@@ -100,8 +101,9 @@ public:
   {
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
-    const auto outputSpeedValue = outputSpeedToValue.at(speed);
-    const auto numberOfShifts = pinNumber * 2;
+    constexpr auto outputSpeedValue = outputSpeedToValue.at(speed);
+    static constexpr auto shiftPerPin = 2;
+    constexpr auto numberOfShifts = pinNumber * shiftPerPin;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::ospeedr,
                                                                      outputSpeedValue << numberOfShifts);
   }
@@ -111,10 +113,33 @@ public:
   {
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
-    const auto pullupPullDownValue = pullupPullDownControlToValue.at(type);
-    const auto numberOfShifts = pinNumber * 2;
+    constexpr auto pullupPullDownValue = pullupPullDownControlToValue.at(type);
+    static constexpr auto shiftPerPin = 2;
+    constexpr auto numberOfShifts = pinNumber * shiftPerPin;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::pupdr,
                                                                      pullupPullDownValue << numberOfShifts);
+  }
+
+  template<AlternateFunction function, PinType pinNumber>
+  static void setAlternateFunction(const RegisterAddressType baseRegisterAddress)
+  {
+    static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
+
+    const auto alternateFunctionValue = alternateFunctionToValue.at(function);
+
+    static constexpr auto numberOfPinsInEachRegister = 8;
+    constexpr auto doesPinBelongToLowRegister = pinNumber < numberOfPinsInEachRegister;
+
+    static constexpr auto shiftPerPin = 4;
+    constexpr auto numberOfShifts =
+      doesPinBelongToLowRegister ? (pinNumber * shiftPerPin) : ((pinNumber - numberOfPinsInEachRegister) * shiftPerPin);
+
+    if constexpr (doesPinBelongToLowRegister)
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::afrl,
+                                                                       alternateFunctionValue << numberOfShifts);
+    else
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::afrh,
+                                                                       alternateFunctionValue << numberOfShifts);
   }
 
 private:

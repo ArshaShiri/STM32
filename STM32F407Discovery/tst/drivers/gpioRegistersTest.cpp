@@ -22,6 +22,8 @@ protected:
   [[nodiscard]] RegisterType getValueOfOutputTypeRegister() const { return gpioRegisterSet.at(1); }
   [[nodiscard]] RegisterType getValueOfOutputSpeedRegister() const { return gpioRegisterSet.at(2); }
   [[nodiscard]] RegisterType getValueOfPullupPullDownRegister() const { return gpioRegisterSet.at(3); }
+  [[nodiscard]] RegisterType getValueOfAlternateFunctionLowRegister() const { return gpioRegisterSet.at(8); }
+  [[nodiscard]] RegisterType getValueOfAlternateFunctionHighRegister() const { return gpioRegisterSet.at(9); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfGPIORegisters{ 10 };
@@ -125,4 +127,48 @@ TEST_F(GPIORegisterTest, setPullupPullDownToPullup) // NOLINT: Static storage wa
   const auto numberOfShifts = UINT32_C(pinNumber * 2);
   const auto expectedValue = UINT32_C(0b01) << numberOfShifts;
   EXPECT_EQ(getValueOfPullupPullDownRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, setAlternateFunctionLowToAF11) // NOLINT: Static storage warning.
+{
+  const auto pinNumber = 3;
+  GPIORegisters<RegisterTypeHost>::setAlternateFunction<AlternateFunction::af11, pinNumber>(
+    registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(pinNumber * 4);
+  const auto expectedValue = UINT32_C(0b1011) << numberOfShifts;
+  EXPECT_EQ(getValueOfAlternateFunctionLowRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, setAlternateFunctionLowToAF4) // NOLINT: Static storage warning.
+{
+  const auto pinNumber = 7;
+  GPIORegisters<RegisterTypeHost>::setAlternateFunction<AlternateFunction::af4, pinNumber>(registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(pinNumber * 4);
+  const auto expectedValue = UINT32_C(0b0100) << numberOfShifts;
+  EXPECT_EQ(getValueOfAlternateFunctionLowRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, setAlternateFunctionHighToAF14) // NOLINT: Static storage warning.
+{
+  const auto pinNumber = 12;
+  const auto numberOfPinsPerRegister = 8;
+  GPIORegisters<RegisterTypeHost>::setAlternateFunction<AlternateFunction::af14, pinNumber>(
+    registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C((pinNumber - numberOfPinsPerRegister) * 4);
+  const auto expectedValue = UINT32_C(0b1110) << numberOfShifts;
+  EXPECT_EQ(getValueOfAlternateFunctionHighRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, setAlternateFunctionHighToAF6) // NOLINT: Static storage warning.
+{
+  const auto pinNumber = 15;
+  const auto numberOfPinsPerRegister = 8;
+  GPIORegisters<RegisterTypeHost>::setAlternateFunction<AlternateFunction::af6, pinNumber>(registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C((pinNumber - numberOfPinsPerRegister) * 4);
+  const auto expectedValue = UINT32_C(0b0110) << numberOfShifts;
+  EXPECT_EQ(getValueOfAlternateFunctionHighRegister(), expectedValue);
 }
