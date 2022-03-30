@@ -95,6 +95,20 @@ public:
                                                                             bitNumber);
   }
 
+  template<PeripheralAHB1 peripheral>
+  static void resetPeripheralOnAHB1(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = ahb1ToBitNumber.at(peripheral);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1rstr, bitNumber);
+  }
+
+  template<PeripheralAPB1 peripheral>
+  static void resetPeripheralOnAPB1(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = apb1ToBitNumber.at(peripheral);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::apb1rstr, bitNumber);
+  }
+
 private:
   static constexpr StaticMap<PeripheralAHB1, RegisterType, 9> ahb1ToBitNumber{ { { { PeripheralAHB1::GPIOA, 0 },
                                                                                    { PeripheralAHB1::GPIOB, 1 },
