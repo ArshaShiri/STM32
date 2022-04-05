@@ -142,6 +142,41 @@ public:
                                                                        alternateFunctionValue << numberOfShifts);
   }
 
+  template<PinType pinNumber>
+  static bool readInputPin(const RegisterAddressType baseRegisterAddress)
+  {
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(baseRegisterAddress + Offsets::idr,
+                                                                               pinNumber);
+  }
+
+  static RegisterAddressType readInputPort(const RegisterAddressType baseRegisterAddress)
+  {
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(baseRegisterAddress + Offsets::idr);
+  }
+
+  template<PinType pinNumber, bool set>
+  static void writeOutputPin(const RegisterAddressType baseRegisterAddress)
+  {
+    if constexpr (set)
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(baseRegisterAddress + Offsets::odr,
+                                                                          pinNumber);
+    else
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(baseRegisterAddress + Offsets::odr,
+                                                                            pinNumber);
+  }
+
+  static void writeOutputPort(const RegisterAddressType baseRegisterAddress, const RegisterAddressType value)
+  {
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::odr, value);
+  }
+
+  template<PinType pinNumber>
+  static void toggleOutputPin(const RegisterAddressType baseRegisterAddress)
+  {
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitToggle(baseRegisterAddress + Offsets::odr,
+                                                                           pinNumber);
+  }
+
 private:
   static constexpr StaticMap<PortMode, RegisterAddressType, 4> portModeToValue{
     { { { PortMode::input, 0b00 },
@@ -187,17 +222,6 @@ private:
   };
 
   static constexpr auto numberOfPins = 16;
-};
-
-
-class GPIORegistersTarget
-{
-public:
-  template<PortMode mode, PinType pinNumber>
-  static void setPortMode(const RegisterType baseRegisterAddress)
-  {
-    GPIORegisters<RegisterType>::setPortMode<mode, pinNumber>(baseRegisterAddress);
-  }
 };
 
 #endif /* GPIOREGISTERS */

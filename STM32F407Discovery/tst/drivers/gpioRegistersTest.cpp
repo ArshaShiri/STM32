@@ -22,6 +22,8 @@ protected:
   [[nodiscard]] RegisterType getValueOfOutputTypeRegister() const { return gpioRegisterSet.at(1); }
   [[nodiscard]] RegisterType getValueOfOutputSpeedRegister() const { return gpioRegisterSet.at(2); }
   [[nodiscard]] RegisterType getValueOfPullupPullDownRegister() const { return gpioRegisterSet.at(3); }
+  [[nodiscard]] RegisterType getValueOfInputRegister() const { return gpioRegisterSet.at(4); }
+  [[nodiscard]] RegisterType getValueOfOutputRegister() const { return gpioRegisterSet.at(5); }
   [[nodiscard]] RegisterType getValueOfAlternateFunctionLowRegister() const { return gpioRegisterSet.at(8); }
   [[nodiscard]] RegisterType getValueOfAlternateFunctionHighRegister() const { return gpioRegisterSet.at(9); }
 
@@ -171,4 +173,56 @@ TEST_F(GPIORegisterTest, setAlternateFunctionHighToAF6) // NOLINT: Static storag
   const auto numberOfShifts = UINT32_C((pinNumber - numberOfPinsPerRegister) * 4);
   const auto expectedValue = UINT32_C(0b0110) << numberOfShifts;
   EXPECT_EQ(getValueOfAlternateFunctionHighRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, readInputPin) // NOLINT: Static storage warning.
+{
+  const auto pinNumber = 13;
+  const auto inputRegisterIdx = 4;
+
+  gpioRegisterSet.at(inputRegisterIdx) = (0b1 << pinNumber);
+  EXPECT_TRUE(GPIORegisters<RegisterTypeHost>::readInputPin<pinNumber>(registerSetBaseAddressValue));
+  EXPECT_FALSE(GPIORegisters<RegisterTypeHost>::readInputPin<pinNumber - 4>(registerSetBaseAddressValue));
+}
+
+TEST_F(GPIORegisterTest, readInputPort) // NOLINT: Static storage warning.
+{
+  const auto inputRegisterIdx = 4;
+  const auto expectedValue = 458514;
+  gpioRegisterSet.at(inputRegisterIdx) = expectedValue;
+
+  EXPECT_EQ(GPIORegisters<RegisterTypeHost>::readInputPort(registerSetBaseAddressValue), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, writeOutputPin) // NOLINT: Static storage warning.
+{
+  const auto numberOfShifts = 6;
+
+  auto expectedValue = UINT32_C(1) << numberOfShifts;
+  GPIORegisters<RegisterTypeHost>::writeOutputPin<numberOfShifts, true>(registerSetBaseAddressValue);
+  EXPECT_EQ(getValueOfOutputRegister(), expectedValue);
+
+  expectedValue = UINT32_C(0);
+  GPIORegisters<RegisterTypeHost>::writeOutputPin<numberOfShifts, false>(registerSetBaseAddressValue);
+  EXPECT_EQ(getValueOfOutputRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, writeOutputPort) // NOLINT: Static storage warning.
+{
+  const auto expectedValue = UINT32_C(458514);
+  GPIORegisters<RegisterTypeHost>::writeOutputPort(registerSetBaseAddressValue, expectedValue);
+  EXPECT_EQ(getValueOfOutputRegister(), expectedValue);
+}
+
+TEST_F(GPIORegisterTest, toggleOutputPin) // NOLINT: Static storage warning.
+{
+  const auto numberOfShifts = 6;
+
+  auto expectedValue = UINT32_C(1) << numberOfShifts;
+  GPIORegisters<RegisterTypeHost>::toggleOutputPin<numberOfShifts>(registerSetBaseAddressValue);
+  EXPECT_EQ(getValueOfOutputRegister(), expectedValue);
+
+  expectedValue = UINT32_C(0);
+  GPIORegisters<RegisterTypeHost>::toggleOutputPin<numberOfShifts>(registerSetBaseAddressValue);
+  EXPECT_EQ(getValueOfOutputRegister(), expectedValue);
 }
