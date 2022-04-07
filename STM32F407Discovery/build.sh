@@ -4,6 +4,7 @@ printManual() {
 	echo ""
 	echo -t "\t-t Build for target."
 	echo -h "\t-h Build for host."
+	echo -a "\t-a Build all."
 	echo -r "\t-r Rebuild"
 	exit 1
 }
@@ -13,11 +14,12 @@ if [ $# -eq 0 ]; then
 	exit
 fi
 
-while getopts :htr flag; do
+while getopts :htra flag; do
 	case "${flag}" in
 	t) buildForTarget=true ;;
 	h) buildForHost=true ;;
 	r) rebuild=true ;;
+	a) buildForTarget=true buildForHost=true ;;
 	\?)
 		printManual
 		exit
@@ -40,7 +42,7 @@ if [ "$buildForHost" = true ]; then
 
 	buildHostDir="$buildDir/host"
 	mkdir -p $buildHostDir
-	cmake -S ./ -B $buildHostDir -DCMAKE_TOOLCHAIN_FILE=./cmake/hostToolchainForUnitTesting.cmake
+	cmake -S ./ -B $buildHostDir -DCMAKE_TOOLCHAIN_FILE=./cmake/hostToolchainForUnitTesting.cmake -DBUILD_TESTS=ON
 	cd $buildHostDir
 	make
 fi
@@ -50,7 +52,7 @@ if [ "$buildForTarget" = true ]; then
 
 	buildTargetDir="$buildDir/target"
 	mkdir $buildTargetDir
-	cmake -S ./ -B $buildTargetDir -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake
+	cmake -S ./ -B $buildTargetDir -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
 	cd $buildTargetDir
 	make
 fi
