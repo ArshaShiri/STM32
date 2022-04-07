@@ -25,7 +25,7 @@ SECTIONS
   load_address_of_data = LOADADDR(.data);
   .data :
   {
-    start_of_data = .; /* Assign a value to the symbol 'start_of_data' The value equals to VMA which is SRAM*/
+    start_of_data = .; /* Assign a value to the symbol 'start_of_data'  The value equals to VMA which is SRAM*/
     *(.data)
     *(.data.*)
     . = ALIGN(4);

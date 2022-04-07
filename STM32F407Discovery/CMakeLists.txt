@@ -1,15 +1,14 @@
 cmake_minimum_required(VERSION 3.2)
 project(STM32F407 CXX)
-enable_testing()
+
+option(BUILD_TESTS "Build tests" OFF)
+option(BUILD_TARGET "Build target" OFF)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
+#set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
-
-# Adding the target-specific CMake file.
-#include(target.cmake)
 
 #Setting up flags for the linker and compiler.
 set(CMAKE_CXX_FLAGS
@@ -21,13 +20,18 @@ set(CMAKE_EXE_LINKER_FLAGS
     CACHE STRING "" FORCE)
 
 # Adding the src:
-#add_subdirectory(src)
+if(BUILD_TARGET)
+  set(CMAKE_EXECUTABLE_SUFFIX .elf)
+endif()
 
-# Adding the tests:
-option(BUILD_TESTS "Build tests" ON)
+add_subdirectory(src)
+
+# Adding the tests.
 if(BUILD_TESTS)
+  enable_testing()
   add_subdirectory(tst)
 endif()
+
 
 # # src/tests/CMakeLists.txt
 # include(ExternalProject)

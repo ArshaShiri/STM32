@@ -16,8 +16,9 @@ struct StaticMap
     const auto it = std::find_if(data.begin(), data.end(), [&key](const auto &pair) { return pair.first == key; });
     if (it != data.end())
       return it->second;
-    else
-      throw std::range_error("Not found in static map!");
+    // Had to comment this out since the target code cannot have exception handling!
+    // else
+    //   throw std::range_error("Not found in static map!");
   }
 };
 
