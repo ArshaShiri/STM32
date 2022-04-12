@@ -1,17 +1,43 @@
+#include <algorithm>
 #include <array>
 #include <cstdint>
 
-static constexpr auto SRAM_START = 0x20000000U;
-static constexpr auto SRAM_SIZE = 128U * 1024U;
-static constexpr auto SRAM_END = SRAM_START + SRAM_SIZE;
-static constexpr auto STACK_START = SRAM_END;
+using FunctionType = void (*)();
 
+extern "C" {
 extern std::uint32_t end_of_text; // NOLINT
 extern std::uint32_t start_of_data; // NOLINT
 extern std::uint32_t end_of_data; // NOLINT
 extern std::uint32_t start_of_bss; // NOLINT
 extern std::uint32_t end_of_bss; // NOLINT
 extern std::uint32_t load_address_of_data; // NOLINT
+extern FunctionType start_of_constructors[];
+extern FunctionType end_of_constructors[];
+}
+
+namespace
+{
+void initializeRam()
+{
+  // Copy data section in SRAM
+  const std::uint32_t sizeOfDataSection = static_cast<uint32_t>(&end_of_data - &start_of_data);
+
+  std::copy(&load_address_of_data, &load_address_of_data + sizeOfDataSection, &start_of_data);
+
+  // Initialize the .bss section to zero in SRAM
+  std::fill(&start_of_bss, &end_of_bss, static_cast<std::uint32_t>(0U));
+}
+
+void initializeConstructors()
+{
+  std::for_each(start_of_constructors, end_of_constructors, [](FunctionType &constructor) { constructor(); });
+}
+} // namespace
+
+static constexpr auto SRAM_START = 0x20000000U;
+static constexpr auto SRAM_SIZE = 128U * 1024U;
+static constexpr auto SRAM_END = SRAM_START + SRAM_SIZE;
+static constexpr auto STACK_START = SRAM_END;
 
 int main();
 
@@ -766,25 +792,8 @@ extern "C" const volatile std::array<isr_type, number_of_interrupts> isr_vector
 // First function that is executed.
 void Reset_Handler()
 {
-  // Copy data section in SRAM
-  const std::uint32_t sizeOfDataSection = static_cast<uint32_t>(&end_of_data - &start_of_data);
-
-  std::uint8_t *pDestination = reinterpret_cast<std::uint8_t *>(&start_of_data); // // NOLINT  SRAM
-  std::uint8_t *pSource = reinterpret_cast<std::uint8_t *>(&load_address_of_data); // NOLINT Flash
-
-  for (std::uint32_t i = 0; i < sizeOfDataSection; i++)
-  {
-    *pDestination++ = *pSource++; // NOLINT
-  }
-
-  // Initialize the .bss section to zero in SRAM
-  const std::uint32_t sizeOfBssSection = static_cast<uint32_t>(&end_of_bss - &start_of_bss);
-  pDestination = reinterpret_cast<std::uint8_t *>(&start_of_bss); // NOLINT
-
-  for (uint32_t i = 0; i < sizeOfBssSection; i++)
-  {
-    *pDestination++ = 0; // NOLINT
-  }
+  initializeRam();
+  initializeConstructors();
 
   // Call main
   // Jump to main (and never return).

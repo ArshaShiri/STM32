@@ -54,5 +54,5 @@ if [ "$buildForTarget" = true ]; then
 	mkdir $buildTargetDir
 	cmake -S ./ -B $buildTargetDir -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
 	cd $buildTargetDir
-	make
+	make -j8
 fi

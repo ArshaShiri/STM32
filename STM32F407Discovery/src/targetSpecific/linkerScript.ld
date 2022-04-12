@@ -11,6 +11,10 @@ SECTIONS
 {
   .text :
   {
+    start_of_constructors = .;
+    KEEP(*(SORT(.init_array.*)))
+    KEEP(*(.init_array*))
+    end_of_constructors = .;
     *(.isr_vector)
     *(.text) /* Merge the text section of all input files */
     *(.text.*) /* Merge the text section the std lib that have names like text.something. See the effect of this by runnuin arm-none-eabi-objdump -h final.elf with and without this section.*/
