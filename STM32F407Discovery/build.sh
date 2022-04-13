@@ -55,4 +55,7 @@ if [ "$buildForTarget" = true ]; then
 	cmake -S ./ -B $buildTargetDir -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
 	cd $buildTargetDir
 	make -j8
+
+	echo "Creating bin files"
+    find $buildTargetDir -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
 fi
