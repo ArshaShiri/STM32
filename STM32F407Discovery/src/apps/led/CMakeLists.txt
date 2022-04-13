@@ -1,5 +1,5 @@
-set(NAMEOFAPP led)
+set(NAME_OF_APP led)
 
-add_executable(${NAMEOFAPP} led.cpp ${CMAKE_SOURCE_DIR}/src/targetSpecific/startup.cpp)
+add_executable(${NAME_OF_APP} led.cpp ${CMAKE_SOURCE_DIR}/src/targetSpecific/startup.cpp)
 
-target_include_directories(${NAMEOFAPP} PUBLIC "${PROJECT_SOURCE_DIR}/src")
+target_include_directories(${NAME_OF_APP} PUBLIC "${PROJECT_SOURCE_DIR}/src")
