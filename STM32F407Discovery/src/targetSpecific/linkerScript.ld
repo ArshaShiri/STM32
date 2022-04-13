@@ -11,11 +11,11 @@ SECTIONS
 {
   .text :
   {
+    *(.isr_vector)
     start_of_constructors = .;
     KEEP(*(SORT(.init_array.*)))
     KEEP(*(.init_array*))
-    end_of_constructors = .;
-    *(.isr_vector)
+    end_of_constructors = .;    
     *(.text) /* Merge the text section of all input files */
     *(.text.*) /* Merge the text section the std lib that have names like text.something. See the effect of this by runnuin arm-none-eabi-objdump -h final.elf with and without this section.*/
     *(.init)
@@ -29,7 +29,7 @@ SECTIONS
   load_address_of_data = LOADADDR(.data);
   .data :
   {
-    start_of_data = .; /* Assign a value to the symbol 'start_of_data'  The value equals to VMA which is SRAM*/
+    start_of_data = .; /* Assign a value to the symbol 'start_of_data' The value equals to VMA which is SRAM*/
     *(.data)
     *(.data.*)
     . = ALIGN(4);
