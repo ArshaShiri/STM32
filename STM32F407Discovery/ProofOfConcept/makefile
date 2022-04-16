@@ -34,6 +34,9 @@ clean:
 load:
 	openocd -f board/stm32f4discovery.cfg
 
+loadbin:
+	st-flash --reset write final.bin 0x08000000
+
 artifacts:
 	arm-none-eabi-objcopy -O binary final.elf final.bin
 	arm-none-eabi-objdump -h *.elf > objdump.out
