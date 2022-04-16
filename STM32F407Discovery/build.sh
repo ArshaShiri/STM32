@@ -6,6 +6,7 @@ printManual() {
 	echo -h "\t-h Build for host."
 	echo -a "\t-a Build all."
 	echo -r "\t-r Rebuild"
+	echo -d "\t-r Rebuild"
 	exit 1
 }
 
@@ -14,12 +15,13 @@ if [ $# -eq 0 ]; then
 	exit
 fi
 
-while getopts :htra flag; do
+while getopts :htrad flag; do
 	case "${flag}" in
 	t) buildForTarget=true ;;
 	h) buildForHost=true ;;
-	r) rebuild=true ;;
 	a) buildForTarget=true buildForHost=true ;;
+	r) rebuild=true ;;
+	d) debug=true ;;
 	\?)
 		printManual
 		exit
@@ -52,7 +54,14 @@ if [ "$buildForTarget" = true ]; then
 
 	buildTargetDir="$buildDir/target"
 	mkdir $buildTargetDir
-	cmake -S ./ -B $buildTargetDir -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
+
+	if [ "$debug" = true ]; then
+		cmake -S ./ -B $buildTargetDir -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
+	else
+		echo "Default release build"
+		cmake -S ./ -B $buildTargetDir -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=./cmake/targetToolchain.cmake -DBUILD_TARGET=ON
+	fi
+
 	cd $buildTargetDir
 	make -j8
 
