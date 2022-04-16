@@ -5,7 +5,8 @@ namespace
 {
 void delay()
 {
-  for (volatile auto i = size_t{ 0 }; i < 500000; ++i)
+  auto i = size_t{ 0 };
+  for ([[maybe_unused]] volatile size_t counter = 0; i < 500000; counter = i, ++i)
   {
   }
 }
