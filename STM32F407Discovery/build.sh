@@ -57,5 +57,8 @@ if [ "$buildForTarget" = true ]; then
 	make -j8
 
 	echo "Creating bin files"
-    find $buildTargetDir -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
+
+	echo "Creating object dumpt files"
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -h "$1" >"${1%/*.elf}"/objdump.out' sh {} \;
 fi
