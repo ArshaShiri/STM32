@@ -29,7 +29,11 @@ finalsh.elf:main.o startup.o
 	$(CC) $(LDFLAGSSEMIHOSTING) -o $@ $^	
 
 clean:
-	rm -rf *.o *.elf *.map *.bin
+	rm -rf *.o *.elf *.map *.bin *.out
 
 load:
 	openocd -f board/stm32f4discovery.cfg
+
+artifacts:
+	find ./ -maxdepth 1 -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
+	arm-none-eabi-objdump -h *.elf > objdump.out
