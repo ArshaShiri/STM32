@@ -5,7 +5,7 @@ namespace
 {
 void delay()
 {
-  for (auto i = size_t{ 0 }; i < 500000; ++i)
+  for (volatile auto i = size_t{ 0 }; i < 500000; ++i)
   {
   }
 }

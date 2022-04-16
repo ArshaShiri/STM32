@@ -1,5 +1,5 @@
-#ifndef GPIOREGISTERS
-#define GPIOREGISTERS
+#ifndef SRC_TARGETSPECIFIC_GPIOREGISTERS
+#define SRC_TARGETSPECIFIC_GPIOREGISTERS
 
 #include "registerType.h"
 #include "registersBaseAddresses.h"
@@ -224,4 +224,4 @@ private:
   static constexpr auto numberOfPins = 16;
 };
 
-#endif /* GPIOREGISTERS */
+#endif /* SRC_TARGETSPECIFIC_GPIOREGISTERS */
