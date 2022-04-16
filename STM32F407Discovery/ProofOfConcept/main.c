@@ -26,9 +26,9 @@
 
 int main(void)
 {
-	uint32_t *pClockControRegister = (uint32_t*)0x40023830;
-	uint32_t *pPortDModeTypeRegister = (uint32_t*)0x40020C00;
-	uint32_t *pPortDOudRegister = (uint32_t*)0x40020C14;
+	volatile uint32_t *pClockControRegister = (uint32_t*)0x40023830;
+	volatile uint32_t *pPortDModeTypeRegister = (uint32_t*)0x40020C00;
+	volatile uint32_t *pPortDOudRegister = (uint32_t*)0x40020C14;
 
 	// Enable the clock for GPIOD peripheral in the AHB1ENR (Set the 3rd bit position)
 	*pClockControRegister |= (1 << 3);
