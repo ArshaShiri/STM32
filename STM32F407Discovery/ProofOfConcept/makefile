@@ -1,7 +1,7 @@
 CC=arm-none-eabi-gcc
 MACHINE=cortex-m4
 #DEBUG = 1
-CFLAGS=-c -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft -std=gnu11 -Wall -O0
+CFLAGS=-c -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft -std=gnu11 -Wall -O3
 # ifeq ($(DEBUG), 1)
 # CFLAGS += -g3 -gdwarf-2 # original: -g
 # endif
