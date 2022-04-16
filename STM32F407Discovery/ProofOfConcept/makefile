@@ -8,7 +8,7 @@ CFLAGS=-c -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft -std=gnu11 -Wall -O0
 LDFLAGS= -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft --specs=nano.specs -T linkerScript.ld -Wl,-Map=final.map
 LDFLAGSSEMIHOSTING= -mcpu=$(MACHINE) -mthumb -mfloat-abi=soft --specs=rdimon.specs -T linkerScript.ld -Wl,-Map=final.map
 
-all:main.o startup.o syscalls.o final.elf
+all:main.o startup.o syscalls.o final.elf artifacts
 
 semi:main.o startup.o syscalls.o finalsh.elf
 
