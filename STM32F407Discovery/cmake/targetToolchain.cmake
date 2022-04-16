@@ -67,7 +67,7 @@ set(CMAKE_CXX_FLAGS_INIT
 string(REPLACE "\n" " " CMAKE_CXX_FLAGS_INIT "${CMAKE_CXX_FLAGS_INIT}")
 
 set(CMAKE_EXE_LINKER_FLAGS_INIT
-    "${COMMON_FLAGS} -T ${CMAKE_SOURCE_DIR}/src/targetSpecific/linkerScript.ld -Wl,-Map=final.map")
+    "${COMMON_FLAGS} -T ${CMAKE_SOURCE_DIR}/src/targetSpecific/linkerScript.ld -Wl,-Map=memroy.map")
 
 # get rid of -rdynamic
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)
