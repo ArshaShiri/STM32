@@ -45,14 +45,6 @@ int main(void)
 	*pPortDModeTypeRegister |= (1 << 28);
 	*pPortDModeTypeRegister |= (1 << 30);
 
-
-	// Set the 12th bit of the output data register to make I/O pin 12 high.
-	*pPortDOudRegister |= (1 << 12);
-	*pPortDOudRegister |= (1 << 13);
-	*pPortDOudRegister |= (1 << 14);
-	*pPortDOudRegister |= (1 << 15);
-
-
     /* Loop forever */
 	for(long long i = 0; i > -1; ++i)
 	{
