@@ -4,52 +4,48 @@
 #include "targetSpecific/registers/gpioRegisters.h"
 #include "targetSpecific/registers/rccRegisters.h"
 
+template<RegisterType baseRegisterAddress>
 class GPIO
 {
-private:
-  RegisterType baseRegisterAddress;
-
 public:
-  GPIO(RegisterType baseRegisterAddressOfGPIO) : baseRegisterAddress{ baseRegisterAddressOfGPIO } {}
-
   template<PeripheralAHB1 gpio, bool set>
-  void setClock()
+  static void setClock()
   {
     RCCRegistersTarget::setPeripheralOnAHB1<gpio, set>();
   }
 
   template<PortMode mode, PinType pinNumber>
-  void setPortMode()
+  static void setPortMode()
   {
     GPIORegisters<RegisterType>::setPortMode<mode, pinNumber>(baseRegisterAddress);
   }
 
   template<OutputType type, PinType pinNumber>
-  void setOutputType()
+  static void setOutputType()
   {
     GPIORegisters<RegisterType>::setOutputType<type, pinNumber>(baseRegisterAddress);
   }
 
   template<OutputSpeed speed, PinType pinNumber>
-  void setOutputSpeed()
+  static void setOutputSpeed()
   {
     GPIORegisters<RegisterType>::setOutputSpeed<speed, pinNumber>(baseRegisterAddress);
   }
 
   template<PullupPullDownControl type, PinType pinNumber>
-  void setPullupPullDown()
+  static void setPullupPullDown()
   {
     GPIORegisters<RegisterType>::setPullupPullDown<type, pinNumber>(baseRegisterAddress);
   }
 
   template<AlternateFunction function, PinType pinNumber>
-  void setAlternateFunction()
+  static void setAlternateFunction()
   {
     GPIORegisters<RegisterType>::setAlternateFunction<function, pinNumber>(baseRegisterAddress);
   }
 
   template<PeripheralAHB1 gpio>
-  void reset()
+  static void reset()
   {
     RCCRegistersTarget::resetPeripheralOnAHB1<gpio>();
   }
@@ -63,18 +59,18 @@ public:
   RegisterType readInputPort() { return GPIORegisters<RegisterType>::readInputPort(baseRegisterAddress); }
 
   template<PinType pinNumber, bool set>
-  void writeOutputPin()
+  static void writeOutputPin()
   {
     GPIORegisters<RegisterType>::writeOutputPin<pinNumber, set>(baseRegisterAddress);
   }
 
-  void writeOutputPort(const RegisterType value)
+  static void writeOutputPort(const RegisterType value)
   {
     GPIORegisters<RegisterType>::writeOutputPort(baseRegisterAddress, value);
   }
 
   template<PinType pinNumber>
-  void toggleOutputPin()
+  static void toggleOutputPin()
   {
     GPIORegisters<RegisterType>::toggleOutputPin<pinNumber>(baseRegisterAddress);
   }

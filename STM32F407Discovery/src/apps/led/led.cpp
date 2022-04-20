@@ -15,17 +15,17 @@ void delay()
 int main()
 {
   constexpr auto pinNumber = 12;
+  using gpioD = GPIO<BaseAddresses::gpioD>;
 
-  auto gpio = GPIO(BaseAddresses::gpioD);
-  gpio.setClock<PeripheralAHB1::GPIOD, true>();
-  gpio.setPortMode<PortMode::generalpurposeOutput, pinNumber>();
-  gpio.setOutputSpeed<OutputSpeed::high, pinNumber>();
-  gpio.setOutputType<OutputType::pushPull, pinNumber>();
-  gpio.setPullupPullDown<PullupPullDownControl::noPullupPullDown, pinNumber>();
+  gpioD::setClock<PeripheralAHB1::GPIOD, true>();
+  gpioD::setPortMode<PortMode::generalpurposeOutput, pinNumber>();
+  gpioD::setOutputSpeed<OutputSpeed::high, pinNumber>();
+  gpioD::setOutputType<OutputType::pushPull, pinNumber>();
+  gpioD::setPullupPullDown<PullupPullDownControl::noPullupPullDown, pinNumber>();
 
   while (true)
   {
-    gpio.toggleOutputPin<pinNumber>();
+    gpioD::toggleOutputPin<pinNumber>();
     delay();
   }
 
