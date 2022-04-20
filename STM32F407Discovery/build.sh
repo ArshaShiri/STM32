@@ -69,5 +69,7 @@ if [ "$buildForTarget" = true ]; then
 	find $buildTargetDir -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
 
 	echo "Creating object dumpt files"
-	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -h "$1" >"${1%/*.elf}"/objdump.out' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -h "$1" >"${1%/*.elf}"/objdump.headers' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -D "$1" >"${1%/*.elf}"/objdump.disassemble' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -d "$1" >"${1%/*.elf}"/objdump.disassembleExe' sh {} \;
 fi

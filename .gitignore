@@ -18,6 +18,8 @@ STM32F407Discovery/build/target/src/apps/CMakeFiles/*
 
 STM32F407Discovery/build/target/src/apps/led/*.*
 !STM32F407Discovery/build/target/src/apps/led/*.map
-!STM32F407Discovery/build/target/src/apps/led/*.out
+!STM32F407Discovery/build/target/src/apps/led/*.headers
+!STM32F407Discovery/build/target/src/apps/led/*.disassemble
+!STM32F407Discovery/build/target/src/apps/led/*.disassembleExe
 STM32F407Discovery/build/target/src/apps/led/Makefile
 STM32F407Discovery/build/target/src/apps/led/CMakeFiles/*
