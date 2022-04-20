@@ -51,7 +51,7 @@ public:
   }
 
   template<PinType pinNumber>
-  bool readInputPin()
+  static bool readInputPin()
   {
     return GPIORegisters<RegisterType>::readInputPin<pinNumber>(baseRegisterAddress);
   }
