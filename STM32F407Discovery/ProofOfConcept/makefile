@@ -39,4 +39,6 @@ loadbin:
 
 artifacts:
 	arm-none-eabi-objcopy -O binary final.elf final.bin
-	arm-none-eabi-objdump -h *.elf > objdump.out
+	arm-none-eabi-objdump -h *.elf > objdump.headers
+	arm-none-eabi-objdump -D *.elf > objdump.disassemble
+	arm-none-eabi-objdump -d *.elf > objdump.disassembleExe
