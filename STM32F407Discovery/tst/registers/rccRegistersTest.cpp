@@ -1,7 +1,7 @@
 
 #include <gtest/gtest.h>
 
-#include "targetSpecific/rccRegisters.h"
+#include "targetSpecific/registers/rccRegisters.h"
 
 class RCCRegisterTest : public ::testing::Test
 {

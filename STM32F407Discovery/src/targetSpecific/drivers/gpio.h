@@ -1,8 +1,8 @@
 #ifndef SRC_TARGETSPECIFIC_DRIVERS_GPIO
 #define SRC_TARGETSPECIFIC_DRIVERS_GPIO
 
-#include "targetSpecific/gpioRegisters.h"
-#include "targetSpecific/rccRegisters.h"
+#include "targetSpecific/registers/gpioRegisters.h"
+#include "targetSpecific/registers/rccRegisters.h"
 
 class GPIO
 {

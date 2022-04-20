@@ -1,5 +1,5 @@
 #include "targetSpecific/drivers/gpio.h"
-#include "targetSpecific/registersBaseAddresses.h"
+#include "targetSpecific/registers/registersBaseAddresses.h"
 
 namespace
 {

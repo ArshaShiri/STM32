@@ -1,7 +1,7 @@
 #ifndef REGISTERACCESS
 #define REGISTERACCESS
 
-#include "targetSpecific/registerType.h"
+#include "targetSpecific/registers/registerType.h"
 
 template<typename RegisterAddressType, typename RegisterValueType>
 struct RegisterAccess

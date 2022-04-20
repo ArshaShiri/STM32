@@ -3,8 +3,8 @@
 
 #include <gtest/gtest.h>
 
-#include "targetSpecific/gpioRegisters.h"
-#include "targetSpecific/registerType.h"
+#include "targetSpecific/registers/gpioRegisters.h"
+#include "targetSpecific/registers/registerType.h"
 
 class GPIORegisterTest : public ::testing::Test
 {
