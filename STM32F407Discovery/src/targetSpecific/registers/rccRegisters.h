@@ -1,5 +1,5 @@
-#ifndef RCCREGISTERS
-#define RCCREGISTERS
+#ifndef SRC_TARGETSPECIFIC_REGISTERS_RCCREGISTERS
+#define SRC_TARGETSPECIFIC_REGISTERS_RCCREGISTERS
 
 #include "registerType.h"
 #include "registersBaseAddresses.h"
@@ -160,4 +160,4 @@ private:
   static constexpr auto rccBaseAddress = BaseAddresses::rcc;
 };
 
-#endif /* RCCREGISTERS */
+#endif /* SRC_TARGETSPECIFIC_REGISTERS_RCCREGISTERS */

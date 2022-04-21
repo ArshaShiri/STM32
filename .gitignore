@@ -3,6 +3,7 @@ STM32F407Discovery/ProofOfConcept/C++/build/
 *.elf
 *.o
 STM32F407Discovery/.vscode/settings.json
+STM32F407Discovery/build/host/*
 
 STM32F407Discovery/build/target/*.*
 STM32F407Discovery/build/target/Makefile
