@@ -1,5 +1,5 @@
-#ifndef REGISTERS
-#define REGISTERS
+#ifndef SRC_TARGETSPECIFIC_REGISTERS_REGISTERSBASEADDRESSES
+#define SRC_TARGETSPECIFIC_REGISTERS_REGISTERSBASEADDRESSES
 
 #include "registerType.h"
 class BaseAddresses
@@ -86,4 +86,4 @@ public:
   static constexpr RegisterType exti = apb2 + APB2Offset::exti;
 };
 
-#endif /* REGISTERS */
+#endif /* SRC_TARGETSPECIFIC_REGISTERS_REGISTERSBASEADDRESSES */
