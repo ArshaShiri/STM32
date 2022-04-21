@@ -1,16 +1,6 @@
 #include "targetSpecific/drivers/gpio.h"
 #include "targetSpecific/registers/registersBaseAddresses.h"
-
-namespace
-{
-void delay()
-{
-  auto i = size_t{ 0 };
-  for ([[maybe_unused]] volatile size_t counter = 0; i < 500000; counter = i, ++i)
-  {
-  }
-}
-} // namespace
+#include "utils/helpers.h"
 
 int main()
 {
@@ -26,7 +16,7 @@ int main()
   while (true)
   {
     gpioD::toggleOutputPin<pinNumber>();
-    delay();
+    softwareDelay<500000>();
   }
 
   return 0;

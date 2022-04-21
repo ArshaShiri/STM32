@@ -22,4 +22,13 @@ struct StaticMap
   }
 };
 
+template<size_t delayCounter>
+void softwareDelay()
+{
+  auto i = size_t{ 0 };
+  for ([[maybe_unused]] volatile size_t counter = 0; i < delayCounter; counter = i, ++i)
+  {
+  }
+}
+
 #endif /* HELPERS */
