@@ -31,10 +31,19 @@ done
 
 scriptDir=$PWD
 buildDir="$PWD/build"
+buildHostDir="$buildDir/host"
+buildTargetDir="$buildDir/target"
 
 if [ "$rebuild" = true ]; then
-	echo "Removing build directory."
-	rm -rf $buildDir
+	if [ "$buildForHost" = true ]; then
+		echo "Removing build host directory."
+		rm -rf $buildHostDir
+	fi
+
+	if [ "$buildForTarget" = true ]; then
+		echo "Removing build target directory."
+		rm -rf $buildTargetDir
+	fi
 fi
 
 mkdir -p $buildDir
@@ -42,7 +51,6 @@ mkdir -p $buildDir
 if [ "$buildForHost" = true ]; then
 	echo "Building for host:"
 
-	buildHostDir="$buildDir/host"
 	mkdir -p $buildHostDir
 	cmake -S ./ -B $buildHostDir -DCMAKE_TOOLCHAIN_FILE=./cmake/hostToolchainForUnitTesting.cmake -DBUILD_TESTS=ON
 	cd $buildHostDir
@@ -52,7 +60,6 @@ fi
 if [ "$buildForTarget" = true ]; then
 	echo "Building for target:"
 
-	buildTargetDir="$buildDir/target"
 	mkdir $buildTargetDir
 
 	if [ "$debug" = true ]; then
