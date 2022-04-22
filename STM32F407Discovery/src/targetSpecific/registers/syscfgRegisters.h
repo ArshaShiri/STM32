@@ -109,6 +109,23 @@ class SYSCFGRegistersTarget
 {
 public:
   template<InputPort inputPort, PinType pin>
+  static void setExternalInterruptConfigurationRegister()
+  {
+    static constexpr auto numberOfEXTIRegisters = 4;
+    static constexpr auto regNumer = pin % numberOfEXTIRegisters;
+
+    if constexpr (regNumer == 0)
+      setExternalInterruptConfigurationRegister1<inputPort, pin>(syscfgBaseAddress);
+    if constexpr (regNumer == 1)
+      setExternalInterruptConfigurationRegister2<inputPort, pin>(syscfgBaseAddress);
+    if constexpr (regNumer == 2)
+      setExternalInterruptConfigurationRegister3<inputPort, pin>(syscfgBaseAddress);
+    else
+      setExternalInterruptConfigurationRegister4<inputPort, pin>(syscfgBaseAddress);
+  }
+
+private:
+  template<InputPort inputPort, PinType pin>
   static void setExternalInterruptConfigurationRegister1()
   {
     SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister1<inputPort, pin>(syscfgBaseAddress);
@@ -132,7 +149,6 @@ public:
     SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister4<inputPort, pin>(syscfgBaseAddress);
   }
 
-private:
   static constexpr auto syscfgBaseAddress = BaseAddresses::syscfg;
 };
 
