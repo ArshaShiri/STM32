@@ -113,5 +113,4 @@ private:
   static constexpr auto extiBaseAddress = BaseAddresses::exti;
 };
 
-
 #endif /* SRC_TARGETSPECIFIC_REGISTERS_EXTIREGISTERS */

@@ -37,53 +37,51 @@ class SYSCFGRegisters
     static constexpr RegisterType cmpcr = UINT32_C(0x20);
   };
 
-  static constexpr auto exti1PinLowerBound = 0;
-  static constexpr auto exti1PinUpperBound = 3;
-
-  static constexpr auto exti2PinLowerBound = 4;
-  static constexpr auto exti2PinUpperBound = 7;
-
-  static constexpr auto exti3PinLowerBound = 8;
-  static constexpr auto exti3PinUpperBound = 11;
-
-  static constexpr auto exti4PinLowerBound = 12;
-  static constexpr auto exti4PinUpperBound = 15;
+  static constexpr auto numberOfPins = 16;
 
 public:
   template<InputPort inputPort, PinType pin>
-  requires((exti1PinLowerBound <= pin) &&
-           (pin <= exti1PinUpperBound)) static void setExternalInterruptConfigurationRegister1(const RegisterAddressType
-                                                                                                 syscfgBaseAddress)
+  requires(pin < numberOfPins) static void setExternalInterruptConfigurationRegister(
+    const RegisterAddressType syscfgBaseAddress)
+  {
+    static constexpr auto numberOfEXTIRegisters = 4;
+    static constexpr auto regNumer = pin / numberOfEXTIRegisters;
+
+    if constexpr (regNumer == 0)
+      setExternalInterruptConfigurationRegister1<inputPort, pin>(syscfgBaseAddress);
+    if constexpr (regNumer == 1)
+      setExternalInterruptConfigurationRegister2<inputPort, pin>(syscfgBaseAddress);
+    if constexpr (regNumer == 2)
+      setExternalInterruptConfigurationRegister3<inputPort, pin>(syscfgBaseAddress);
+    else
+      setExternalInterruptConfigurationRegister4<inputPort, pin>(syscfgBaseAddress);
+  }
+
+private:
+  template<InputPort inputPort, PinType pin>
+  static void setExternalInterruptConfigurationRegister1(const RegisterAddressType syscfgBaseAddress)
   {
     doSet<inputPortToBits.at(inputPort), pin, Offsets::exticr1>(syscfgBaseAddress);
   }
 
   template<InputPort inputPort, PinType pin>
-  requires((exti2PinLowerBound <= pin) &&
-           (pin <= exti2PinUpperBound)) static void setExternalInterruptConfigurationRegister2(const RegisterAddressType
-                                                                                                 syscfgBaseAddress)
+  static void setExternalInterruptConfigurationRegister2(const RegisterAddressType syscfgBaseAddress)
   {
     doSet<inputPortToBits.at(inputPort), pin, Offsets::exticr2>(syscfgBaseAddress);
   }
 
   template<InputPort inputPort, PinType pin>
-  requires((exti3PinLowerBound <= pin) &&
-           (pin <= exti3PinUpperBound)) static void setExternalInterruptConfigurationRegister3(const RegisterAddressType
-                                                                                                 syscfgBaseAddress)
+  static void setExternalInterruptConfigurationRegister3(const RegisterAddressType syscfgBaseAddress)
   {
     doSet<inputPortToBits.at(inputPort), pin, Offsets::exticr3>(syscfgBaseAddress);
   }
 
   template<InputPort inputPort, PinType pin>
-  requires((exti4PinLowerBound <= pin) &&
-           (pin <= exti4PinUpperBound)) static void setExternalInterruptConfigurationRegister4(const RegisterAddressType
-                                                                                                 syscfgBaseAddress)
+  static void setExternalInterruptConfigurationRegister4(const RegisterAddressType syscfgBaseAddress)
   {
     doSet<inputPortToBits.at(inputPort), pin, Offsets::exticr4>(syscfgBaseAddress);
   }
 
-
-private:
   template<RegisterType value, PinType pin, std::uint32_t offset>
   static void doSet(const RegisterAddressType syscfgBaseAddress)
   {
@@ -111,44 +109,10 @@ public:
   template<InputPort inputPort, PinType pin>
   static void setExternalInterruptConfigurationRegister()
   {
-    static constexpr auto numberOfEXTIRegisters = 4;
-    static constexpr auto regNumer = pin % numberOfEXTIRegisters;
-
-    if constexpr (regNumer == 0)
-      setExternalInterruptConfigurationRegister1<inputPort, pin>(syscfgBaseAddress);
-    if constexpr (regNumer == 1)
-      setExternalInterruptConfigurationRegister2<inputPort, pin>(syscfgBaseAddress);
-    if constexpr (regNumer == 2)
-      setExternalInterruptConfigurationRegister3<inputPort, pin>(syscfgBaseAddress);
-    else
-      setExternalInterruptConfigurationRegister4<inputPort, pin>(syscfgBaseAddress);
+    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister<inputPort, pin>(syscfgBaseAddress);
   }
 
 private:
-  template<InputPort inputPort, PinType pin>
-  static void setExternalInterruptConfigurationRegister1()
-  {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister1<inputPort, pin>(syscfgBaseAddress);
-  }
-
-  template<InputPort inputPort, PinType pin>
-  static void setExternalInterruptConfigurationRegister2()
-  {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister2<inputPort, pin>(syscfgBaseAddress);
-  }
-
-  template<InputPort inputPort, PinType pin>
-  static void setExternalInterruptConfigurationRegister3()
-  {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister3<inputPort, pin>(syscfgBaseAddress);
-  }
-
-  template<InputPort inputPort, PinType pin>
-  static void setExternalInterruptConfigurationRegister4()
-  {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister4<inputPort, pin>(syscfgBaseAddress);
-  }
-
   static constexpr auto syscfgBaseAddress = BaseAddresses::syscfg;
 };
 

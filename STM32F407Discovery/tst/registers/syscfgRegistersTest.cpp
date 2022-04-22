@@ -31,7 +31,7 @@ protected:
 TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister1) // NOLINT: Static storage warning.
 {
   constexpr auto pinNumber = 3;
-  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister1<InputPort::PD, pinNumber>(
+  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister<InputPort::PD, pinNumber>(
     registerSetBaseAddressValue);
   const auto numerOfShifts = 12;
   const auto expectedValue = UINT32_C(0b0011) << numerOfShifts;
@@ -41,7 +41,7 @@ TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister1) // NOLINT: 
 TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister2) // NOLINT: Static storage warning.
 {
   constexpr auto pinNumber = 5;
-  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister2<InputPort::PH, pinNumber>(
+  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister<InputPort::PH, pinNumber>(
     registerSetBaseAddressValue);
   const auto numerOfShifts = 4;
   const auto expectedValue = UINT32_C(0b0111) << numerOfShifts;
@@ -51,7 +51,7 @@ TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister2) // NOLINT: 
 TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister3) // NOLINT: Static storage warning.
 {
   constexpr auto pinNumber = 8;
-  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister3<InputPort::PE, pinNumber>(
+  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister<InputPort::PE, pinNumber>(
     registerSetBaseAddressValue);
   const auto numerOfShifts = 0;
   const auto expectedValue = UINT32_C(0b0100) << numerOfShifts;
@@ -61,7 +61,7 @@ TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister3) // NOLINT: 
 TEST_F(EXTIRegisterTest, setExternalInterruptConfigurationRegister4) // NOLINT: Static storage warning.
 {
   constexpr auto pinNumber = 13;
-  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister4<InputPort::PB, pinNumber>(
+  SYSCFGRegisters<RegisterTypeHost>::setExternalInterruptConfigurationRegister<InputPort::PB, pinNumber>(
     registerSetBaseAddressValue);
   const auto numerOfShifts = 4;
   const auto expectedValue = UINT32_C(0b0001) << numerOfShifts;
