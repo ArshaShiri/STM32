@@ -10,7 +10,7 @@ protected:
 
   void SetUp() override
   {
-    std::for_each(rccRegisterSet.begin(), rccRegisterSet.end(), [](RegisterType &el) { el = 0; });
+    std::fill(rccRegisterSet.begin(), rccRegisterSet.end(), 0);
     registerSetBaseAddressValue =
       reinterpret_cast<RegisterTypeHost>(rccRegisterSet.data()); // NOLINT: Ignored reinterpret_cast by clang-tidy.
   }

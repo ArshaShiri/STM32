@@ -13,21 +13,21 @@ protected:
 
   void SetUp() override
   {
-    std::for_each(gpioRegisterSet.begin(), gpioRegisterSet.end(), [](RegisterType &el) { el = 0; });
+    std::fill(extiRegisterSet.begin(), extiRegisterSet.end(), 0);
     registerSetBaseAddressValue =
-      reinterpret_cast<RegisterTypeHost>(gpioRegisterSet.data()); // NOLINT: Ignored reinterpret_cast by clang-tidy.
+      reinterpret_cast<RegisterTypeHost>(extiRegisterSet.data()); // NOLINT: Ignored reinterpret_cast by clang-tidy.
   }
 
-  [[nodiscard]] RegisterType getValueOfInterruptMaskRegister() const { return gpioRegisterSet.at(0); }
-  [[nodiscard]] RegisterType getValueOfEventtMaskRegister() const { return gpioRegisterSet.at(1); }
-  [[nodiscard]] RegisterType getValueOfRisingTriggerRegister() const { return gpioRegisterSet.at(2); }
-  [[nodiscard]] RegisterType getValueOfFallingTriggerRegister() const { return gpioRegisterSet.at(3); }
-  [[nodiscard]] RegisterType getSoftwareInterruptEventRegister() const { return gpioRegisterSet.at(4); }
-  [[nodiscard]] RegisterType getValueOfPendingRegister() const { return gpioRegisterSet.at(5); }
+  [[nodiscard]] RegisterType getValueOfInterruptMaskRegister() const { return extiRegisterSet.at(0); }
+  [[nodiscard]] RegisterType getValueOfEventtMaskRegister() const { return extiRegisterSet.at(1); }
+  [[nodiscard]] RegisterType getValueOfRisingTriggerRegister() const { return extiRegisterSet.at(2); }
+  [[nodiscard]] RegisterType getValueOfFallingTriggerRegister() const { return extiRegisterSet.at(3); }
+  [[nodiscard]] RegisterType getSoftwareInterruptEventRegister() const { return extiRegisterSet.at(4); }
+  [[nodiscard]] RegisterType getValueOfPendingRegister() const { return extiRegisterSet.at(5); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfEXTIRegisters{ 6 };
-  std::array<RegisterType, numberOfEXTIRegisters> gpioRegisterSet{};
+  std::array<RegisterType, numberOfEXTIRegisters> extiRegisterSet{};
 };
 
 TEST_F(EXTIRegisterTest, setInterruptMask) // NOLINT: Static storage warning.

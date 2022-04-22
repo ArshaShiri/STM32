@@ -13,7 +13,7 @@ protected:
 
   void SetUp() override
   {
-    std::for_each(gpioRegisterSet.begin(), gpioRegisterSet.end(), [](RegisterType &el) { el = 0; });
+    std::fill(gpioRegisterSet.begin(), gpioRegisterSet.end(), 0);
     registerSetBaseAddressValue =
       reinterpret_cast<RegisterTypeHost>(gpioRegisterSet.data()); // NOLINT: Ignored reinterpret_cast by clang-tidy.
   }
