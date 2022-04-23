@@ -1,4 +1,9 @@
-add_executable(registersTest main.cpp gpioRegistersTest.cpp rccRegistersTest.cpp extiRegistersTest.cpp syscfgRegistersTest.cpp)
+add_executable(registersTest main.cpp
+                             gpioRegistersTest.cpp
+                             rccRegistersTest.cpp
+                             extiRegistersTest.cpp
+                             syscfgRegistersTest.cpp
+                             interruptRegistersTest.cpp)
 
 target_link_libraries(registersTest PRIVATE GTest::GTest)
 
