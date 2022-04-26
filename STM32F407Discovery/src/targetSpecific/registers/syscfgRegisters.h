@@ -86,10 +86,10 @@ private:
   static void doSet(const RegisterAddressType syscfgBaseAddress)
   {
     constexpr auto numberOfEXTIsInEachConfigRegister = 4;
-    constexpr auto extiNumbner = pin % numberOfEXTIsInEachConfigRegister;
+    constexpr auto extiNumber = pin % numberOfEXTIsInEachConfigRegister;
     constexpr auto numberOfShiftsPerEXTI = 4;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(syscfgBaseAddress + offset,
-                                                                     value << extiNumbner * numberOfShiftsPerEXTI);
+                                                                     value << extiNumber * numberOfShiftsPerEXTI);
   }
 
   static constexpr StaticMap<InputPort, RegisterType, 9> inputPortToBits{ { { { InputPort::PA, 0b0000 },
@@ -102,19 +102,5 @@ private:
                                                                               { InputPort::PH, 0b0111 },
                                                                               { InputPort::PI, 0b1000 } } } };
 };
-
-class SYSCFGRegistersTarget
-{
-public:
-  template<InputPort inputPort, PinType pin>
-  static void setExternalInterruptConfigurationRegister()
-  {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister<inputPort, pin>(syscfgBaseAddress);
-  }
-
-private:
-  static constexpr auto syscfgBaseAddress = BaseAddresses::syscfg;
-};
-
 
 #endif /* SRC_TARGETSPECIFIC_REGISTERS_SYSCFGREGISTERS */

@@ -79,27 +79,4 @@ public:
   }
 };
 
-class InterruptsRegistersTarget
-{
-public:
-public:
-  template<std::uint8_t irqNumber>
-  static void enable()
-  {
-    InterruptsRegisters<RegisterType>::enable<irqNumber>(BaseAddresses::nvicISER0);
-  }
-
-  template<std::uint8_t irqNumber>
-  static void disable()
-  {
-    InterruptsRegisters<RegisterType>::disable<irqNumber>(BaseAddresses::nvicICER0);
-  }
-
-  template<std::uint8_t irqNumber, std::uint8_t irqPriority>
-  static void setPriority()
-  {
-    InterruptsRegisters<RegisterType>::setPriority<irqNumber, irqPriority>(BaseAddresses::nvicIPR0);
-  }
-};
-
 #endif /* SRC_PROCESSORSPECIFIC_INTERRUPTREGISTERS */
