@@ -27,6 +27,11 @@ enum class PeripheralAPB1
   I2C3
 };
 
+enum class PeripheralAPB2
+{
+  SYSCFG
+};
+
 template<typename RegisterAddressType>
 class RCCRegisters
 {
@@ -75,24 +80,21 @@ public:
   static void setPeripheralOnAHB1(const RegisterAddressType rccBaseAddress)
   {
     constexpr RegisterAddressType bitNumber = ahb1ToBitNumber.at(peripheral);
-
-    if constexpr (set)
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::ahb1enr, bitNumber);
-    else
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::ahb1enr,
-                                                                            bitNumber);
+    doSet<set>(rccBaseAddress + Offsets::ahb1enr, bitNumber);
   }
 
   template<PeripheralAPB1 peripheral, bool set>
   static void setPeripheralOnAPB1(const RegisterAddressType rccBaseAddress)
   {
     constexpr RegisterAddressType bitNumber = apb1ToBitNumber.at(peripheral);
+    doSet<set>(rccBaseAddress + Offsets::apb1enr, bitNumber);
+  }
 
-    if constexpr (set)
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::apb1enr, bitNumber);
-    else
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::apb1enr,
-                                                                            bitNumber);
+  template<PeripheralAPB2 peripheral, bool set>
+  static void setPeripheralOnAPB2(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = apb2ToBitNumber.at(peripheral);
+    doSet<set>(rccBaseAddress + Offsets::apb2enr, bitNumber);
   }
 
   template<PeripheralAHB1 peripheral>
@@ -113,7 +115,25 @@ public:
                                                                           bitNumber);
   }
 
+  template<PeripheralAPB2 peripheral>
+  static void resetPeripheralOnAPB2(const RegisterAddressType rccBaseAddress)
+  {
+    constexpr RegisterAddressType bitNumber = apb2ToBitNumber.at(peripheral);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(rccBaseAddress + Offsets::apb2rstr, bitNumber);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(rccBaseAddress + Offsets::apb2rstr,
+                                                                          bitNumber);
+  }
+
 private:
+  template<bool set>
+  static void doSet(const RegisterAddressType regAddress, const RegisterAddressType bitNumber)
+  {
+    if constexpr (set)
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(regAddress, bitNumber);
+    else
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(regAddress, bitNumber);
+  }
+
   static constexpr StaticMap<PeripheralAHB1, RegisterType, 9> ahb1ToBitNumber{ { { { PeripheralAHB1::GPIOA, 0 },
                                                                                    { PeripheralAHB1::GPIOB, 1 },
                                                                                    { PeripheralAHB1::GPIOC, 2 },
@@ -127,6 +147,8 @@ private:
   static constexpr StaticMap<PeripheralAPB1, RegisterType, 3> apb1ToBitNumber{
     { { { PeripheralAPB1::I2C1, 21 }, { PeripheralAPB1::I2C2, 22 }, { PeripheralAPB1::I2C3, 23 } } }
   };
+
+  static constexpr StaticMap<PeripheralAPB2, RegisterType, 1> apb2ToBitNumber{ { { { PeripheralAPB2::SYSCFG, 14 } } } };
 };
 
 class RCCRegistersTarget

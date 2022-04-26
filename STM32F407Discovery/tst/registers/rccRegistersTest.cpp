@@ -17,8 +17,11 @@ protected:
 
   [[nodiscard]] RegisterType getValueOfAHB1EnrRegister() const { return rccRegisterSet.at(12); }
   [[nodiscard]] RegisterType getValueOfAPB1EnrRegister() const { return rccRegisterSet.at(16); }
+  [[nodiscard]] RegisterType getValueOfAPB2EnrRegister() const { return rccRegisterSet.at(17); }
+
   [[nodiscard]] RegisterType getValueOfAHB1RstrRegister() const { return rccRegisterSet.at(4); }
   [[nodiscard]] RegisterType getValueOfAPB1RstrRegister() const { return rccRegisterSet.at(8); }
+  [[nodiscard]] RegisterType getValueOfAPB2RstrRegister() const { return rccRegisterSet.at(9); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfRCCRegisters{ 36 };
@@ -64,6 +67,19 @@ TEST_F(RCCRegisterTest, enableDisableI2C3Clock) // NOLINT: Static storage warnin
   EXPECT_EQ(getValueOfAHB1EnrRegister(), expectedValue);
 }
 
+TEST_F(RCCRegisterTest, enableDisableSYSCFGlock) // NOLINT: Static storage warning.
+{
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAPB2<PeripheralAPB2::SYSCFG, true>(registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(14);
+  auto expectedValue = UINT32_C(0b1) << numberOfShifts;
+  EXPECT_EQ(getValueOfAPB2EnrRegister(), expectedValue);
+
+  RCCRegisters<RegisterTypeHost>::setPeripheralOnAPB2<PeripheralAPB2::SYSCFG, false>(registerSetBaseAddressValue);
+  expectedValue = 0;
+  EXPECT_EQ(getValueOfAPB2EnrRegister(), expectedValue);
+}
+
 TEST_F(RCCRegisterTest, resetGPIOC) // NOLINT: Static storage warning.
 {
   RCCRegisters<RegisterTypeHost>::resetPeripheralOnAHB1<PeripheralAHB1::GPIOC>(registerSetBaseAddressValue);
@@ -80,4 +96,13 @@ TEST_F(RCCRegisterTest, resetI2C2) // NOLINT: Static storage warning.
   const auto numberOfShifts = UINT32_C(22);
   auto expectedValue = UINT32_C(0b0) << numberOfShifts;
   EXPECT_EQ(getValueOfAPB1RstrRegister(), expectedValue);
+}
+
+TEST_F(RCCRegisterTest, resetSYSCFG) // NOLINT: Static storage warning.
+{
+  RCCRegisters<RegisterTypeHost>::resetPeripheralOnAPB2<PeripheralAPB2::SYSCFG>(registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(14);
+  auto expectedValue = UINT32_C(0b0) << numberOfShifts;
+  EXPECT_EQ(getValueOfAPB2RstrRegister(), expectedValue);
 }
