@@ -166,6 +166,12 @@ public:
     RCCRegisters<RegisterType>::setPeripheralOnAPB1<peripheral, set>(rccBaseAddress);
   }
 
+  template<PeripheralAPB2 peripheral, bool set>
+  static void setPeripheralOnAPB2()
+  {
+    RCCRegisters<RegisterType>::setPeripheralOnAPB2<peripheral, set>(rccBaseAddress);
+  }
+
   template<PeripheralAHB1 peripheral>
   static void resetPeripheralOnAHB1()
   {
@@ -176,6 +182,12 @@ public:
   static void resetPeripheralOnAPB1()
   {
     RCCRegisters<RegisterType>::resetPeripheralOnAPB1<peripheral>(rccBaseAddress);
+  }
+
+  template<PeripheralAPB2 peripheral>
+  static void resetPeripheralOnAPB2()
+  {
+    RCCRegisters<RegisterType>::resetPeripheralOnAPB2<peripheral>(rccBaseAddress);
   }
 
 private:
