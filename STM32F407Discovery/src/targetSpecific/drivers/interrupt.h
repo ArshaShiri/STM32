@@ -22,12 +22,14 @@ public:
   static void setRisingTriggerRegister()
   {
     EXTIRegisters<RegisterType>::setRisingTriggerRegister<line, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setFallingTriggerRegister<line, false>(extiBaseAddress);
   }
 
   template<std::uint8_t line, bool set>
   static void setFallingTriggerRegister()
   {
     EXTIRegisters<RegisterType>::setFallingTriggerRegister<line, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setRisingTriggerRegister<line, false>(extiBaseAddress);
   }
 
   template<std::uint8_t line, bool set>
