@@ -70,47 +70,4 @@ private:
   }
 };
 
-class EXTIRegistersTarget
-{
-public:
-  template<std::uint8_t line, bool set>
-  static void setInterruptMaskRegister()
-  {
-    EXTIRegisters<RegisterType>::setInterruptMaskRegister<line, set>(extiBaseAddress);
-  }
-
-  template<std::uint8_t line, bool set>
-  static void setEventMaskRegister()
-  {
-    EXTIRegisters<RegisterType>::setEventMaskRegister<line, set>(extiBaseAddress);
-  }
-
-  template<std::uint8_t line, bool set>
-  static void setRisingTriggerRegister()
-  {
-    EXTIRegisters<RegisterType>::setRisingTriggerRegister<line, set>(extiBaseAddress);
-  }
-
-  template<std::uint8_t line, bool set>
-  static void setFallingTriggerRegister()
-  {
-    EXTIRegisters<RegisterType>::setFallingTriggerRegister<line, set>(extiBaseAddress);
-  }
-
-  template<std::uint8_t line, bool set>
-  static void setSoftwareInterruptEventRegister()
-  {
-    EXTIRegisters<RegisterType>::setSoftwareInterruptEventRegister<line, set>(extiBaseAddress);
-  }
-
-  template<std::uint8_t line, bool set>
-  static void setPendingRegister()
-  {
-    EXTIRegisters<RegisterType>::setPendingRegister<line, set>(extiBaseAddress);
-  }
-
-private:
-  static constexpr auto extiBaseAddress = BaseAddresses::exti;
-};
-
 #endif /* SRC_TARGETSPECIFIC_REGISTERS_EXTIREGISTERS */
