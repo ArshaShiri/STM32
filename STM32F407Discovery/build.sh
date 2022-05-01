@@ -33,6 +33,7 @@ scriptDir=$PWD
 buildDir="$PWD/build"
 buildHostDir="$buildDir/host"
 buildTargetDir="$buildDir/target"
+artifactsDir="$buildDir/artifacts/target"
 
 if [ "$rebuild" = true ]; then
 	if [ "$buildForHost" = true ]; then
@@ -43,6 +44,7 @@ if [ "$rebuild" = true ]; then
 	if [ "$buildForTarget" = true ]; then
 		echo "Removing build target directory."
 		rm -rf $buildTargetDir
+		rm -rf $artifactsDir
 	fi
 fi
 
@@ -84,5 +86,7 @@ if [ "$buildForTarget" = true ]; then
 	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -d "$1" >"${1%.elf}".disassembleExe' sh {} \;
 
 	echo "Saving artifacsts"
+	mkdir -p $artifactsDir
+	find $buildTargetDir \( -name "*.headers" -o -name "*.disassemble" -o -name "*.disassembleExe" -o -name "*.map" \) -exec sh -c 'mv "$1" "$2"' sh {} $artifactsDir \;
 
 fi
