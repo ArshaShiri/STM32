@@ -75,8 +75,14 @@ if [ "$buildForTarget" = true ]; then
 	echo "Creating bin files"
 	find $buildTargetDir -name "*.elf" -exec sh -c 'exec arm-none-eabi-objcopy -O binary "$1" "${1%.elf}.bin"' sh {} \;
 
+	echo "Fix the name of memory map files"
+	find $buildTargetDir -name "*.map" -exec sh -c 'dir="$(dirname "$1")"; basename="$(basename "$dir")"; echo $basename; mv "$1" "${1%/*.map}"/$basename.map' sh {} \;
+
 	echo "Creating object dumpt files"
-	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -h "$1" >"${1%/*.elf}"/objdump.headers' sh {} \;
-	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -D "$1" >"${1%/*.elf}"/objdump.disassemble' sh {} \;
-	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -d "$1" >"${1%/*.elf}"/objdump.disassembleExe' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -h "$1" >"${1%.elf}".headers' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -D "$1" >"${1%.elf}".disassemble' sh {} \;
+	find $buildTargetDir -name "*.elf" -exec sh -c 'arm-none-eabi-objdump -d "$1" >"${1%.elf}".disassembleExe' sh {} \;
+
+	echo "Saving artifacsts"
+
 fi
