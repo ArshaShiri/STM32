@@ -32,6 +32,13 @@ void initializeConstructors()
 {
   std::for_each(start_of_constructors, end_of_constructors, [](FunctionType &constructor) { constructor(); });
 }
+
+extern "C" void defaulHandler()
+{
+  while (true)
+  {
+  };
+}
 } // namespace
 
 static constexpr auto SRAM_START = 0x20000000U;
@@ -39,647 +46,98 @@ static constexpr auto SRAM_SIZE = 128U * 1024U;
 static constexpr auto SRAM_END = SRAM_START + SRAM_SIZE;
 static constexpr auto STACK_START = SRAM_END;
 
-int main();
-
-void Default_Handler()
-{
-  while (true)
-  {
-  };
-}
-
 extern "C" void Reset_Handler() __attribute__((used, noinline));
 
-extern "C" void NMI_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void HardFault_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void MemManage_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void BusFault_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void UsageFault_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SVC_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DebugMon_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void PendSV_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SysTick_Handler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void WWDG_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void PVD_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TAMP_STAMP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void RTC_WKUP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void RCC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI0_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI4_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream0_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream4_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream5_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream6_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void ADC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN1_TX_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN1_RX0_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN1_RX1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN1_SCE_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI9_5_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM1_BRK_TIM9_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM1_UP_TIM10_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM1_TRG_COM_TIM11_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM1_CC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM4_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C1_EV_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C1_ER_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C2_EV_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C2_ER_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SPI1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SPI2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void USART1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void USART2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void USART3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void EXTI15_10_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void RTC_Alarm_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_FS_WKUP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM8_BRK_TIM12_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM8_UP_TIM13_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM8_TRG_COM_TIM14_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM8_CC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA1_Stream7_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void FSMC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SDIO_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM5_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void SPI3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void UART4_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void UART5_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM6_DAC_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void TIM7_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream0_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream2_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream3_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream4_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void ETH_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void ETH_WKUP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN2_TX_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN2_RX0_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN2_RX1_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CAN2_SCE_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_FS_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream5_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream6_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DMA2_Stream7_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void USART6_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C3_EV_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void I2C3_ER_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_HS_EP1_OUT_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_HS_EP1_IN_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_HS_WKUP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void OTG_HS_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void DCMI_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void CRYP_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void HASH_RNG_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
-extern "C" void FPU_IRQHandler()
-{
-  for (;;)
-  {
-    asm volatile("nop"); // NOLINT inline assembler
-  }
-}
+extern "C" void NMI_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void HardFault_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void MemManage_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void BusFault_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void UsageFault_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SVC_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DebugMon_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void PendSV_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SysTick_Handler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void WWDG_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void PVD_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TAMP_STAMP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void RTC_WKUP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void RCC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI0_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI4_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream0_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream4_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream5_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream6_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void ADC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN1_TX_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN1_RX0_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN1_RX1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN1_SCE_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI9_5_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM1_BRK_TIM9_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM1_UP_TIM10_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM1_TRG_COM_TIM11_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM1_CC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM4_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C1_EV_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C1_ER_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C2_EV_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C2_ER_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SPI1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SPI2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void USART1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void USART2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void USART3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void EXTI15_10_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void RTC_Alarm_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_FS_WKUP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM8_BRK_TIM12_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM8_UP_TIM13_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM8_TRG_COM_TIM14_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM8_CC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA1_Stream7_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void FSMC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SDIO_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM5_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void SPI3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void UART4_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void UART5_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM6_DAC_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void TIM7_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream0_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream2_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream3_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream4_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void ETH_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void ETH_WKUP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN2_TX_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN2_RX0_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN2_RX1_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CAN2_SCE_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_FS_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream5_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream6_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DMA2_Stream7_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void USART6_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C3_EV_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void I2C3_ER_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_HS_EP1_OUT_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_HS_EP1_IN_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_HS_WKUP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void OTG_HS_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void DCMI_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void CRYP_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void HASH_RNG_IRQHandler() __attribute__((weak, alias("defaulHandler")));
+extern "C" void FPU_IRQHandler() __attribute__((weak, alias("defaulHandler")));
 
 namespace
 {

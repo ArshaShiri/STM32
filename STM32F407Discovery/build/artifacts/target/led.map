@@ -51,7 +51,7 @@ END GROUP
 LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
 
-.text           0x0000000008000000      0x8d4
+.text           0x0000000008000000      0x76c
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x188 CMakeFiles/led.dir/__/__/targetSpecific/startup.cpp.obj
                 0x0000000008000000                isr_vector
@@ -70,217 +70,217 @@ LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x00000000080001d8                _mainCRTStartup
                 0x00000000080001d8                _start
  .text          0x000000000800024c        0x0 CMakeFiles/led.dir/led.cpp.obj
- .text          0x000000000800024c      0x1c4 CMakeFiles/led.dir/__/__/targetSpecific/startup.cpp.obj
+ .text          0x000000000800024c       0x5c CMakeFiles/led.dir/__/__/targetSpecific/startup.cpp.obj
+                0x000000000800024c                RTC_Alarm_IRQHandler
+                0x000000000800024c                HASH_RNG_IRQHandler
+                0x000000000800024c                EXTI2_IRQHandler
+                0x000000000800024c                TIM8_CC_IRQHandler
+                0x000000000800024c                DebugMon_Handler
+                0x000000000800024c                TIM1_CC_IRQHandler
+                0x000000000800024c                DMA2_Stream5_IRQHandler
+                0x000000000800024c                HardFault_Handler
+                0x000000000800024c                DMA1_Stream5_IRQHandler
+                0x000000000800024c                SysTick_Handler
+                0x000000000800024c                PVD_IRQHandler
+                0x000000000800024c                SDIO_IRQHandler
+                0x000000000800024c                TAMP_STAMP_IRQHandler
+                0x000000000800024c                PendSV_Handler
                 0x000000000800024c                NMI_Handler
+                0x000000000800024c                CAN2_RX1_IRQHandler
+                0x000000000800024c                EXTI3_IRQHandler
+                0x000000000800024c                TIM8_TRG_COM_TIM14_IRQHandler
+                0x000000000800024c                TIM1_UP_TIM10_IRQHandler
+                0x000000000800024c                TIM8_UP_TIM13_IRQHandler
+                0x000000000800024c                I2C3_ER_IRQHandler
+                0x000000000800024c                EXTI0_IRQHandler
+                0x000000000800024c                I2C2_EV_IRQHandler
+                0x000000000800024c                DMA1_Stream2_IRQHandler
+                0x000000000800024c                CAN1_RX0_IRQHandler
+                0x000000000800024c                FPU_IRQHandler
+                0x000000000800024c                OTG_HS_WKUP_IRQHandler
+                0x000000000800024c                UsageFault_Handler
+                0x000000000800024c                CAN2_SCE_IRQHandler
+                0x000000000800024c                DMA2_Stream2_IRQHandler
+                0x000000000800024c                SPI1_IRQHandler
+                0x000000000800024c                TIM6_DAC_IRQHandler
+                0x000000000800024c                TIM1_BRK_TIM9_IRQHandler
+                0x000000000800024c                DCMI_IRQHandler
+                0x000000000800024c                CAN2_RX0_IRQHandler
+                0x000000000800024c                DMA2_Stream3_IRQHandler
+                0x000000000800024c                defaulHandler
+                0x000000000800024c                USART6_IRQHandler
+                0x000000000800024c                USART3_IRQHandler
+                0x000000000800024c                CRYP_IRQHandler
+                0x000000000800024c                CAN1_RX1_IRQHandler
+                0x000000000800024c                UART5_IRQHandler
+                0x000000000800024c                DMA2_Stream0_IRQHandler
+                0x000000000800024c                TIM4_IRQHandler
+                0x000000000800024c                I2C1_EV_IRQHandler
+                0x000000000800024c                DMA1_Stream6_IRQHandler
+                0x000000000800024c                DMA1_Stream1_IRQHandler
+                0x000000000800024c                UART4_IRQHandler
+                0x000000000800024c                TIM3_IRQHandler
+                0x000000000800024c                RCC_IRQHandler
+                0x000000000800024c                TIM8_BRK_TIM12_IRQHandler
+                0x000000000800024c                EXTI15_10_IRQHandler
+                0x000000000800024c                ADC_IRQHandler
+                0x000000000800024c                DMA1_Stream7_IRQHandler
+                0x000000000800024c                TIM7_IRQHandler
+                0x000000000800024c                CAN2_TX_IRQHandler
+                0x000000000800024c                TIM5_IRQHandler
+                0x000000000800024c                DMA2_Stream7_IRQHandler
+                0x000000000800024c                I2C3_EV_IRQHandler
+                0x000000000800024c                EXTI9_5_IRQHandler
+                0x000000000800024c                RTC_WKUP_IRQHandler
+                0x000000000800024c                ETH_WKUP_IRQHandler
+                0x000000000800024c                SPI2_IRQHandler
+                0x000000000800024c                OTG_HS_EP1_IN_IRQHandler
+                0x000000000800024c                MemManage_Handler
+                0x000000000800024c                DMA1_Stream0_IRQHandler
+                0x000000000800024c                CAN1_TX_IRQHandler
+                0x000000000800024c                SVC_Handler
+                0x000000000800024c                EXTI4_IRQHandler
+                0x000000000800024c                FSMC_IRQHandler
+                0x000000000800024c                ETH_IRQHandler
+                0x000000000800024c                OTG_HS_EP1_OUT_IRQHandler
+                0x000000000800024c                WWDG_IRQHandler
+                0x000000000800024c                TIM2_IRQHandler
+                0x000000000800024c                OTG_FS_WKUP_IRQHandler
+                0x000000000800024c                TIM1_TRG_COM_TIM11_IRQHandler
+                0x000000000800024c                OTG_HS_IRQHandler
+                0x000000000800024c                EXTI1_IRQHandler
+                0x000000000800024c                USART2_IRQHandler
+                0x000000000800024c                I2C2_ER_IRQHandler
+                0x000000000800024c                DMA2_Stream1_IRQHandler
+                0x000000000800024c                CAN1_SCE_IRQHandler
+                0x000000000800024c                DMA2_Stream4_IRQHandler
+                0x000000000800024c                BusFault_Handler
+                0x000000000800024c                USART1_IRQHandler
+                0x000000000800024c                OTG_FS_IRQHandler
+                0x000000000800024c                SPI3_IRQHandler
+                0x000000000800024c                DMA1_Stream4_IRQHandler
+                0x000000000800024c                I2C1_ER_IRQHandler
+                0x000000000800024c                DMA2_Stream6_IRQHandler
+                0x000000000800024c                DMA1_Stream3_IRQHandler
                 0x0000000008000250                Reset_Handler
-                0x00000000080002a4                FPU_IRQHandler
-                0x00000000080002a8                HardFault_Handler
-                0x00000000080002ac                MemManage_Handler
-                0x00000000080002b0                BusFault_Handler
-                0x00000000080002b4                UsageFault_Handler
-                0x00000000080002b8                SVC_Handler
-                0x00000000080002bc                DebugMon_Handler
-                0x00000000080002c0                PendSV_Handler
-                0x00000000080002c4                SysTick_Handler
-                0x00000000080002c8                WWDG_IRQHandler
-                0x00000000080002cc                PVD_IRQHandler
-                0x00000000080002d0                TAMP_STAMP_IRQHandler
-                0x00000000080002d4                RTC_WKUP_IRQHandler
-                0x00000000080002d8                RCC_IRQHandler
-                0x00000000080002dc                EXTI0_IRQHandler
-                0x00000000080002e0                EXTI1_IRQHandler
-                0x00000000080002e4                EXTI2_IRQHandler
-                0x00000000080002e8                EXTI3_IRQHandler
-                0x00000000080002ec                EXTI4_IRQHandler
-                0x00000000080002f0                DMA1_Stream0_IRQHandler
-                0x00000000080002f4                DMA1_Stream1_IRQHandler
-                0x00000000080002f8                DMA1_Stream2_IRQHandler
-                0x00000000080002fc                DMA1_Stream3_IRQHandler
-                0x0000000008000300                DMA1_Stream4_IRQHandler
-                0x0000000008000304                DMA1_Stream5_IRQHandler
-                0x0000000008000308                DMA1_Stream6_IRQHandler
-                0x000000000800030c                ADC_IRQHandler
-                0x0000000008000310                CAN1_TX_IRQHandler
-                0x0000000008000314                CAN1_RX0_IRQHandler
-                0x0000000008000318                CAN1_RX1_IRQHandler
-                0x000000000800031c                CAN1_SCE_IRQHandler
-                0x0000000008000320                EXTI9_5_IRQHandler
-                0x0000000008000324                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008000328                TIM1_UP_TIM10_IRQHandler
-                0x000000000800032c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008000330                TIM1_CC_IRQHandler
-                0x0000000008000334                TIM2_IRQHandler
-                0x0000000008000338                TIM3_IRQHandler
-                0x000000000800033c                TIM4_IRQHandler
-                0x0000000008000340                I2C1_EV_IRQHandler
-                0x0000000008000344                I2C1_ER_IRQHandler
-                0x0000000008000348                I2C2_EV_IRQHandler
-                0x000000000800034c                I2C2_ER_IRQHandler
-                0x0000000008000350                SPI1_IRQHandler
-                0x0000000008000354                SPI2_IRQHandler
-                0x0000000008000358                USART1_IRQHandler
-                0x000000000800035c                USART2_IRQHandler
-                0x0000000008000360                USART3_IRQHandler
-                0x0000000008000364                EXTI15_10_IRQHandler
-                0x0000000008000368                RTC_Alarm_IRQHandler
-                0x000000000800036c                OTG_FS_WKUP_IRQHandler
-                0x0000000008000370                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008000374                TIM8_UP_TIM13_IRQHandler
-                0x0000000008000378                TIM8_TRG_COM_TIM14_IRQHandler
-                0x000000000800037c                TIM8_CC_IRQHandler
-                0x0000000008000380                DMA1_Stream7_IRQHandler
-                0x0000000008000384                FSMC_IRQHandler
-                0x0000000008000388                SDIO_IRQHandler
-                0x000000000800038c                TIM5_IRQHandler
-                0x0000000008000390                SPI3_IRQHandler
-                0x0000000008000394                UART4_IRQHandler
-                0x0000000008000398                UART5_IRQHandler
-                0x000000000800039c                TIM6_DAC_IRQHandler
-                0x00000000080003a0                TIM7_IRQHandler
-                0x00000000080003a4                DMA2_Stream0_IRQHandler
-                0x00000000080003a8                DMA2_Stream1_IRQHandler
-                0x00000000080003ac                DMA2_Stream2_IRQHandler
-                0x00000000080003b0                DMA2_Stream3_IRQHandler
-                0x00000000080003b4                DMA2_Stream4_IRQHandler
-                0x00000000080003b8                ETH_IRQHandler
-                0x00000000080003bc                ETH_WKUP_IRQHandler
-                0x00000000080003c0                CAN2_TX_IRQHandler
-                0x00000000080003c4                CAN2_RX0_IRQHandler
-                0x00000000080003c8                CAN2_RX1_IRQHandler
-                0x00000000080003cc                CAN2_SCE_IRQHandler
-                0x00000000080003d0                OTG_FS_IRQHandler
-                0x00000000080003d4                DMA2_Stream5_IRQHandler
-                0x00000000080003d8                DMA2_Stream6_IRQHandler
-                0x00000000080003dc                DMA2_Stream7_IRQHandler
-                0x00000000080003e0                USART6_IRQHandler
-                0x00000000080003e4                I2C3_EV_IRQHandler
-                0x00000000080003e8                I2C3_ER_IRQHandler
-                0x00000000080003ec                OTG_HS_EP1_OUT_IRQHandler
-                0x00000000080003f0                OTG_HS_EP1_IN_IRQHandler
-                0x00000000080003f4                OTG_HS_WKUP_IRQHandler
-                0x00000000080003f8                OTG_HS_IRQHandler
-                0x00000000080003fc                DCMI_IRQHandler
-                0x0000000008000400                CRYP_IRQHandler
-                0x0000000008000404                HASH_RNG_IRQHandler
-                0x0000000008000408                Default_Handler()
- .text          0x0000000008000410        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .text          0x0000000008000410        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .text          0x0000000008000410        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .text          0x0000000008000410      0x134 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
-                0x0000000008000410                memcpy
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
- .text          0x0000000008000544        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .text          0x00000000080002a8        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+ .text          0x00000000080002a8        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .text          0x00000000080002a8        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+ .text          0x00000000080002a8      0x134 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
+                0x00000000080002a8                memcpy
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .text          0x00000000080003dc        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.text.*)
- .text.startup  0x0000000008000544       0x58 CMakeFiles/led.dir/led.cpp.obj
-                0x0000000008000544                main
- .text.exit     0x000000000800059c       0x20 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
-                0x000000000800059c                exit
+ .text.startup  0x00000000080003dc       0x58 CMakeFiles/led.dir/led.cpp.obj
+                0x00000000080003dc                main
+ .text.exit     0x0000000008000434       0x20 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+                0x0000000008000434                exit
  .text.__libc_init_array
-                0x00000000080005bc       0x48 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
-                0x00000000080005bc                __libc_init_array
- .text.memset   0x0000000008000604       0xa4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
-                0x0000000008000604                memset
+                0x0000000008000454       0x48 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+                0x0000000008000454                __libc_init_array
+ .text.memset   0x000000000800049c       0xa4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+                0x000000000800049c                memset
  .text.startup.register_fini
-                0x00000000080006a8       0x14 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x0000000008000540       0x14 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x00000000080006bc       0xc4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
-                0x00000000080006bc                __call_exitprocs
- .text.atexit   0x0000000008000780        0xc /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
-                0x0000000008000780                atexit
+                0x0000000008000554       0xc4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x0000000008000554                __call_exitprocs
+ .text.atexit   0x0000000008000618        0xc /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+                0x0000000008000618                atexit
  .text.__libc_fini_array
-                0x000000000800078c       0x2c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
-                0x000000000800078c                __libc_fini_array
+                0x0000000008000624       0x2c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+                0x0000000008000624                __libc_fini_array
  .text.__retarget_lock_init
-                0x00000000080007b8        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007b8                __retarget_lock_init
+                0x0000000008000650        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000650                __retarget_lock_init
  .text.__retarget_lock_init_recursive
-                0x00000000080007bc        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007bc                __retarget_lock_init_recursive
+                0x0000000008000654        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000654                __retarget_lock_init_recursive
  .text.__retarget_lock_close
-                0x00000000080007c0        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007c0                __retarget_lock_close
+                0x0000000008000658        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000658                __retarget_lock_close
  .text.__retarget_lock_close_recursive
-                0x00000000080007c4        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007c4                __retarget_lock_close_recursive
+                0x000000000800065c        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800065c                __retarget_lock_close_recursive
  .text.__retarget_lock_acquire
-                0x00000000080007c8        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007c8                __retarget_lock_acquire
+                0x0000000008000660        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000660                __retarget_lock_acquire
  .text.__retarget_lock_acquire_recursive
-                0x00000000080007cc        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007cc                __retarget_lock_acquire_recursive
+                0x0000000008000664        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000664                __retarget_lock_acquire_recursive
  .text.__retarget_lock_try_acquire
-                0x00000000080007d0        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007d0                __retarget_lock_try_acquire
+                0x0000000008000668        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000668                __retarget_lock_try_acquire
  .text.__retarget_lock_try_acquire_recursive
-                0x00000000080007d4        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007d4                __retarget_lock_try_acquire_recursive
+                0x000000000800066c        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800066c                __retarget_lock_try_acquire_recursive
  .text.__retarget_lock_release
-                0x00000000080007d8        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007d8                __retarget_lock_release
+                0x0000000008000670        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000670                __retarget_lock_release
  .text.__retarget_lock_release_recursive
-                0x00000000080007dc        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
-                0x00000000080007dc                __retarget_lock_release_recursive
+                0x0000000008000674        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-lock.o)
+                0x0000000008000674                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x00000000080007e0       0x8c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
-                0x00000000080007e0                __register_exitproc
- .text._exit    0x000000000800086c        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
-                0x000000000800086c                _exit
+                0x0000000008000678       0x8c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+                0x0000000008000678                __register_exitproc
+ .text._exit    0x0000000008000704        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                0x0000000008000704                _exit
  *(.init)
- .init          0x0000000008000870        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008000870                _init
- .init          0x0000000008000874        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x0000000008000708        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008000708                _init
+ .init          0x000000000800070c        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x000000000800087c        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x000000000800087c                _fini
- .fini          0x0000000008000880        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .fini          0x0000000008000714        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008000714                _fini
+ .fini          0x0000000008000718        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.rodata)
- .rodata        0x0000000008000888       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .rodata        0x00000000080008ac       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .rodata        0x0000000008000720       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x0000000008000744       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  *(.rodata.*)
  .rodata._global_impure_ptr
-                0x00000000080008d0        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                0x00000000080008d0                _global_impure_ptr
-                0x00000000080008d4                . = ALIGN (0x4)
-                0x00000000080008d4                end_of_text = .
-                0x00000000080008e0                load_address_of_data = LOADADDR (.data)
+                0x0000000008000768        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000008000768                _global_impure_ptr
+                0x000000000800076c                . = ALIGN (0x4)
+                0x000000000800076c                end_of_text = .
+                0x0000000008000778                load_address_of_data = LOADADDR (.data)
 
-.glue_7         0x00000000080008d4        0x0
- .glue_7        0x00000000080008d4        0x0 linker stubs
+.glue_7         0x000000000800076c        0x0
+ .glue_7        0x000000000800076c        0x0 linker stubs
 
-.glue_7t        0x00000000080008d4        0x0
- .glue_7t       0x00000000080008d4        0x0 linker stubs
+.glue_7t        0x000000000800076c        0x0
+ .glue_7t       0x000000000800076c        0x0 linker stubs
 
-.vfp11_veneer   0x00000000080008d4        0x0
- .vfp11_veneer  0x00000000080008d4        0x0 linker stubs
+.vfp11_veneer   0x000000000800076c        0x0
+ .vfp11_veneer  0x000000000800076c        0x0 linker stubs
 
-.v4_bx          0x00000000080008d4        0x0
- .v4_bx         0x00000000080008d4        0x0 linker stubs
+.v4_bx          0x000000000800076c        0x0
+ .v4_bx         0x000000000800076c        0x0 linker stubs
 
-.iplt           0x00000000080008d4        0x0
- .iplt          0x00000000080008d4        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x000000000800076c        0x0
+ .iplt          0x000000000800076c        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.eh_frame       0x00000000080008d4        0x4
- .eh_frame      0x00000000080008d4        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x00000000080008d4        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+.eh_frame       0x000000000800076c        0x4
+ .eh_frame      0x000000000800076c        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x000000000800076c        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.ARM.extab      0x00000000080008d8        0x0
- .ARM.extab     0x00000000080008d8        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.extab      0x0000000008000770        0x0
+ .ARM.extab     0x0000000008000770        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 
-.ARM.exidx      0x00000000080008d8        0x8
- .ARM.exidx     0x00000000080008d8        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.exidx      0x0000000008000770        0x8
+ .ARM.exidx     0x0000000008000770        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
                                          0x10 (size before relaxing)
 
-.rel.dyn        0x00000000080008e0        0x0
- .rel.iplt      0x00000000080008e0        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008000778        0x0
+ .rel.iplt      0x0000000008000778        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x0000000020000000      0x434 load address 0x00000000080008e0
+.data           0x0000000020000000      0x434 load address 0x0000000008000778
                 0x0000000020000000                start_of_data = .
  *(.data)
  .data          0x0000000020000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
@@ -314,13 +314,13 @@ LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3
                 0x0000000020000434                . = ALIGN (0x4)
                 0x0000000020000434                end_of_data = .
 
-.fini_array     0x0000000020000434        0x4 load address 0x0000000008000d14
+.fini_array     0x0000000020000434        0x4 load address 0x0000000008000bac
  .fini_array    0x0000000020000434        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.igot.plt       0x0000000020000438        0x0 load address 0x0000000008000d18
+.igot.plt       0x0000000020000438        0x0 load address 0x0000000008000bb0
  .igot.plt      0x0000000020000438        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.bss            0x0000000020000438       0x40 load address 0x0000000008000d18
+.bss            0x0000000020000438       0x40 load address 0x0000000008000bb0
                 0x0000000020000438                start_of_bss = .
                 0x0000000020000438                __bss_start__ = start_of_bss
  *(.bss)
