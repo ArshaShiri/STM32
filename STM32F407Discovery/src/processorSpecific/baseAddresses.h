@@ -3,6 +3,9 @@
 
 #include "targetSpecific/registers/registerType.h"
 
+namespace processor
+{
+
 class BaseAddresses
 {
 public:
@@ -10,5 +13,7 @@ public:
   static constexpr RegisterType nvicICER0 = UINT32_C(0xE000E180);
   static constexpr RegisterType nvicIPR0 = UINT32_C(0xE000E400);
 };
+
+} // namespace processor
 
 #endif /* SRC_PROCESSORSPECIFIC_BASEADDRESSES */

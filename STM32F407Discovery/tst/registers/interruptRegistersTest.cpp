@@ -43,42 +43,42 @@ protected:
 TEST_F(InterruptsRegistersTest, setIRQInRegsiter0) // NOLINT: Static storage warning.
 {
   const auto irqNumber = 5;
-  InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = 5;
   auto expectedValue = 1 << numberOfShifts;
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(0));
 
   expectedValue = 0;
-  InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(0));
 }
 
 TEST_F(InterruptsRegistersTest, setIRQInRegsiter1) // NOLINT: Static storage warning.
 {
   const auto irqNumber = 54;
-  InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = 22;
   auto expectedValue = 1 << numberOfShifts;
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(1));
 
   expectedValue = 0;
-  InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(1));
 }
 
 TEST_F(InterruptsRegistersTest, setIRQInRegsiter2) // NOLINT: Static storage warning.
 {
   const auto irqNumber = 81;
-  InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::enable<irqNumber>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = 17;
   auto expectedValue = 1 << numberOfShifts;
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(2));
 
   expectedValue = 0;
-  InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::disable<irqNumber>(registerSetBaseAddressValue);
   EXPECT_EQ(expectedValue, getValueOfInterruptRegister(2));
 }
 
@@ -86,7 +86,8 @@ TEST_F(InterruptsRegistersTest, setIRQ1InterruptPriority) // NOLINT: Static stor
 {
   const auto irqNumber = 1;
   const auto irqPriority = 15;
-  InterruptsRegisters<RegisterTypeHost>::setPriority<irqNumber, irqPriority>(irqPriorityRegisterSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::setPriority<irqNumber, irqPriority>(
+    irqPriorityRegisterSetBaseAddressValue);
 
   const auto numberOfShifts = 12;
   auto expectedValue = irqPriority << numberOfShifts;
@@ -97,7 +98,8 @@ TEST_F(InterruptsRegistersTest, setIRQ27InterruptPriority) // NOLINT: Static sto
 {
   const std::uint8_t irqNumber = 27;
   const std::uint8_t irqPriority = 14;
-  InterruptsRegisters<RegisterTypeHost>::setPriority<irqNumber, irqPriority>(irqPriorityRegisterSetBaseAddressValue);
+  processor::InterruptsRegisters<RegisterTypeHost>::setPriority<irqNumber, irqPriority>(
+    irqPriorityRegisterSetBaseAddressValue);
 
   const auto numberOfShifts = 28;
   auto expectedValue = irqPriority << numberOfShifts;

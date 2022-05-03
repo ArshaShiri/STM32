@@ -7,8 +7,6 @@
 #include "utils/helpers.h"
 #include "utils/registerAccess.h"
 
-#include <iostream>
-
 enum class InputPort
 {
   PA,

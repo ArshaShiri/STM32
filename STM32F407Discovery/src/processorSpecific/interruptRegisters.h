@@ -6,8 +6,8 @@
 
 #include "utils/registerAccess.h"
 
-#include <iostream>
-
+namespace processor
+{
 template<typename RegisterAddressType>
 class InterruptsRegisters
 {
@@ -78,5 +78,7 @@ public:
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(registerAddress, value);
   }
 };
+
+} // namespace processor
 
 #endif /* SRC_PROCESSORSPECIFIC_INTERRUPTREGISTERS */

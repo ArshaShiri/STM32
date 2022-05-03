@@ -76,20 +76,25 @@ public:
   template<IRQ irqNumber>
   static void enableIRQ()
   {
-    InterruptsRegisters<RegisterType>::enable<irqToPositionInVectorTable.at(irqNumber), >(BaseAddresses::nvicISER0);
+    using namespace processor;
+    InterruptsRegisters<RegisterType>::enable<irqToPositionInVectorTable.at(irqNumber)>(
+      processor::BaseAddresses::nvicISER0);
   }
 
   template<IRQ irqNumber>
   static void disableIRQ()
   {
-    InterruptsRegisters<RegisterType>::disable<irqToPositionInVectorTable.at(irqNumber), >(BaseAddresses::nvicICER0);
+    using namespace processor;
+    InterruptsRegisters<RegisterType>::disable<irqToPositionInVectorTable.at(irqNumber)>(
+      processor::BaseAddresses::nvicICER0);
   }
 
   template<IRQ irqNumber, std::uint8_t irqPriority>
   static void setIRQPriority()
   {
+    using namespace processor;
     InterruptsRegisters<RegisterType>::setPriority<irqToPositionInVectorTable.at(irqNumber), irqPriority>(
-      BaseAddresses::nvicIPR0);
+      processor::BaseAddresses::nvicIPR0);
   }
 
 private:
