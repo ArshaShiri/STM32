@@ -28,12 +28,7 @@ int main()
   Interrupt::enableIRQ<IRQ::EXTI0>();
 
   while (true)
-  {
-    if (gpioA::readInputPin<buttonPinNumber>())
-    {
-      softwareDelay<500000>();
-    }
-  }
+    ;
 
   return 0;
 }
@@ -41,6 +36,7 @@ int main()
 extern "C" {
 void EXTI0_IRQHandler()
 {
+  softwareDelay<500000>();
   Interrupt::setEXTIPendingRegister<0, true>();
   GPIO<BaseAddresses::gpioD>::toggleOutputPin<12>();
 }
