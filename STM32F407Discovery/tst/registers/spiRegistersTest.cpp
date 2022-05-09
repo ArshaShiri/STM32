@@ -217,6 +217,15 @@ TEST_F(SPIRegisterTest, setUnsetBIDIMODE) // NOLINT: Static storage warning.
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 }
 
+TEST_F(SPIRegisterTest, setBaudRate) // NOLINT: Static storage warning.
+{
+  SPIRegisters<RegisterTypeHost>::setBaudRate<BaudRateControl::fPCLKDiv16, true>(registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(3);
+  auto expectedValue = UINT32_C(0b011) << numberOfShifts;
+  EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
+}
+
 TEST_F(SPIRegisterTest, setUnsetRXDMAEN) // NOLINT: Static storage warning.
 {
   SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::RXDMAEN, true>(

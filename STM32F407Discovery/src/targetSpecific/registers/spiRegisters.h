@@ -24,6 +24,18 @@ enum class ControlRegister1Property
   BIDIMODE
 };
 
+enum class BaudRateControl
+{
+  fPCLKDiv2,
+  fPCLKDiv4,
+  fPCLKDiv8,
+  fPCLKDiv16,
+  fPCLKDiv32,
+  fPCLKDiv64,
+  fPCLKDiv128,
+  fPCLKDiv256
+};
+
 enum class ControlRegister2Property
 {
   RXDMAEN,
@@ -34,7 +46,6 @@ enum class ControlRegister2Property
   RXNEIE,
   TXEIE
 };
-
 
 template<typename RegisterAddressType>
 class SPIRegisters
@@ -61,12 +72,22 @@ public:
     doSet<set>(spiBaseAddress + Offsets::cr1, bitNumber);
   }
 
+  template<BaudRateControl property, bool set>
+  static void setBaudRate(const RegisterAddressType spiBaseAddress)
+  {
+    constexpr auto value = baudRateControlToValue.at(property);
+    constexpr auto numberOfShifts = 3;
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(spiBaseAddress + Offsets::cr1,
+                                                                     value << numberOfShifts);
+  }
+
   template<ControlRegister2Property property, bool set>
   static void setControlRegister2Bit(const RegisterAddressType spiBaseAddress)
   {
     constexpr auto bitNumber = controlRegister2PropertyToValue.at(property);
     doSet<set>(spiBaseAddress + Offsets::cr2, bitNumber);
   }
+
 
 private:
   template<bool set>
@@ -92,6 +113,17 @@ private:
         { ControlRegister1Property::CRCEN, 13 },
         { ControlRegister1Property::BIDIOE, 14 },
         { ControlRegister1Property::BIDIMODE, 15 } } }
+  };
+
+  static constexpr StaticMap<BaudRateControl, std::uint8_t, 8> baudRateControlToValue{
+    { { { BaudRateControl::fPCLKDiv2, 0b000 },
+        { BaudRateControl::fPCLKDiv4, 0b001 },
+        { BaudRateControl::fPCLKDiv8, 0b010 },
+        { BaudRateControl::fPCLKDiv16, 0b011 },
+        { BaudRateControl::fPCLKDiv32, 0b100 },
+        { BaudRateControl::fPCLKDiv64, 0b101 },
+        { BaudRateControl::fPCLKDiv128, 0b110 },
+        { BaudRateControl::fPCLKDiv256, 0b111 } } }
   };
 
   static constexpr StaticMap<ControlRegister2Property, std::uint8_t, 7> controlRegister2PropertyToValue{
