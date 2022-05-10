@@ -22,46 +22,46 @@ protected:
   std::array<RegisterType, numberOfSPIRegisters> spiRegisterSet{};
 };
 
-TEST_F(SPIRegisterTest, setUnsetCPHA) // NOLINT: Static storage warning.
+TEST_F(SPIRegisterTest, setUnsetcpha) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CPHA, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::cpha, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(0);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CPHA, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::cpha, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 }
 
-TEST_F(SPIRegisterTest, setUnsetCPOL) // NOLINT: Static storage warning.
+TEST_F(SPIRegisterTest, setUnsetcpol) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CPOL, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::cpol, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(1);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CPOL, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::cpol, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 }
 
-TEST_F(SPIRegisterTest, setUnsetMSTR) // NOLINT: Static storage warning.
+TEST_F(SPIRegisterTest, setUnsetmstr) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::MSTR, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::mstr, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(2);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::MSTR, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::mstr, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -69,14 +69,14 @@ TEST_F(SPIRegisterTest, setUnsetMSTR) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetSPE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SPE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::spe, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(6);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SPE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::spe, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -84,14 +84,14 @@ TEST_F(SPIRegisterTest, setUnsetSPE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetLSBFIRST) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::LSBFIRST, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::lsbfirst, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(7);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::LSBFIRST, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::lsbfirst, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -99,14 +99,14 @@ TEST_F(SPIRegisterTest, setUnsetLSBFIRST) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetSSI) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SSI, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::ssi, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(8);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SSI, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::ssi, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -114,14 +114,14 @@ TEST_F(SPIRegisterTest, setUnsetSSI) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetSSM) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SSM, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::ssm, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(9);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::SSM, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::ssm, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -129,14 +129,14 @@ TEST_F(SPIRegisterTest, setUnsetSSM) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetRXONLY) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::RXONLY, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::rxonly, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(10);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::RXONLY, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::rxonly, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -144,14 +144,14 @@ TEST_F(SPIRegisterTest, setUnsetRXONLY) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetDFF) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::DFF, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::dff, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(11);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::DFF, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::dff, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -159,14 +159,14 @@ TEST_F(SPIRegisterTest, setUnsetDFF) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetCRCNEXT) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CRCNEXT, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::crcnext, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(12);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CRCNEXT, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::crcnext, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -174,14 +174,14 @@ TEST_F(SPIRegisterTest, setUnsetCRCNEXT) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetCRCEN) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CRCEN, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::crcen, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(13);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::CRCEN, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::crcen, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -189,14 +189,14 @@ TEST_F(SPIRegisterTest, setUnsetCRCEN) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetBIDIOE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::BIDIOE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::bidioe, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(14);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::BIDIOE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::bidioe, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -204,14 +204,14 @@ TEST_F(SPIRegisterTest, setUnsetBIDIOE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetBIDIMODE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::BIDIMODE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::bidimode, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(15);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::BIDIMODE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister1Bit<ControlRegister1Property::bidimode, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
@@ -228,14 +228,14 @@ TEST_F(SPIRegisterTest, setBaudRate) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetRXDMAEN) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::RXDMAEN, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::rxdmaen, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(0);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::RXDMAEN, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::rxdmaen, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -243,14 +243,14 @@ TEST_F(SPIRegisterTest, setUnsetRXDMAEN) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetTXDMAEN) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::TXDMAEN, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::txdmaen, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(1);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::TXDMAEN, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::txdmaen, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -258,14 +258,14 @@ TEST_F(SPIRegisterTest, setUnsetTXDMAEN) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetSSOE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::SSOE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::ssoe, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(2);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::SSOE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::ssoe, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -273,14 +273,14 @@ TEST_F(SPIRegisterTest, setUnsetSSOE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetFRF) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::FRF, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::frf, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(4);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::FRF, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::frf, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -288,14 +288,14 @@ TEST_F(SPIRegisterTest, setUnsetFRF) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetERRIE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::ERRIE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::errie, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(5);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::ERRIE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::errie, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -303,14 +303,14 @@ TEST_F(SPIRegisterTest, setUnsetERRIE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetRXNEIE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::RXNEIE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::rxneie, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(6);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::RXNEIE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::rxneie, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
@@ -318,14 +318,14 @@ TEST_F(SPIRegisterTest, setUnsetRXNEIE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setUnsetTXEIE) // NOLINT: Static storage warning.
 {
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::TXEIE, true>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::txeie, true>(
     registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(7);
   auto expectedValue = UINT32_C(0b1) << numberOfShifts;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
 
-  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::TXEIE, false>(
+  SPIRegisters<RegisterTypeHost>::setControlRegister2Bit<ControlRegister2Property::txeie, false>(
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);

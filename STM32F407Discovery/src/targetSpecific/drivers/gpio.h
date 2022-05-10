@@ -1,5 +1,5 @@
-#ifndef SRC_TARGETSPECIFIC_DRIVERS_GPIO
-#define SRC_TARGETSPECIFIC_DRIVERS_GPIO
+#ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_GPIO
+#define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_GPIO
 
 #include "targetSpecific/registers/gpioRegisters.h"
 #include "targetSpecific/registers/rccRegisters.h"
@@ -76,4 +76,4 @@ public:
   }
 };
 
-#endif /* SRC_TARGETSPECIFIC_DRIVERS_GPIO */
+#endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_GPIO */
