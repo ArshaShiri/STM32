@@ -26,6 +26,54 @@ enum class ControlRegister1Property
   bidimode
 };
 
+enum class ClockPhase
+{
+  firstClockTransitionFirstDataCapture,
+  secondClockTransitionFirstDataCapture
+};
+
+enum class ClockPolarity
+{
+  clockZeroWhenIdle,
+  clockOneWhenIdle
+};
+
+enum class MasterSelection
+{
+  master,
+  slave
+};
+
+enum class SoftwareSlaveSelect
+{
+  disabled,
+  enabled
+};
+
+enum class DataFrameFormat
+{
+  eightBit,
+  sixteenBit
+};
+
+enum class ReceiveOnly
+{
+  fullDuplex,
+  outputDisabled
+};
+
+enum class OutputEnableInBidirectionalMode
+{
+  disabled,
+  enabled
+};
+
+enum class BidirectionalDataMode
+{
+  fullDuplex,
+  halfDuplex
+};
+
 enum class BaudRateControl
 {
   fPCLKDiv2,
@@ -67,11 +115,12 @@ class SPIRegisters
   };
 
 public:
-  template<ControlRegister1Property property, bool set>
+  template<ControlRegister1Property property, typename T, T value>
   static void setControlRegister1Bit(const RegisterAddressType spiBaseAddress)
   {
     constexpr auto bitNumber = controlRegister1PropertyToShiftValue.at(property);
-    doSet<set>(spiBaseAddress + Offsets::cr1, bitNumber);
+    constexpr auto setValue = SetValueHelper<property, T>::getSetValue(value);
+    doSet<setValue>(spiBaseAddress + Offsets::cr1, bitNumber);
   }
 
   template<BaudRateControl property, bool set>
@@ -90,8 +139,65 @@ public:
     doSet<set>(spiBaseAddress + Offsets::cr2, bitNumber);
   }
 
-
 private:
+  template<ControlRegister1Property property, typename T>
+  struct SetValueHelper
+  {
+    static constexpr bool getSetValue(T value) { return value; }
+  };
+
+  // Only specialize based on property to avoid calling a specialized method with the wrong value type.
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::cpha, T>
+  {
+    static constexpr bool getSetValue(T value)
+    {
+      return value == ClockPhase::secondClockTransitionFirstDataCapture ? 1 : 0;
+    }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::cpol, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == ClockPolarity::clockOneWhenIdle ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::mstr, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == MasterSelection::master ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::dff, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == DataFrameFormat::sixteenBit ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::ssm, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == SoftwareSlaveSelect::enabled ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::rxonly, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == ReceiveOnly::outputDisabled ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::bidioe, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == OutputEnableInBidirectionalMode::enabled ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::bidimode, T>
+  {
+    static constexpr bool getSetValue(T value) { return value == BidirectionalDataMode::halfDuplex ? 1 : 0; }
+  };
+
   template<bool set>
   static void doSet(const RegisterAddressType regAddress, const RegisterAddressType bitNumber)
   {
