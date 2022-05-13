@@ -1,5 +1,5 @@
-#ifndef SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT
-#define SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT
+#ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT
+#define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT
 
 #include "processorSpecific/interruptRegisters.h"
 
@@ -26,39 +26,39 @@ public:
   template<PinType pin, bool set>
   static void setEXTIInterruptMaskRegister()
   {
-    EXTIRegisters<RegisterType>::setInterruptMaskRegister<pin, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setInterruptMaskRegister<pin, set>(BaseAddresses::exti);
   }
 
   template<PinType pin, bool set>
   static void setEXTIEventMaskRegister()
   {
-    EXTIRegisters<RegisterType>::setEventMaskRegister<pin, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setEventMaskRegister<pin, set>(BaseAddresses::exti);
   }
 
   template<PinType pin, bool set>
   static void setEXTIRisingTriggerRegister()
   {
-    EXTIRegisters<RegisterType>::setRisingTriggerRegister<pin, set>(extiBaseAddress);
-    EXTIRegisters<RegisterType>::setFallingTriggerRegister<pin, false>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setRisingTriggerRegister<pin, set>(BaseAddresses::exti);
+    EXTIRegisters<RegisterType>::setFallingTriggerRegister<pin, false>(BaseAddresses::exti);
   }
 
   template<PinType pin, bool set>
   static void setEXTIFallingTriggerRegister()
   {
-    EXTIRegisters<RegisterType>::setFallingTriggerRegister<pin, set>(extiBaseAddress);
-    EXTIRegisters<RegisterType>::setRisingTriggerRegister<pin, false>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setFallingTriggerRegister<pin, set>(BaseAddresses::exti);
+    EXTIRegisters<RegisterType>::setRisingTriggerRegister<pin, false>(BaseAddresses::exti);
   }
 
   template<PinType pin, bool set>
   static void setEXTISoftwareInterruptEventRegister()
   {
-    EXTIRegisters<RegisterType>::setSoftwareInterruptEventRegister<pin, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setSoftwareInterruptEventRegister<pin, set>(BaseAddresses::exti);
   }
 
   template<PinType pin, bool set>
   static void setEXTIPendingRegister()
   {
-    EXTIRegisters<RegisterType>::setPendingRegister<pin, set>(extiBaseAddress);
+    EXTIRegisters<RegisterType>::setPendingRegister<pin, set>(BaseAddresses::exti);
   }
 
   template<bool set>
@@ -70,7 +70,7 @@ public:
   template<InputPort inputPort, PinType pin>
   static void setExternalInterruptConfigurationRegister()
   {
-    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister<inputPort, pin>(syscfgBaseAddress);
+    SYSCFGRegisters<RegisterType>::setExternalInterruptConfigurationRegister<inputPort, pin>(BaseAddresses::syscfg);
   }
 
   template<IRQ irqNumber>
@@ -98,9 +98,6 @@ public:
   }
 
 private:
-  static constexpr auto extiBaseAddress = BaseAddresses::exti;
-  static constexpr auto syscfgBaseAddress = BaseAddresses::syscfg;
-
   static constexpr StaticMap<IRQ, std::uint8_t, 7> irqToPositionInVectorTable{ { { { IRQ::EXTI0, 6 },
                                                                                    { IRQ::EXTI1, 7 },
                                                                                    { IRQ::EXTI2, 8 },
@@ -110,4 +107,4 @@ private:
                                                                                    { IRQ::EXTI15_10, 40 } } } };
 };
 
-#endif /* SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT */
+#endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT */

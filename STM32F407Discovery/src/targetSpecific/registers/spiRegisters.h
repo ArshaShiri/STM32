@@ -123,10 +123,10 @@ public:
     doSet<setValue>(spiBaseAddress + Offsets::cr1, bitNumber);
   }
 
-  template<BaudRateControl property, bool set>
+  template<BaudRateControl rate, bool set>
   static void setBaudRate(const RegisterAddressType spiBaseAddress)
   {
-    constexpr auto value = baudRateControlToShiftValue.at(property);
+    constexpr auto value = baudRateControlToShiftValue.at(rate);
     constexpr auto numberOfShifts = 3;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(spiBaseAddress + Offsets::cr1,
                                                                      value << numberOfShifts);
@@ -137,6 +137,34 @@ public:
   {
     constexpr auto bitNumber = controlRegister2PropertyToShiftValue.at(property);
     doSet<set>(spiBaseAddress + Offsets::cr2, bitNumber);
+  }
+
+  static void writeToDataRegister(const RegisterAddressType spiBaseAddress, const std::uint8_t data)
+  {
+    RegisterAccess<RegisterAddressType, std::uint8_t>::regSet(spiBaseAddress + Offsets::dr, data);
+  }
+
+  static void writeToDataRegister(const RegisterAddressType spiBaseAddress, const std::uint16_t data)
+  {
+    RegisterAccess<RegisterAddressType, std::uint16_t>::regSet(spiBaseAddress + Offsets::dr, data);
+  }
+
+  static bool isReceiveBufferOccupied(const RegisterAddressType spiBaseAddress)
+  {
+    constexpr auto bitNumber = 0;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::sr, bitNumber);
+  }
+
+  static bool isTransmitBufferOccupied(const RegisterAddressType spiBaseAddress)
+  {
+    constexpr auto bitNumber = 1;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::sr, bitNumber);
+  }
+
+  static bool isSPIBusy(const RegisterAddressType spiBaseAddress)
+  {
+    constexpr auto bitNumber = 7;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::sr, bitNumber);
   }
 
 private:

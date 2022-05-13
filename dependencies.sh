@@ -6,6 +6,7 @@ sudo apt-get remove binutils-arm-none-eabi gcc-arm-none-eabi
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo apt-get install gcc-arm-none-eabi
 sudo apt-get install gdb-arm-none-eabi
+sudo apt install libstdc++-arm-none-eabi-newlib
 
 echo "Installing pre-commit"
 pip install pre-commit

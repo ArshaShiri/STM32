@@ -196,7 +196,7 @@ private:
         { OutputSpeed::veryHigh, 0b11 } } }
   };
 
-  static constexpr StaticMap<PullupPullDownControl, RegisterAddressType, 4> pullupPullDownControlToValue{
+  static constexpr StaticMap<PullupPullDownControl, RegisterAddressType, 3> pullupPullDownControlToValue{
     { { { PullupPullDownControl::noPullupPullDown, 0b00 },
         { PullupPullDownControl::pullup, 0b01 },
         { PullupPullDownControl::pullDown, 0b10 } } }

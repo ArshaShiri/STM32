@@ -16,6 +16,8 @@ protected:
 
   [[nodiscard]] RegisterType getValueOfControlRegister1() const { return spiRegisterSet.at(0); }
   [[nodiscard]] RegisterType getValueOfControlRegister2() const { return spiRegisterSet.at(1); }
+  void setDataRegister(RegisterType value) { spiRegisterSet.at(2) = value; }
+  [[nodiscard]] RegisterType getValueOfDataRegister() const { return spiRegisterSet.at(3); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfSPIRegisters{ 9 };
@@ -351,4 +353,39 @@ TEST_F(SPIRegisterTest, setUnsetTXEIE) // NOLINT: Static storage warning.
     registerSetBaseAddressValue);
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister2(), expectedValue);
+}
+
+TEST_F(SPIRegisterTest, readTransmitBuffer) // NOLINT: Static storage warning.
+{
+  const auto numberOfShifts = UINT32_C(1);
+  const auto transmitBufferIsEmpty = UINT32_C(0b1) << numberOfShifts;
+  setDataRegister(transmitBufferIsEmpty);
+  EXPECT_TRUE(SPIRegisters<RegisterTypeHost>::isTransmitBufferOccupied(registerSetBaseAddressValue));
+}
+
+TEST_F(SPIRegisterTest, readReceiveBuffer) // NOLINT: Static storage warning.
+{
+  const auto numberOfShifts = UINT32_C(0);
+  const auto transmitBufferIsEmpty = UINT32_C(0b1) << numberOfShifts;
+  setDataRegister(transmitBufferIsEmpty);
+  EXPECT_TRUE(SPIRegisters<RegisterTypeHost>::isReceiveBufferOccupied(registerSetBaseAddressValue));
+}
+
+TEST_F(SPIRegisterTest, readisSPIBusy) // NOLINT: Static storage warning.
+{
+  const auto numberOfShifts = UINT32_C(7);
+  const auto transmitBufferIsEmpty = UINT32_C(0b1) << numberOfShifts;
+  setDataRegister(transmitBufferIsEmpty);
+  EXPECT_TRUE(SPIRegisters<RegisterTypeHost>::isSPIBusy(registerSetBaseAddressValue));
+}
+
+TEST_F(SPIRegisterTest, writeToDataRegister) // NOLINT: Static storage warning.
+{
+  const std::uint8_t data1 = UINT8_C(250);
+  SPIRegisters<RegisterTypeHost>::writeToDataRegister(registerSetBaseAddressValue, data1);
+  EXPECT_EQ(getValueOfDataRegister(), data1);
+
+  const std::uint16_t data2 = UINT16_C(5651);
+  SPIRegisters<RegisterTypeHost>::writeToDataRegister(registerSetBaseAddressValue, data2);
+  EXPECT_EQ(getValueOfDataRegister(), data2);
 }
