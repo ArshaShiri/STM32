@@ -309,14 +309,14 @@ TEST_F(SPIRegisterTest, readTransmitBuffer) // NOLINT: Static storage warning.
   const auto numberOfShifts = UINT32_C(1);
   const auto transmitBufferIsEmpty = UINT32_C(0b1) << numberOfShifts;
   setDataRegister(transmitBufferIsEmpty);
-  EXPECT_TRUE(SPIRegs::isTransmitBufferOccupied(registerSetBaseAddressValue));
+  EXPECT_TRUE(SPIRegs::isTransmitBufferEmpty(registerSetBaseAddressValue));
 }
 
 TEST_F(SPIRegisterTest, readReceiveBuffer) // NOLINT: Static storage warning.
 {
   const auto numberOfShifts = UINT32_C(0);
-  const auto transmitBufferIsEmpty = UINT32_C(0b1) << numberOfShifts;
-  setDataRegister(transmitBufferIsEmpty);
+  const auto receiveBufferIsOccupied = UINT32_C(0b1) << numberOfShifts;
+  setDataRegister(receiveBufferIsOccupied);
   EXPECT_TRUE(SPIRegs::isReceiveBufferOccupied(registerSetBaseAddressValue));
 }
 

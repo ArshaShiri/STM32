@@ -1,6 +1,8 @@
 #ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_SPI
 #define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_SPI
 
+#include <array>
+
 #include "targetSpecific/registers/spiRegisters.h"
 #include "utils/helpers.h"
 
@@ -35,6 +37,26 @@ public:
     setDataFrameFormat<data.format>();
     setClockPhase<data.phase>();
     setClockPolarity<data.polarity>();
+  }
+
+  template<std::size_t size>
+  static void sendData(const std::array<std::uint16_t, size> &data)
+  {
+    if (SPIRegisters<RegisterType>::
+          readControlRegister1Bit<ControlRegister1Property::dff, DataFrameFormat, DataFrameFormat::eightBit>)
+      return;
+
+    doSendData<std::uint16_t, size>(data);
+  }
+
+  template<std::size_t size>
+  static void sendData(const std::array<std::uint8_t, size> &data)
+  {
+    if (SPIRegisters<RegisterType>::
+          readControlRegister1Bit<ControlRegister1Property::dff, DataFrameFormat, DataFrameFormat::sixteenBit>)
+      return;
+
+    doSendData<std::uint8_t, size>(data);
   }
 
 private:
@@ -77,6 +99,17 @@ private:
   {
     SPIRegisters<RegisterType>::setControlRegister1Bit<ControlRegister1Property::cpol, ClockPolarity, polarity>(
       spiNumberToBaseAddress.at(spiNumber));
+  }
+
+  template<typename T, std::size_t size>
+  static void doSendData(const std::array<T, size> &data)
+  {
+    for (const auto dataEl : data)
+    {
+      while (!SPIRegisters<RegisterType>::isTransmitBufferEmpty())
+        ;
+      SPIRegisters<RegisterType>::writeToDataRegister(spiNumberToBaseAddress.at(spiNumber), dataEl);
+    }
   }
 
   static constexpr StaticMap<SPINumber, RegisterType, 3> spiNumberToBaseAddress{

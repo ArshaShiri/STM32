@@ -164,7 +164,7 @@ public:
     return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::sr, bitNumber);
   }
 
-  static bool isTransmitBufferOccupied(const RegisterAddressType spiBaseAddress)
+  static bool isTransmitBufferEmpty(const RegisterAddressType spiBaseAddress)
   {
     constexpr auto bitNumber = 1;
     return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::sr, bitNumber);

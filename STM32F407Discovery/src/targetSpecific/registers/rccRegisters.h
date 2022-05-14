@@ -24,12 +24,15 @@ enum class PeripheralAPB1
 {
   I2C1,
   I2C2,
-  I2C3
+  I2C3,
+  SPI2,
+  SPI3
 };
 
 enum class PeripheralAPB2
 {
-  SYSCFG
+  SYSCFG,
+  SPI1,
 };
 
 template<typename RegisterAddressType>
@@ -144,11 +147,14 @@ private:
                                                                                    { PeripheralAHB1::GPIOH, 7 },
                                                                                    { PeripheralAHB1::GPIOI, 8 } } } };
 
-  static constexpr StaticMap<PeripheralAPB1, RegisterType, 3> apb1ToBitNumber{
-    { { { PeripheralAPB1::I2C1, 21 }, { PeripheralAPB1::I2C2, 22 }, { PeripheralAPB1::I2C3, 23 } } }
-  };
+  static constexpr StaticMap<PeripheralAPB1, RegisterType, 5> apb1ToBitNumber{ { { { PeripheralAPB1::SPI2, 14 },
+                                                                                   { PeripheralAPB1::SPI3, 15 },
+                                                                                   { PeripheralAPB1::I2C1, 21 },
+                                                                                   { PeripheralAPB1::I2C2, 22 },
+                                                                                   { PeripheralAPB1::I2C3, 23 } } } };
 
-  static constexpr StaticMap<PeripheralAPB2, RegisterType, 1> apb2ToBitNumber{ { { { PeripheralAPB2::SYSCFG, 14 } } } };
+  static constexpr StaticMap<PeripheralAPB2, RegisterType, 2> apb2ToBitNumber{ { { { PeripheralAPB2::SPI1, 12 },
+                                                                                   { PeripheralAPB2::SYSCFG, 14 } } } };
 };
 
 class RCCRegistersTarget
