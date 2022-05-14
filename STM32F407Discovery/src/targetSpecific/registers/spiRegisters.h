@@ -123,6 +123,15 @@ public:
     doSet<setValue>(spiBaseAddress + Offsets::cr1, bitNumber);
   }
 
+  template<ControlRegister1Property property, typename T, T value>
+  static bool readControlRegister1Bit(const RegisterAddressType spiBaseAddress)
+  {
+    constexpr auto bitNumber = controlRegister1PropertyToShiftValue.at(property);
+    const auto actualValueInRegister =
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(spiBaseAddress + Offsets::cr1, bitNumber);
+    return actualValueInRegister == SetValueHelper<property, T>::getSetValue(value);
+  }
+
   template<BaudRateControl rate, bool set>
   static void setBaudRate(const RegisterAddressType spiBaseAddress)
   {
