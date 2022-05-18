@@ -151,7 +151,7 @@ public:
 
   static RegisterAddressType readInputPort(const RegisterAddressType baseRegisterAddress)
   {
-    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::idr);
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(baseRegisterAddress + Offsets::idr);
   }
 
   template<PinType pinNumber, bool set>
