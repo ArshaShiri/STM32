@@ -17,8 +17,8 @@ struct StaticMap
     if (it != data.end())
       return it->second;
     // Had to comment this out since the target code cannot have exception handling!
-    // else
-    //   throw std::range_error("Not found in static map!");
+    else
+      return 0;
   }
 };
 

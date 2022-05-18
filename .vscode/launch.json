@@ -7,7 +7,7 @@
         {
             "name": "STlink launch",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/C++/build/test.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spi/spi.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stutil",
@@ -17,13 +17,13 @@
             "runToEntryPoint": "main", // else it starts at reset handler - not interested
             // "preLaunchTask": "Build all", // configured in tasks.json
             //"preLaunchCommands": ["echo pw"], // can be configured in tasks.json
-            "svdFile": "", // Include svd to watch device peripherals
+            "svdFile": "$./STM32F407.svd", // Include svd to watch device peripherals
             "swoConfig": {} // currently (v1.7.0) not supported
         },
         {
             "name": "STlink attach",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/ProofOfConcept/C++/build/test.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spi/spi.elf",
             "request": "attach",
             "type": "cortex-debug",
             "servertype": "stutil",
@@ -33,7 +33,7 @@
             "runToEntryPoint": "main", // else it starts at reset handler - not interested
             // "preLaunchTask": "Build all", // can be configured in tasks.json
             //"preLaunchCommands": ["fsfmake -j8"],
-            "svdFile": "", // Include svd to watch device peripherals
+            "svdFile": "STM32F407.svd", // Include svd to watch device peripherals
             "swoConfig": {} // currently (v1.7.0) not supported
         },
     ]

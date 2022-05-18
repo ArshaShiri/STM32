@@ -1,5 +1,5 @@
-#ifndef SRC_TARGETSPECIFIC_GPIOREGISTERS
-#define SRC_TARGETSPECIFIC_GPIOREGISTERS
+#ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_GPIOREGISTERS
+#define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_GPIOREGISTERS
 
 #include "registerType.h"
 #include "registersBaseAddresses.h"
@@ -82,8 +82,8 @@ public:
     constexpr auto portModeValue = portModeToValue.at(mode);
     static constexpr auto shiftPerPin = 2;
     constexpr auto numberOfShifts = pinNumber * shiftPerPin;
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::moder,
-                                                                     portModeValue << numberOfShifts);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::moder,
+                                                                          portModeValue << numberOfShifts);
   }
 
   template<OutputType type, PinType pinNumber>
@@ -92,8 +92,8 @@ public:
     static_assert(pinNumber < numberOfPins, "Pin number is not supported!");
 
     constexpr auto outputTypeValue = outputTypeToValue.at(type);
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::otyper,
-                                                                     outputTypeValue << pinNumber);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::otyper,
+                                                                          outputTypeValue << pinNumber);
   }
 
   template<OutputSpeed speed, PinType pinNumber>
@@ -104,8 +104,8 @@ public:
     constexpr auto outputSpeedValue = outputSpeedToValue.at(speed);
     static constexpr auto shiftPerPin = 2;
     constexpr auto numberOfShifts = pinNumber * shiftPerPin;
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::ospeedr,
-                                                                     outputSpeedValue << numberOfShifts);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::ospeedr,
+                                                                          outputSpeedValue << numberOfShifts);
   }
 
   template<PullupPullDownControl type, PinType pinNumber>
@@ -116,8 +116,8 @@ public:
     constexpr auto pullupPullDownValue = pullupPullDownControlToValue.at(type);
     static constexpr auto shiftPerPin = 2;
     constexpr auto numberOfShifts = pinNumber * shiftPerPin;
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::pupdr,
-                                                                     pullupPullDownValue << numberOfShifts);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::pupdr,
+                                                                          pullupPullDownValue << numberOfShifts);
   }
 
   template<AlternateFunction function, PinType pinNumber>
@@ -135,11 +135,11 @@ public:
       doesPinBelongToLowRegister ? (pinNumber * shiftPerPin) : ((pinNumber - numberOfPinsInEachRegister) * shiftPerPin);
 
     if constexpr (doesPinBelongToLowRegister)
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::afrl,
-                                                                       alternateFunctionValue << numberOfShifts);
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::afrl,
+                                                                            alternateFunctionValue << numberOfShifts);
     else
-      RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::afrh,
-                                                                       alternateFunctionValue << numberOfShifts);
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::afrh,
+                                                                            alternateFunctionValue << numberOfShifts);
   }
 
   template<PinType pinNumber>
@@ -151,7 +151,7 @@ public:
 
   static RegisterAddressType readInputPort(const RegisterAddressType baseRegisterAddress)
   {
-    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(baseRegisterAddress + Offsets::idr);
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::idr);
   }
 
   template<PinType pinNumber, bool set>
@@ -167,7 +167,7 @@ public:
 
   static void writeOutputPort(const RegisterAddressType baseRegisterAddress, const RegisterAddressType value)
   {
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(baseRegisterAddress + Offsets::odr, value);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOverride(baseRegisterAddress + Offsets::odr, value);
   }
 
   template<PinType pinNumber>
@@ -224,4 +224,4 @@ private:
   static constexpr auto numberOfPins = 16;
 };
 
-#endif /* SRC_TARGETSPECIFIC_GPIOREGISTERS */
+#endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_GPIOREGISTERS */

@@ -12,6 +12,13 @@ struct RegisterAccess
     memory(address) = value;
   }
 
+  static void regOverride(const RegisterAddressType address,
+                          const RegisterValueType value = static_cast<RegisterValueType>(0))
+  {
+    regAnd(address, ~value);
+    regOr(address, value);
+  }
+
   static void regAnd(const RegisterAddressType address,
                      const RegisterValueType value = static_cast<RegisterValueType>(0))
   {

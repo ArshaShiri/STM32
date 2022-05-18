@@ -206,7 +206,7 @@ TEST_F(SPIRegisterTest, setUnsetBIDIMODE) // NOLINT: Static storage warning.
 
 TEST_F(SPIRegisterTest, setBaudRate) // NOLINT: Static storage warning.
 {
-  SPIRegs::setBaudRate<BaudRateControl::fPCLKDiv16, true>(registerSetBaseAddressValue);
+  SPIRegs::setBaudRate<BaudRateControl::fPCLKDiv16>(registerSetBaseAddressValue);
 
   const auto numberOfShifts = UINT32_C(3);
   auto expectedValue = UINT32_C(0b011) << numberOfShifts;

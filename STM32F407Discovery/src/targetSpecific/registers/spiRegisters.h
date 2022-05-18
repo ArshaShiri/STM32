@@ -132,13 +132,13 @@ public:
     return actualValueInRegister == SetValueHelper<property, T>::getSetValue(value);
   }
 
-  template<BaudRateControl rate, bool set>
+  template<BaudRateControl rate>
   static void setBaudRate(const RegisterAddressType spiBaseAddress)
   {
     constexpr auto value = baudRateControlToShiftValue.at(rate);
     constexpr auto numberOfShifts = 3;
-    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(spiBaseAddress + Offsets::cr1,
-                                                                     value << numberOfShifts);
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regOr(spiBaseAddress + Offsets::cr1,
+                                                                    value << numberOfShifts);
   }
 
   template<ControlRegister2Property property, bool set>
