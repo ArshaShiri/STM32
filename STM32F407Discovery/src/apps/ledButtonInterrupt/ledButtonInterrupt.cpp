@@ -6,25 +6,30 @@
 
 int main()
 {
-  constexpr auto ledPinNumber = 12;
+  static constexpr auto pinNumberLed = 12;
+  static constexpr GPIOInitData initDataLed{ PeripheralAHB1::GPIOD,
+                                             PortMode::generalpurposeOutput,
+                                             OutputType::pushPull,
+                                             OutputSpeed::high,
+                                             PullupPullDownControl::noPullupPullDown };
+
+  constexpr auto pinNumberButton = 0;
+  static constexpr GPIOInitData initDataButton{ PeripheralAHB1::GPIOA,
+                                                PortMode::input,
+                                                OutputType::pushPull,
+                                                OutputSpeed::high,
+                                                PullupPullDownControl::noPullupPullDown };
+
   using gpioD = GPIO<BaseAddresses::gpioD>;
-  gpioD::setClock<PeripheralAHB1::GPIOD, true>();
-  gpioD::setPortMode<PortMode::generalpurposeOutput, ledPinNumber>();
-  gpioD::setOutputSpeed<OutputSpeed::high, ledPinNumber>();
-  gpioD::setOutputType<OutputType::pushPull, ledPinNumber>();
-  gpioD::setPullupPullDown<PullupPullDownControl::noPullupPullDown, ledPinNumber>();
-
-  constexpr auto buttonPinNumber = 0;
   using gpioA = GPIO<BaseAddresses::gpioA>;
-  gpioA::setClock<PeripheralAHB1::GPIOA, true>();
-  gpioA::setPortMode<PortMode::input, buttonPinNumber>();
-  gpioA::setOutputSpeed<OutputSpeed::high, buttonPinNumber>();
-  gpioA::setPullupPullDown<PullupPullDownControl::noPullupPullDown, buttonPinNumber>();
 
-  Interrupt::setEXTIRisingTriggerRegister<buttonPinNumber, true>();
+  gpioD::init<initDataLed, pinNumberLed>();
+  gpioA::init<initDataButton, pinNumberButton>();
+
+  Interrupt::setEXTIRisingTriggerRegister<pinNumberButton, true>();
   Interrupt::setExternalInterruptClock<true>();
-  Interrupt::setExternalInterruptConfigurationRegister<InputPort::PA, buttonPinNumber>();
-  Interrupt::setEXTIInterruptMaskRegister<buttonPinNumber, true>();
+  Interrupt::setExternalInterruptConfigurationRegister<InputPort::PA, pinNumberButton>();
+  Interrupt::setEXTIInterruptMaskRegister<pinNumberButton, true>();
   Interrupt::enableIRQ<IRQ::EXTI0>();
 
   while (true)

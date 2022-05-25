@@ -21,6 +21,11 @@ Archive member included to satisfy reference by file (symbol)
 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o) (_exit)
 
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+
 Memory Configuration
 
 Name             Origin             Length             Attributes
@@ -49,7 +54,7 @@ END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
 
-.text           0x0000000008000000      0x7c0
+.text           0x0000000008000000      0x7f0
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x188 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
                 0x0000000008000000                isr_vector
@@ -183,57 +188,63 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .text          0x0000000008000678        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  .text          0x0000000008000678        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.text.*)
- .text.startup  0x0000000008000678       0xd0 CMakeFiles/ledButton.dir/ledButton.cpp.obj
-                0x0000000008000678                main
- .text.startup  0x0000000008000748       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .text._ZN4GPIOILm1073875968EE4initIXtl12GPIOInitDataL14PeripheralAHB13EL8PortMode1EL17AlternateFunction0EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh12EEEvv
+                0x0000000008000678       0x74 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000678                void GPIO<1073875968ul>::init<GPIOInitData{(PeripheralAHB1)3, (PortMode)1, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)12>()
+ .text._ZN4GPIOILm1073872896EE4initIXtl12GPIOInitDataL14PeripheralAHB10EL8PortMode0EL17AlternateFunction0EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh0EEEvv
+                0x00000000080006ec       0x50 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080006ec                void GPIO<1073872896ul>::init<GPIOInitData{(PeripheralAHB1)0, (PortMode)0, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)0>()
+ .text.startup  0x000000000800073c       0x3c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800073c                main
+ .text.startup  0x0000000008000778       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  *(.init)
- .init          0x000000000800075c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x000000000800075c                _init
- .init          0x0000000008000760        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x000000000800078c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x000000000800078c                _init
+ .init          0x0000000008000790        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008000768        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008000768                _fini
- .fini          0x000000000800076c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .fini          0x0000000008000798        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008000798                _fini
+ .fini          0x000000000800079c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.rodata)
- .rodata        0x0000000008000774       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .rodata        0x0000000008000798        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                0x0000000008000798                _global_impure_ptr
- .rodata        0x000000000800079c       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .rodata        0x00000000080007a4       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x00000000080007c8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x00000000080007c8                _global_impure_ptr
+ .rodata        0x00000000080007cc       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  *(.rodata.*)
-                0x00000000080007c0                . = ALIGN (0x4)
-                0x00000000080007c0                end_of_text = .
-                0x00000000080007cc                load_address_of_data = LOADADDR (.data)
+                0x00000000080007f0                . = ALIGN (0x4)
+                0x00000000080007f0                end_of_text = .
+                0x00000000080007fc                load_address_of_data = LOADADDR (.data)
 
-.glue_7         0x00000000080007c0        0x0
- .glue_7        0x00000000080007c0        0x0 linker stubs
+.glue_7         0x00000000080007f0        0x0
+ .glue_7        0x00000000080007f0        0x0 linker stubs
 
-.glue_7t        0x00000000080007c0        0x0
- .glue_7t       0x00000000080007c0        0x0 linker stubs
+.glue_7t        0x00000000080007f0        0x0
+ .glue_7t       0x00000000080007f0        0x0 linker stubs
 
-.vfp11_veneer   0x00000000080007c0        0x0
- .vfp11_veneer  0x00000000080007c0        0x0 linker stubs
+.vfp11_veneer   0x00000000080007f0        0x0
+ .vfp11_veneer  0x00000000080007f0        0x0 linker stubs
 
-.v4_bx          0x00000000080007c0        0x0
- .v4_bx         0x00000000080007c0        0x0 linker stubs
+.v4_bx          0x00000000080007f0        0x0
+ .v4_bx         0x00000000080007f0        0x0 linker stubs
 
-.iplt           0x00000000080007c0        0x0
- .iplt          0x00000000080007c0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x00000000080007f0        0x0
+ .iplt          0x00000000080007f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.eh_frame       0x00000000080007c0        0x4
- .eh_frame      0x00000000080007c0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x00000000080007c0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+.eh_frame       0x00000000080007f0        0x4
+ .eh_frame      0x00000000080007f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x00000000080007f0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.ARM.extab      0x00000000080007c4        0x0
- .ARM.extab     0x00000000080007c4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.extab      0x00000000080007f4        0x0
+ .ARM.extab     0x00000000080007f4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 
-.ARM.exidx      0x00000000080007c4        0x8
- .ARM.exidx     0x00000000080007c4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.exidx      0x00000000080007f4        0x8
+ .ARM.exidx     0x00000000080007f4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
                                          0x10 (size before relaxing)
 
-.rel.dyn        0x00000000080007cc        0x0
- .rel.iplt      0x00000000080007cc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x00000000080007fc        0x0
+ .rel.iplt      0x00000000080007fc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x0000000020000000      0x438 load address 0x00000000080007cc
+.data           0x0000000020000000      0x438 load address 0x00000000080007fc
                 0x0000000020000000                start_of_data = .
  *(.data)
  .data          0x0000000020000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
@@ -260,20 +271,20 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000438                . = ALIGN (0x4)
                 0x0000000020000438                end_of_data = .
 
-.fini_array     0x0000000020000438        0x4 load address 0x0000000008000c04
+.fini_array     0x0000000020000438        0x4 load address 0x0000000008000c34
  .fini_array    0x0000000020000438        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
 .tm_clone_table
-                0x000000002000043c        0x0 load address 0x0000000008000c08
+                0x000000002000043c        0x0 load address 0x0000000008000c38
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x000000002000043c        0x0 load address 0x0000000008000c08
+.igot.plt       0x000000002000043c        0x0 load address 0x0000000008000c38
  .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.bss            0x000000002000043c       0x1c load address 0x0000000008000c08
+.bss            0x000000002000043c       0x1c load address 0x0000000008000c38
                 0x000000002000043c                start_of_bss = .
                 0x000000002000043c                __bss_start__ = start_of_bss
  *(.bss)

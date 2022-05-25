@@ -4,27 +4,33 @@
 
 int main()
 {
-  constexpr auto ledPinNumber = 12;
-  using gpioD = GPIO<BaseAddresses::gpioD>;
-  gpioD::setClock<PeripheralAHB1::GPIOD, true>();
-  gpioD::setPortMode<PortMode::generalpurposeOutput, ledPinNumber>();
-  gpioD::setOutputSpeed<OutputSpeed::high, ledPinNumber>();
-  gpioD::setOutputType<OutputType::pushPull, ledPinNumber>();
-  gpioD::setPullupPullDown<PullupPullDownControl::noPullupPullDown, ledPinNumber>();
+  static constexpr auto pinNumberLed = 12;
+  static constexpr GPIOInitData initDataLed{ PeripheralAHB1::GPIOD,
+                                             PortMode::generalpurposeOutput,
+                                             OutputType::pushPull,
+                                             OutputSpeed::high,
+                                             PullupPullDownControl::noPullupPullDown };
 
-  constexpr auto buttonPinNumber = 0;
+  constexpr auto pinNumberButton = 0;
+  static constexpr GPIOInitData initDataButton{ PeripheralAHB1::GPIOA,
+                                                PortMode::input,
+                                                OutputType::pushPull,
+                                                OutputSpeed::high,
+                                                PullupPullDownControl::noPullupPullDown };
+
+
+  using gpioD = GPIO<BaseAddresses::gpioD>;
   using gpioA = GPIO<BaseAddresses::gpioA>;
-  gpioA::setClock<PeripheralAHB1::GPIOA, true>();
-  gpioA::setPortMode<PortMode::input, buttonPinNumber>();
-  gpioA::setOutputSpeed<OutputSpeed::high, buttonPinNumber>();
-  gpioA::setPullupPullDown<PullupPullDownControl::noPullupPullDown, buttonPinNumber>();
+
+  gpioD::init<initDataLed, pinNumberLed>();
+  gpioA::init<initDataButton, pinNumberButton>();
 
   while (true)
   {
-    if (gpioA::readInputPin<buttonPinNumber>())
+    if (gpioA::readInputPin<pinNumberButton>())
     {
       softwareDelay<500000>();
-      gpioD::toggleOutputPin<ledPinNumber>();
+      gpioD::toggleOutputPin<pinNumberLed>();
     }
   }
 

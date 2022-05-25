@@ -44,7 +44,6 @@ set(CMAKE_CXX_FLAGS_INIT
     -Wall
     -Wextra
     -pedantic
-    -Werror
     -Wall
     -Wextra
     -Wshadow

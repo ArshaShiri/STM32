@@ -14,27 +14,15 @@ namespace
 {
 void initSPI2GPIOPeripherals()
 {
-  // constexpr auto pinNumberNSS = 12;
   constexpr auto pinNumberSCLK = 13;
-  // constexpr auto pinNumberMISO = 14;
   constexpr auto pinNumberMOSI = 15;
-
+  static constexpr GPIOInitData initData{ PeripheralAHB1::GPIOB,  PortMode::alternateFunction,
+                                          AlternateFunction::af5, OutputType::pushPull,
+                                          OutputSpeed::high,      PullupPullDownControl::noPullupPullDown };
 
   using gpioB = GPIO<BaseAddresses::gpioB>;
-  gpioB::setClock<PeripheralAHB1::GPIOB, true>();
-
-  auto setPinDependentProperties = []<RegisterType pinNumber>() {
-    gpioB::setPortMode<PortMode::alternateFunction, pinNumber>();
-    gpioB::setAlternateFunction<AlternateFunction::af5, pinNumber>();
-    gpioB::setOutputType<OutputType::pushPull, pinNumber>();
-    gpioB::setPullupPullDown<PullupPullDownControl::noPullupPullDown, pinNumber>();
-    gpioB::setOutputSpeed<OutputSpeed::high, pinNumber>();
-  };
-
-  // setPinDependentProperties.template operator()<pinNumberNSS>();
-  setPinDependentProperties.template operator()<pinNumberSCLK>();
-  // setPinDependentProperties.template operator()<pinNumberMISO>();
-  setPinDependentProperties.template operator()<pinNumberMOSI>();
+  gpioB::init<initData, pinNumberSCLK>();
+  gpioB::init<initData, pinNumberMOSI>();
 }
 } // namespace
 
