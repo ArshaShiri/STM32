@@ -26,6 +26,17 @@ enum class ControlRegister1Property
   bidimode
 };
 
+enum class ControlRegister2Property
+{
+  rxdmaen,
+  txdmaen,
+  ssoe,
+  frf,
+  errie,
+  rxneie,
+  txeie
+};
+
 enum class ClockPhase
 {
   firstClockTransitionFirstDataCapture,
@@ -84,17 +95,6 @@ enum class BaudRateControl
   fPCLKDiv64,
   fPCLKDiv128,
   fPCLKDiv256
-};
-
-enum class ControlRegister2Property
-{
-  rxdmaen,
-  txdmaen,
-  ssoe,
-  frf,
-  errie,
-  rxneie,
-  txeie
 };
 
 template<typename RegisterAddressType>

@@ -5,6 +5,7 @@
 #include <variant>
 
 #include "targetSpecific/drivers/gpio.h"
+#include "targetSpecific/drivers/interrupt.h"
 #include "targetSpecific/registers/spiRegisters.h"
 #include "utils/helpers.h"
 
@@ -26,6 +27,7 @@ struct SPIInitData
   SoftwareSlaveSelect slaveSelect;
 };
 
+extern "C" void SPI2_IRQHandler();
 template<SPINumber spiNumber>
 class SPI
 {
@@ -64,6 +66,25 @@ public:
   }
 
   template<std::size_t size>
+  static void sendDataViaInterrupt(const std::array<std::uint16_t, size> &data)
+  {
+    const auto isDataFrameFormat8Bit = SPIRegisters<RegisterType>::
+      readControlRegister1Bit<ControlRegister1Property::dff, DataFrameFormat, DataFrameFormat::eightBit>(
+        spiNumberToBaseAddress.at(spiNumber));
+
+    if (isDataFrameFormat8Bit)
+      return;
+
+    sizeOfData = size;
+    idxOfData = 0;
+    data16bit = data.data();
+
+    Interrupt::enableIRQ<spiNumberToIRQ.at(spiNumber)>();
+    SPIRegisters<RegisterType>::setControlRegister2Bit<ControlRegister2Property::txdmaen, true>(
+      spiNumberToBaseAddress.at(spiNumber));
+  }
+
+  template<std::size_t size>
   static void sendData(const std::array<std::uint8_t, size> &data)
   {
     const auto isDataFrameFormat16Bit = SPIRegisters<RegisterType>::
@@ -74,6 +95,25 @@ public:
       return;
 
     doSendData<std::uint8_t, size>(data);
+  }
+
+  template<std::size_t size>
+  static void sendDataViaInterrupt(const std::array<std::uint8_t, size> &data)
+  {
+    const auto isDataFrameFormat16Bit = SPIRegisters<RegisterType>::
+      readControlRegister1Bit<ControlRegister1Property::dff, DataFrameFormat, DataFrameFormat::sixteenBit>(
+        spiNumberToBaseAddress.at(spiNumber));
+
+    if (isDataFrameFormat16Bit)
+      return;
+
+    sizeOfData = size;
+    idxOfData = 0;
+    data8bit = data.data();
+
+    Interrupt::enableIRQ<spiNumberToIRQ.at(spiNumber)>();
+    SPIRegisters<RegisterType>::setControlRegister2Bit<ControlRegister2Property::txeie, true>(
+      spiNumberToBaseAddress.at(spiNumber));
   }
 
 private:
@@ -154,12 +194,49 @@ private:
     }
   }
 
+  static void sendNextData()
+  {
+    if (idxOfData == sizeOfData)
+    {
+      data8bit = nullptr;
+      data16bit = nullptr;
+      sizeOfData = 0;
+      idxOfData = 0;
+      SPIRegisters<RegisterType>::setControlRegister2Bit<ControlRegister2Property::txeie, false>(
+        spiNumberToBaseAddress.at(spiNumber));
+    }
+
+    if (data8bit != nullptr)
+    {
+      SPIRegisters<RegisterType>::writeToDataRegister(spiNumberToBaseAddress.at(spiNumber), *data8bit);
+      ++data8bit;
+    }
+
+    if (data16bit != nullptr)
+    {
+      SPIRegisters<RegisterType>::writeToDataRegister(spiNumberToBaseAddress.at(spiNumber), *data16bit);
+      ++data16bit;
+    }
+
+    ++idxOfData;
+  }
+
   static constexpr StaticMap<SPINumber, RegisterType, 3> spiNumberToBaseAddress{
     { { { SPINumber::spi1, BaseAddresses::spi1 },
         { SPINumber::spi2, BaseAddresses::spi2 },
         { SPINumber::spi3, BaseAddresses::spi3 } } }
   };
-};
 
+  static constexpr StaticMap<SPINumber, IRQ, 3> spiNumberToIRQ{
+    { { { SPINumber::spi1, IRQ::SPI1 }, { SPINumber::spi2, IRQ::SPI2 }, { SPINumber::spi3, IRQ::SPI3 } } }
+  };
+
+  static inline size_t sizeOfData = 0;
+  static inline size_t idxOfData = 0;
+  static inline const uint8_t *data8bit = nullptr;
+  static inline const uint16_t *data16bit = nullptr;
+
+  friend void SPI2_IRQHandler();
+};
 
 #endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_SPI */

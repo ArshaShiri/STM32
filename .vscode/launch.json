@@ -7,7 +7,7 @@
         {
             "name": "STlink launch",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spi/spi.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spiInterrupt/spiInterrupt.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "stutil",
@@ -23,7 +23,7 @@
         {
             "name": "STlink attach",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spi/spi.elf",
+            "executable": "${workspaceRoot}/STM32F407Discovery/build/target/src/apps/spiInterrupt/spiInterrupt.elf",
             "request": "attach",
             "type": "cortex-debug",
             "servertype": "stutil",

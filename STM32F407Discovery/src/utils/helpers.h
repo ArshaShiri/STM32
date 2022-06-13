@@ -17,8 +17,8 @@ struct StaticMap
     if (it != data.end())
       return it->second;
     // Had to comment this out since the target code cannot have exception handling!
-    else
-      return 0;
+    // else
+    //   return 0;
   }
 };
 

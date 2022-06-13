@@ -17,7 +17,10 @@ enum class IRQ
   EXTI3,
   EXTI4,
   EXTI9_5,
-  EXTI15_10
+  EXTI15_10,
+  SPI1,
+  SPI2,
+  SPI3
 };
 
 class Interrupt
@@ -98,13 +101,16 @@ public:
   }
 
 private:
-  static constexpr StaticMap<IRQ, std::uint8_t, 7> irqToPositionInVectorTable{ { { { IRQ::EXTI0, 6 },
-                                                                                   { IRQ::EXTI1, 7 },
-                                                                                   { IRQ::EXTI2, 8 },
-                                                                                   { IRQ::EXTI3, 9 },
-                                                                                   { IRQ::EXTI4, 10 },
-                                                                                   { IRQ::EXTI9_5, 23 },
-                                                                                   { IRQ::EXTI15_10, 40 } } } };
+  static constexpr StaticMap<IRQ, std::uint8_t, 10> irqToPositionInVectorTable{ { { { IRQ::EXTI0, 6 },
+                                                                                    { IRQ::EXTI1, 7 },
+                                                                                    { IRQ::EXTI2, 8 },
+                                                                                    { IRQ::EXTI3, 9 },
+                                                                                    { IRQ::EXTI4, 10 },
+                                                                                    { IRQ::EXTI9_5, 23 },
+                                                                                    { IRQ::SPI1, 35 },
+                                                                                    { IRQ::SPI2, 36 },
+                                                                                    { IRQ::EXTI15_10, 40 },
+                                                                                    { IRQ::SPI3, 54 } } } };
 };
 
 #endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_INTERRUPT */
