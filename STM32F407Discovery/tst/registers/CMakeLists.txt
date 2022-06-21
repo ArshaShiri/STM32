@@ -1,6 +1,7 @@
 add_executable(registersTest extiRegistersTest.cpp
                              gpioRegistersTest.cpp
-                             interruptRegistersTest.cpp                             
+                             i2cRegistersTest.cpp
+                             interruptRegistersTest.cpp
                              main.cpp
                              rccRegistersTest.cpp
                              spiRegistersTest.cpp
