@@ -22,7 +22,7 @@ protected:
   std::array<RegisterType, numberOfI2CRegisters> i2cRegisterSet{};
 };
 
-TEST_F(I2CRegisterTest, setPeripheralEnable) // NOLINT: Static storage warning.
+TEST_F(I2CRegisterTest, setPeripheral) // NOLINT: Static storage warning.
 {
   I2CRegs::setControlRegister1Bit<ControlRegister1Property::pe, Peripheral, Peripheral::enable>(
     registerSetBaseAddressValue);
@@ -32,6 +32,22 @@ TEST_F(I2CRegisterTest, setPeripheralEnable) // NOLINT: Static storage warning.
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
 
   I2CRegs::setControlRegister1Bit<ControlRegister1Property::pe, Peripheral, Peripheral::disable>(
+    registerSetBaseAddressValue);
+
+  expectedValue = 0;
+  EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
+}
+
+TEST_F(I2CRegisterTest, setAcknowledge) // NOLINT: Static storage warning.
+{
+  I2CRegs::setControlRegister1Bit<ControlRegister1Property::ack, Acknowledge, Acknowledge::enable>(
+    registerSetBaseAddressValue);
+
+  const auto numberOfShifts = UINT32_C(10);
+  auto expectedValue = UINT32_C(0b1) << numberOfShifts;
+  EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
+
+  I2CRegs::setControlRegister1Bit<ControlRegister1Property::ack, Acknowledge, Acknowledge::disable>(
     registerSetBaseAddressValue);
 
   expectedValue = 0;

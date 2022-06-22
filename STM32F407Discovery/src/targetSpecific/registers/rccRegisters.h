@@ -127,6 +127,25 @@ public:
                                                                           bitNumber);
   }
 
+  static uint32_t getAPB1Clock(const RegisterAddressType rccBaseAddress)
+  {
+    uint32_t clockSourceValue = 0;
+    const auto systemClockSwitchStatus = getSystemClockSwitchStatus(rccBaseAddress);
+
+    // HSI
+    if (systemClockSwitchStatus == 0)
+      clockSourceValue = 16000000;
+    else // HSE
+      clockSourceValue = 8000000;
+
+    // PLL is not implemented.
+
+    const auto ahpPrescaler = getAHBPrescaler(rccBaseAddress);
+    const auto apb1Prescaler = getAPB1Prescaler(rccBaseAddress);
+
+    return (clockSourceValue / ahpPrescaler) / apb1Prescaler;
+  }
+
 private:
   template<bool set>
   static void doSet(const RegisterAddressType regAddress, const RegisterAddressType bitNumber)
@@ -135,6 +154,70 @@ private:
       RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(regAddress, bitNumber);
     else
       RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(regAddress, bitNumber);
+  }
+
+  static uint8_t getSystemClockSwitchStatus(const RegisterAddressType rccBaseAddress)
+  {
+    const auto cfgrValue =
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(rccBaseAddress + Offsets::cfgr);
+    constexpr auto numberOfShifts = 2;
+    constexpr auto maskValue = 0b11;
+
+    return (cfgrValue >> numberOfShifts) & maskValue;
+  }
+
+  static uint16_t getAHBPrescaler(const RegisterAddressType rccBaseAddress)
+  {
+    const auto cfgrValue =
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(rccBaseAddress + Offsets::cfgr);
+    constexpr auto numberOfShifts = 4;
+    constexpr auto maskValue = 0b1111;
+    const auto prescalerValue = (cfgrValue >> numberOfShifts) & maskValue;
+
+    if (prescalerValue < 0b1000)
+      return 1;
+
+    if (prescalerValue == 0b1000)
+      return 2;
+    if (prescalerValue == 0b1001)
+      return 4;
+    if (prescalerValue == 0b1010)
+      return 8;
+    if (prescalerValue == 0b1011)
+      return 16;
+    if (prescalerValue == 0b1100)
+      return 64;
+    if (prescalerValue == 0b1101)
+      return 128;
+    if (prescalerValue == 0b1110)
+      return 256;
+    if (prescalerValue == 0b1111)
+      return 512;
+
+    return 0;
+  }
+
+  static uint8_t getAPB1Prescaler(const RegisterAddressType rccBaseAddress)
+  {
+    const auto cfgrValue =
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(rccBaseAddress + Offsets::cfgr);
+    constexpr auto numberOfShifts = 10;
+    constexpr auto maskValue = 0b111;
+    const auto prescalerValue = (cfgrValue >> numberOfShifts) & maskValue;
+
+    if (prescalerValue < 0b100)
+      return 1;
+
+    if (prescalerValue == 0b100)
+      return 2;
+    if (prescalerValue == 0b101)
+      return 4;
+    if (prescalerValue == 0b110)
+      return 8;
+    if (prescalerValue == 0b111)
+      return 16;
+
+    return 1;
   }
 
   static constexpr StaticMap<PeripheralAHB1, RegisterType, 9> ahb1ToBitNumber{ { { { PeripheralAHB1::GPIOA, 0 },

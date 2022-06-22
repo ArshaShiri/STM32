@@ -15,13 +15,15 @@ protected:
       reinterpret_cast<RegisterTypeHost>(rccRegisterSet.data()); // NOLINT: Ignored reinterpret_cast by clang-tidy.
   }
 
-  [[nodiscard]] RegisterType getValueOfAHB1EnrRegister() const { return rccRegisterSet.at(12); }
-  [[nodiscard]] RegisterType getValueOfAPB1EnrRegister() const { return rccRegisterSet.at(16); }
-  [[nodiscard]] RegisterType getValueOfAPB2EnrRegister() const { return rccRegisterSet.at(17); }
-
+  void setCFGRValue(const RegisterType value) { rccRegisterSet.at(2) = value; }
   [[nodiscard]] RegisterType getValueOfAHB1RstrRegister() const { return rccRegisterSet.at(4); }
   [[nodiscard]] RegisterType getValueOfAPB1RstrRegister() const { return rccRegisterSet.at(8); }
   [[nodiscard]] RegisterType getValueOfAPB2RstrRegister() const { return rccRegisterSet.at(9); }
+
+
+  [[nodiscard]] RegisterType getValueOfAHB1EnrRegister() const { return rccRegisterSet.at(12); }
+  [[nodiscard]] RegisterType getValueOfAPB1EnrRegister() const { return rccRegisterSet.at(16); }
+  [[nodiscard]] RegisterType getValueOfAPB2EnrRegister() const { return rccRegisterSet.at(17); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfRCCRegisters{ 36 };
@@ -105,4 +107,32 @@ TEST_F(RCCRegisterTest, resetSYSCFG) // NOLINT: Static storage warning.
   const auto numberOfShifts = UINT32_C(14);
   auto expectedValue = UINT32_C(0b0) << numberOfShifts;
   EXPECT_EQ(getValueOfAPB2RstrRegister(), expectedValue);
+}
+
+TEST_F(RCCRegisterTest, getAPB1Clock) // NOLINT: Static storage warning.
+{
+  RegisterType cfgrValue = 0b0;
+
+  // Set system clock to hsi
+  const auto systemClockShiftValue = 2;
+  const auto hsiValue = 0b00;
+  cfgrValue = cfgrValue | (hsiValue << systemClockShiftValue);
+
+  RegisterType ahbPrescaler = 0b1011;
+  const auto ahbPrescalerShiftValue = 4;
+  cfgrValue = cfgrValue | (ahbPrescaler << ahbPrescalerShiftValue);
+
+  RegisterType apb1Prescaler = 0b101;
+  const auto apb1PrescalerShiftValue = 10;
+  cfgrValue = cfgrValue | (apb1Prescaler << apb1PrescalerShiftValue);
+
+  setCFGRValue(cfgrValue);
+
+  auto apb1Clock = RCCRegisters<RegisterTypeHost>::getAPB1Clock(registerSetBaseAddressValue);
+
+  const auto expectedHSIValue = 16000000;
+  auto expectedAhbPrescalerahbPrescaler = 16;
+  auto expectedApb1PrescalerahbPrescaler = 4;
+  auto expectedApb1Clock = (expectedHSIValue / expectedAhbPrescalerahbPrescaler) / expectedApb1PrescalerahbPrescaler;
+  EXPECT_EQ(apb1Clock, expectedApb1Clock);
 }

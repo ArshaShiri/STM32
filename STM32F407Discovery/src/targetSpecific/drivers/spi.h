@@ -2,7 +2,6 @@
 #define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_SPI
 
 #include <array>
-#include <variant>
 
 #include "targetSpecific/drivers/gpio.h"
 #include "targetSpecific/drivers/interrupt.h"

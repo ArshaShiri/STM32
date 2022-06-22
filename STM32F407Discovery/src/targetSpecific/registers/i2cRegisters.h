@@ -55,6 +55,8 @@ class I2CRegisters
     static constexpr RegisterType fltr = UINT32_C(0x24);
   };
 
+  static constexpr auto maxClockFrequencyValue = 0b110010;
+
 public:
   template<ControlRegister1Property property, typename T, T value>
   static void setControlRegister1Bit(const RegisterAddressType i2cBaseAddress)
@@ -63,6 +65,9 @@ public:
     constexpr auto setValue = SetValueHelper<property, T>::getSetValue(value);
     doSet<setValue>(i2cBaseAddress + Offsets::cr1, bitNumber);
   }
+
+  template<uint8_t value>
+  requires(value < maxClockFrequencyValue) static void setClockFrequency() {}
 
 private:
   template<ControlRegister1Property property, typename T>
