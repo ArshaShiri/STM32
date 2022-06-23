@@ -127,7 +127,7 @@ public:
                                                                           bitNumber);
   }
 
-  static uint32_t getAPB1Clock(const RegisterAddressType rccBaseAddress)
+  static uint32_t getAPB1ClockHZ(const RegisterAddressType rccBaseAddress)
   {
     uint32_t clockSourceValue = 0;
     const auto systemClockSwitchStatus = getSystemClockSwitchStatus(rccBaseAddress);

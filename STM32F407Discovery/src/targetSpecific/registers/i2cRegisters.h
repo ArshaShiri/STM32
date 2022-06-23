@@ -37,6 +37,12 @@ enum class Acknowledge
   disable
 };
 
+enum class FastModeDutyCycle
+{
+  two,
+  sixteenOverNine
+};
+
 template<typename RegisterAddressType>
 class I2CRegisters
 {
@@ -66,8 +72,74 @@ public:
     doSet<setValue>(i2cBaseAddress + Offsets::cr1, bitNumber);
   }
 
-  template<uint8_t value>
-  requires(value < maxClockFrequencyValue) static void setClockFrequency() {}
+  static void setPeripheralClockFrequency(const RegisterAddressType i2cBaseAddress, uint8_t value)
+  {
+    constexpr RegisterAddressType maskValue = UINT32_C(0b111111);
+    value = value & maskValue;
+    auto cr2Value = RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(i2cBaseAddress + Offsets::cr2);
+    cr2Value = cr2Value & ~maskValue;
+
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::cr2, cr2Value | value);
+  }
+
+  static void setOwnAddress(const RegisterAddressType i2cBaseAddress, uint8_t value)
+  {
+    constexpr RegisterAddressType maskValue = UINT32_C(0b1111111);
+    constexpr RegisterAddressType shiftValueForSevenBitAddress = 1;
+    value = (value & maskValue) << shiftValueForSevenBitAddress;
+
+    auto oar1Value = RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(i2cBaseAddress + Offsets::oar1);
+    oar1Value = oar1Value & ~maskValue;
+
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::oar1,
+                                                                     (oar1Value | value));
+  }
+
+  static void keepBit14OfOAR1AsSet(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumberThatHasToBeSetToOne = 14;
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(i2cBaseAddress + Offsets::oar1,
+                                                                        bitNumberThatHasToBeSetToOne);
+  }
+
+  static void setSerialClock(const RegisterAddressType i2cBaseAddress,
+                             const uint32_t serialClockSpeed,
+                             const uint32_t apb1ClockHz,
+                             const FastModeDutyCycle cycle)
+  {
+    constexpr auto standardModeSpeedHz = UINT32_C(100000);
+    constexpr auto fastModeSpeedHz = UINT32_C(400000);
+
+    uint16_t ccrValue = UINT32_C(0);
+
+    // Assuming t high is equal to t low.
+    if (serialClockSpeed < standardModeSpeedHz)
+      ccrValue = (apb1ClockHz) / (2 * serialClockSpeed);
+    else
+    {
+      constexpr auto bitNumberForFastMode = 15;
+      RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(i2cBaseAddress + Offsets::ccr,
+                                                                          bitNumberForFastMode);
+
+      constexpr auto bitNumberForDutyCycle = 14;
+      if (cycle == FastModeDutyCycle::two)
+      {
+        RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(i2cBaseAddress + Offsets::ccr,
+                                                                              bitNumberForDutyCycle);
+        ccrValue = (apb1ClockHz) / (3 * serialClockSpeed);
+      }
+      else
+      {
+        RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(i2cBaseAddress + Offsets::ccr,
+                                                                            bitNumberForDutyCycle);
+        ccrValue = (apb1ClockHz) / (25 * serialClockSpeed);
+      }
+    }
+
+    constexpr auto ccrMastValue = 0xFFF;
+    ccrValue = ccrValue & ccrMastValue;
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::ccr, ccrValue);
+  }
 
 private:
   template<ControlRegister1Property property, typename T>

@@ -16,6 +16,8 @@ protected:
   }
 
   [[nodiscard]] RegisterType getValueOfControlRegister1() const { return i2cRegisterSet.at(0); }
+  [[nodiscard]] RegisterType getValueOfControlRegister2() const { return i2cRegisterSet.at(1); }
+  [[nodiscard]] RegisterType getValueOfOwnAddressRegister() const { return i2cRegisterSet.at(2); }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfI2CRegisters{ 10 };
@@ -52,4 +54,23 @@ TEST_F(I2CRegisterTest, setAcknowledge) // NOLINT: Static storage warning.
 
   expectedValue = 0;
   EXPECT_EQ(getValueOfControlRegister1(), expectedValue);
+}
+
+TEST_F(I2CRegisterTest, setPeripheralClockFrequency) // NOLINT: Static storage warning.
+{
+  uint8_t clockFrequencyValueMhz = 16;
+  I2CRegs::setPeripheralClockFrequency(registerSetBaseAddressValue, clockFrequencyValueMhz);
+  EXPECT_EQ(getValueOfControlRegister2(), clockFrequencyValueMhz);
+
+  clockFrequencyValueMhz = 48;
+  I2CRegs::setPeripheralClockFrequency(registerSetBaseAddressValue, clockFrequencyValueMhz);
+  EXPECT_EQ(getValueOfControlRegister2(), clockFrequencyValueMhz);
+}
+
+TEST_F(I2CRegisterTest, setOwnAddress) // NOLINT: Static storage warning.
+{
+  uint8_t ownAddress = 0b1101011;
+  constexpr auto shiftValueForSevenBitAddress = 1;
+  I2CRegs::setOwnAddress(registerSetBaseAddressValue, ownAddress);
+  EXPECT_EQ(getValueOfOwnAddressRegister(), ownAddress << shiftValueForSevenBitAddress);
 }

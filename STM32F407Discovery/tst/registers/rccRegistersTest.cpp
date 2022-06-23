@@ -109,7 +109,7 @@ TEST_F(RCCRegisterTest, resetSYSCFG) // NOLINT: Static storage warning.
   EXPECT_EQ(getValueOfAPB2RstrRegister(), expectedValue);
 }
 
-TEST_F(RCCRegisterTest, getAPB1Clock) // NOLINT: Static storage warning.
+TEST_F(RCCRegisterTest, getAPB1ClockHZ) // NOLINT: Static storage warning.
 {
   RegisterType cfgrValue = 0b0;
 
@@ -128,7 +128,7 @@ TEST_F(RCCRegisterTest, getAPB1Clock) // NOLINT: Static storage warning.
 
   setCFGRValue(cfgrValue);
 
-  auto apb1Clock = RCCRegisters<RegisterTypeHost>::getAPB1Clock(registerSetBaseAddressValue);
+  auto apb1Clock = RCCRegisters<RegisterTypeHost>::getAPB1ClockHZ(registerSetBaseAddressValue);
 
   const auto expectedHSIValue = 16000000;
   auto expectedAhbPrescalerahbPrescaler = 16;
