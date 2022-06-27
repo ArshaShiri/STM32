@@ -43,6 +43,12 @@ enum class FastModeDutyCycle
   sixteenOverNine
 };
 
+enum class StartCondition
+{
+  noStartGeneration,
+  repeatedStartGeneration
+};
+
 template<typename RegisterAddressType>
 class I2CRegisters
 {
@@ -141,6 +147,35 @@ public:
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::ccr, ccrValue);
   }
 
+  static bool isStartConditionGenerated(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumber = 0;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
+                                                                               bitNumber);
+  }
+
+  static bool isAddressTransmissionFinished(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumber = 1;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
+                                                                               bitNumber);
+  }
+
+  static void writeToDataRegister(const RegisterAddressType i2cBaseAddress, uint8_t data)
+  {
+    RegisterAccess<RegisterAddressType, uint8_t>::regSet(i2cBaseAddress + Offsets::dr, data);
+  }
+
+  static RegisterAddressType readStatusRegister1(const RegisterAddressType i2cBaseAddress)
+  {
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(i2cBaseAddress + Offsets::sr1);
+  }
+
+  static RegisterAddressType readStatusRegister2(const RegisterAddressType i2cBaseAddress)
+  {
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regGet(i2cBaseAddress + Offsets::sr2);
+  }
+
 private:
   template<ControlRegister1Property property, typename T>
   struct SetValueHelper
@@ -152,6 +187,15 @@ private:
   struct SetValueHelper<ControlRegister1Property::pe, T>
   {
     static constexpr bool getSetValue(Peripheral value) { return value == Peripheral::enable ? 1 : 0; }
+  };
+
+  template<typename T>
+  struct SetValueHelper<ControlRegister1Property::start, T>
+  {
+    static constexpr bool getSetValue(StartCondition value)
+    {
+      return value == StartCondition::repeatedStartGeneration ? 1 : 0;
+    }
   };
 
   template<typename T>

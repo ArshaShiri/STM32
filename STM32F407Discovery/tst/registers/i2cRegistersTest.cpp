@@ -18,6 +18,9 @@ protected:
   [[nodiscard]] RegisterType getValueOfControlRegister1() const { return i2cRegisterSet.at(0); }
   [[nodiscard]] RegisterType getValueOfControlRegister2() const { return i2cRegisterSet.at(1); }
   [[nodiscard]] RegisterType getValueOfOwnAddressRegister() const { return i2cRegisterSet.at(2); }
+  [[nodiscard]] RegisterType getValueOfDataRegister() const { return i2cRegisterSet.at(4); }
+  void setStatusRegister1(RegisterType value) { i2cRegisterSet.at(5) = value; }
+  void setStatusRegister2(RegisterType value) { i2cRegisterSet.at(6) = value; }
 
   RegisterTypeHost registerSetBaseAddressValue{ 0 };
   static constexpr auto numberOfI2CRegisters{ 10 };
@@ -73,4 +76,39 @@ TEST_F(I2CRegisterTest, setOwnAddress) // NOLINT: Static storage warning.
   constexpr auto shiftValueForSevenBitAddress = 1;
   I2CRegs::setOwnAddress(registerSetBaseAddressValue, ownAddress);
   EXPECT_EQ(getValueOfOwnAddressRegister(), ownAddress << shiftValueForSevenBitAddress);
+}
+
+TEST_F(I2CRegisterTest, isStartConditionGenerated) // NOLINT: Static storage warning.
+{
+  const auto value = 0b1;
+  setStatusRegister1(value);
+  EXPECT_TRUE(I2CRegs::isStartConditionGenerated(registerSetBaseAddressValue));
+}
+
+TEST_F(I2CRegisterTest, isAddressTransmissionFinished) // NOLINT: Static storage warning.
+{
+  const auto value = 0b10;
+  setStatusRegister1(value);
+  EXPECT_TRUE(I2CRegs::isAddressTransmissionFinished(registerSetBaseAddressValue));
+}
+
+TEST_F(I2CRegisterTest, writeToDataRegister) // NOLINT: Static storage warning.
+{
+  const uint8_t value = 176;
+  I2CRegs::writeToDataRegister(registerSetBaseAddressValue, value);
+  EXPECT_EQ(getValueOfDataRegister(), value);
+}
+
+TEST_F(I2CRegisterTest, readStatusRegister1) // NOLINT: Static storage warning.
+{
+  const auto value1 = 431465;
+  setStatusRegister1(value1);
+  EXPECT_EQ(I2CRegs::readStatusRegister1(registerSetBaseAddressValue), value1);
+}
+
+TEST_F(I2CRegisterTest, readStatusRegister2) // NOLINT: Static storage warning.
+{
+  const auto value2 = 45561465;
+  setStatusRegister2(value2);
+  EXPECT_EQ(I2CRegs::readStatusRegister2(registerSetBaseAddressValue), value2);
 }
