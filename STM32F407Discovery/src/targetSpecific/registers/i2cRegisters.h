@@ -49,6 +49,12 @@ enum class StartCondition
   repeatedStartGeneration
 };
 
+enum class StopCondition
+{
+  noStopGeneration,
+  stopGeneration
+};
+
 template<typename RegisterAddressType>
 class I2CRegisters
 {
@@ -113,9 +119,6 @@ public:
                              const uint32_t apb1ClockHz,
                              const FastModeDutyCycle cycle)
   {
-    constexpr auto standardModeSpeedHz = UINT32_C(100000);
-    constexpr auto fastModeSpeedHz = UINT32_C(400000);
-
     uint16_t ccrValue = UINT32_C(0);
 
     // Assuming t high is equal to t low.
@@ -147,6 +150,28 @@ public:
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::ccr, ccrValue);
   }
 
+  void setTRise(const RegisterAddressType i2cBaseAddress, const uint32_t serialClockSpeed, const uint32_t apb1ClockHz)
+  {
+    uint8_t tRise = 0;
+
+    if (serialClockSpeed < standardModeSpeedHz)
+    {
+      constexpr auto maxTRiseNanoSeconds = 1000; // 1 micro seconds or 1 Mhz
+      constexpr auto maxTRiseHZ = maxTRiseNanoSeconds * 1000;
+      tRise = (apb1ClockHz / maxTRiseHZ) + 1;
+    }
+    else
+    {
+      constexpr auto maxTRiseNanoSeconds = 300; // 1 micro seconds or 1 Mhz
+      constexpr auto maxTRiseHZ = maxTRiseNanoSeconds / 1e9;
+      tRise = (apb1ClockHz / maxTRiseHZ) + 1;
+    }
+
+    constexpr auto maskValueForTRise = 0b11111;
+    RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::trise,
+                                                                     tRise & maskValueForTRise);
+  }
+
   static bool isStartConditionGenerated(const RegisterAddressType i2cBaseAddress)
   {
     constexpr auto bitNumber = 0;
@@ -157,6 +182,20 @@ public:
   static bool isAddressTransmissionFinished(const RegisterAddressType i2cBaseAddress)
   {
     constexpr auto bitNumber = 1;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
+                                                                               bitNumber);
+  }
+
+  static bool isDataRegisterEmpty(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumber = 7;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
+                                                                               bitNumber);
+  }
+
+  static bool isByteTransferFinished(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumber = 2;
     return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
                                                                                bitNumber);
   }
@@ -199,6 +238,12 @@ private:
   };
 
   template<typename T>
+  struct SetValueHelper<ControlRegister1Property::stop, T>
+  {
+    static constexpr bool getSetValue(StopCondition value) { return value == StopCondition::stopGeneration ? 1 : 0; }
+  };
+
+  template<typename T>
   struct SetValueHelper<ControlRegister1Property::ack, T>
   {
     static constexpr bool getSetValue(Acknowledge value) { return value == Acknowledge::enable ? 1 : 0; }
@@ -229,6 +274,9 @@ private:
         { ControlRegister1Property::alert, 13 },
         { ControlRegister1Property::swrst, 15 } } }
   };
+
+  static constexpr auto standardModeSpeedHz = UINT32_C(100000);
+  static constexpr auto fastModeSpeedHz = UINT32_C(400000);
 };
 
 
