@@ -1,0 +1,4 @@
+18:20:30 **** Clean-only build of configuration Debug for project Screen ****
+make -j16 clean 
+rm -rf *
+ 
