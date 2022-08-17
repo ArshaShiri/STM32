@@ -150,7 +150,8 @@ public:
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::ccr, ccrValue);
   }
 
-  void setTRise(const RegisterAddressType i2cBaseAddress, const uint32_t serialClockSpeed, const uint32_t apb1ClockHz)
+  static void
+    setTRise(const RegisterAddressType i2cBaseAddress, const uint32_t serialClockSpeed, const uint32_t apb1ClockHz)
   {
     uint8_t tRise = 0;
 

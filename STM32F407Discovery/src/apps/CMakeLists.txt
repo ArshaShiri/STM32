@@ -1,3 +1,4 @@
+add_subdirectory(i2c)
 add_subdirectory(led)
 add_subdirectory(ledButton)
 add_subdirectory(ledButtonInterrupt)

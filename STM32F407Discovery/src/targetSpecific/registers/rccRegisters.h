@@ -279,6 +279,8 @@ public:
     RCCRegisters<RegisterType>::resetPeripheralOnAPB2<peripheral>(rccBaseAddress);
   }
 
+  static uint32_t getAPB1ClockHZ() { return RCCRegisters<RegisterType>::getAPB1ClockHZ(rccBaseAddress); }
+
 private:
   static constexpr auto rccBaseAddress = BaseAddresses::rcc;
 };
