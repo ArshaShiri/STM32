@@ -1,5 +1,5 @@
-#ifndef SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS
-#define SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS
+#ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS
+#define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS
 
 #include "registerType.h"
 #include "registersBaseAddresses.h"
@@ -122,8 +122,8 @@ public:
     uint16_t ccrValue = UINT32_C(0);
 
     // Assuming t high is equal to t low.
-    if (serialClockSpeed < standardModeSpeedHz)
-      ccrValue = (apb1ClockHz) / (2 * serialClockSpeed);
+    if (serialClockSpeed <= standardModeSpeedHz)
+      ccrValue = static_cast<decltype(ccrValue)>((apb1ClockHz) / (2 * serialClockSpeed));
     else
     {
       constexpr auto bitNumberForFastMode = 15;
@@ -135,18 +135,18 @@ public:
       {
         RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitClear(i2cBaseAddress + Offsets::ccr,
                                                                               bitNumberForDutyCycle);
-        ccrValue = (apb1ClockHz) / (3 * serialClockSpeed);
+        ccrValue = static_cast<decltype(ccrValue)>((apb1ClockHz) / (3 * serialClockSpeed));
       }
       else
       {
         RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitSet(i2cBaseAddress + Offsets::ccr,
                                                                             bitNumberForDutyCycle);
-        ccrValue = (apb1ClockHz) / (25 * serialClockSpeed);
+        ccrValue = static_cast<decltype(ccrValue)>((apb1ClockHz) / (25 * serialClockSpeed));
       }
     }
 
-    constexpr auto ccrMastValue = 0xFFF;
-    ccrValue = ccrValue & ccrMastValue;
+    constexpr uint16_t ccrMaskValue = 0xFFF;
+    ccrValue = ccrValue & ccrMaskValue;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::ccr, ccrValue);
   }
 
@@ -155,20 +155,20 @@ public:
   {
     uint8_t tRise = 0;
 
-    if (serialClockSpeed < standardModeSpeedHz)
+    if (serialClockSpeed <= standardModeSpeedHz)
     {
-      constexpr auto maxTRiseNanoSeconds = 1000; // 1 micro seconds or 1 Mhz
-      constexpr auto maxTRiseHZ = maxTRiseNanoSeconds * 1000;
-      tRise = (apb1ClockHz / maxTRiseHZ) + 1;
+      constexpr auto maxTRiseNanoSeconds = UINT16_C(1000); // 1 micro seconds or 1 Mhz
+      constexpr auto maxTRiseHZ = maxTRiseNanoSeconds * UINT16_C(1000);
+      tRise = static_cast<decltype(tRise)>((apb1ClockHz / maxTRiseHZ) + 1);
     }
     else
     {
       constexpr auto maxTRiseNanoSeconds = 300; // 1 micro seconds or 1 Mhz
-      constexpr auto maxTRiseHZ = maxTRiseNanoSeconds / 1e9;
-      tRise = (apb1ClockHz / maxTRiseHZ) + 1;
+      constexpr auto maxTRiseHZ = 1e9;
+      tRise = static_cast<decltype(tRise)>(((apb1ClockHz * maxTRiseNanoSeconds) / maxTRiseHZ) + 1);
     }
 
-    constexpr auto maskValueForTRise = 0b11111;
+    constexpr auto maskValueForTRise = 0b111111;
     RegisterAccess<RegisterAddressType, RegisterAddressType>::regSet(i2cBaseAddress + Offsets::trise,
                                                                      tRise & maskValueForTRise);
   }
@@ -198,6 +198,13 @@ public:
   {
     constexpr auto bitNumber = 2;
     return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr1,
+                                                                               bitNumber);
+  }
+
+  static bool isAddressSent(const RegisterAddressType i2cBaseAddress)
+  {
+    constexpr auto bitNumber = 1;
+    return RegisterAccess<RegisterAddressType, RegisterAddressType>::regBitGet(i2cBaseAddress + Offsets::sr2,
                                                                                bitNumber);
   }
 
@@ -281,4 +288,4 @@ private:
 };
 
 
-#endif /* SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS */
+#endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_REGISTERS_I2CREGISTERS */

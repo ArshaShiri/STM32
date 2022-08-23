@@ -1,5 +1,5 @@
-#ifndef SRC_TARGETSPECIFIC_DRIVERS_I2C
-#define SRC_TARGETSPECIFIC_DRIVERS_I2C
+#ifndef STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_I2C
+#define STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_I2C
 
 #include <array>
 
@@ -30,11 +30,13 @@ public:
   template<I2CInitData data>
   static void init()
   {
-    secAcknowledgement<data.acknowledge>();
+    setI2CClock<true>();
+
+    setAcknowledgement<data.acknowledge>();
     const auto apb1ClockHz = RCCRegistersTarget::getAPB1ClockHZ();
 
     constexpr auto mhzToHZRatio = UINT32_C(1000000);
-    const auto apb1ClockMhz = apb1ClockHz / mhzToHZRatio;
+    const uint8_t apb1ClockMhz = static_cast<uint8_t>(apb1ClockHz / mhzToHZRatio);
 
     I2CRegisters<RegisterType>::setPeripheralClockFrequency(i2cNumberToBaseAddress.at(i2cNumber), apb1ClockMhz);
     I2CRegisters<RegisterType>::setOwnAddress(i2cNumberToBaseAddress.at(i2cNumber), data.ownAddress);
@@ -43,6 +45,8 @@ public:
       i2cNumberToBaseAddress.at(i2cNumber), data.serialClockSpeedHz, apb1ClockHz, data.fastModeDutyCycle);
 
     I2CRegisters<RegisterType>::setTRise(i2cNumberToBaseAddress.at(i2cNumber), data.serialClockSpeedHz, apb1ClockHz);
+
+    setI2CEnable();
   }
 
   template<std::size_t size>
@@ -53,7 +57,7 @@ public:
       setControlRegister1Bit<ControlRegister1Property::start, StartCondition, StartCondition::repeatedStartGeneration>(
         i2cNumberToBaseAddress.at(i2cNumber));
 
-    // Confirm that start generation is completed byu checking hte SB flag in the SR1.
+    // Confirm that start generation is completed by checking the SB flag in the SR1.
     // Note: until SB is cleared, SCL will be stretched (pulled to low)
     while (!I2CRegisters<RegisterType>::isStartConditionGenerated(i2cNumberToBaseAddress.at(i2cNumber)))
       ;
@@ -88,8 +92,25 @@ public:
   }
 
 private:
+  template<bool set>
+  static void setI2CClock()
+  {
+    if constexpr (i2cNumber == I2CNumber::i2c1)
+      RCCRegistersTarget::setPeripheralOnAPB1<PeripheralAPB1::I2C1, set>();
+    if constexpr (i2cNumber == I2CNumber::i2c2)
+      RCCRegistersTarget::setPeripheralOnAPB1<PeripheralAPB1::I2C2, set>();
+    else
+      RCCRegistersTarget::setPeripheralOnAPB1<PeripheralAPB1::I2C3, set>();
+  }
+
+  static void setI2CEnable()
+  {
+    I2CRegisters<RegisterType>::setControlRegister1Bit<ControlRegister1Property::pe, Peripheral, Peripheral::enable>(
+      i2cNumberToBaseAddress.at(i2cNumber));
+  }
+
   template<Acknowledge acknowledge>
-  static void secAcknowledgement()
+  static void setAcknowledgement()
   {
     I2CRegisters<RegisterType>::setControlRegister1Bit<ControlRegister1Property::ack, Acknowledge, acknowledge>(
       i2cNumberToBaseAddress.at(i2cNumber));
@@ -97,10 +118,13 @@ private:
 
   static void executeAddressPhase(uint8_t slaveAddress)
   {
-    constexpr auto readWriteBitNumber = 1;
-    slaveAddress = slaveAddress << readWriteBitNumber;
-    slaveAddress = slaveAddress & ~(readWriteBitNumber);
+    constexpr uint8_t readWriteBitNumber = 1;
+    slaveAddress = static_cast<decltype(slaveAddress)>(slaveAddress << readWriteBitNumber);
+    slaveAddress = static_cast<decltype(slaveAddress)>(slaveAddress & ~(readWriteBitNumber));
     I2CRegisters<RegisterType>::writeToDataRegister(i2cNumberToBaseAddress.at(i2cNumber), slaveAddress);
+    while (!I2CRegisters<RegisterType>::isAddressSent(i2cNumberToBaseAddress.at(i2cNumber)))
+    {
+    };
   }
 
   static void clearADDRFLag()
@@ -116,4 +140,4 @@ private:
   };
 };
 
-#endif /* SRC_TARGETSPECIFIC_DRIVERS_I2C */
+#endif /* STM32F407DISCOVERY_SRC_TARGETSPECIFIC_DRIVERS_I2C */
