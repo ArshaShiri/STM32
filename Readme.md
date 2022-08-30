@@ -1,9 +1,21 @@
-# Description
+# Project Goal
+This project aims to build a nubmer of drivers for **STM32F407 Discovery** using modern C++. 
 
-# Requirements
+## Table of Contents
+* [Description](#description)
+* [Requirements](#requirements)
+* [Apps](#apps)
+* [How to Build and Flash](#build)
+
+## Description
+
+## Requirements
+* CMake
 * clang-format
-* clang-tidy
 * pre-commit
 * cmake-format
 * ST-link
-# Executables
+
+## Apps
+
+## Build
