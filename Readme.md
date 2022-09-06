@@ -26,8 +26,14 @@ This project aims to build a number of drivers for **STM32F407 Discovery** using
 * [i2c](#i2c)
 
 #### led
+This app makes the green LED blink. This app tests the GPIO drivers. A software timer is used to control the blinking frequency.
+
 #### ledButton
+This app toggles the green LED by pressing the user button on the board. A software timer is used to debounce the button. The program registers the button press in an infinite loop by reading the pin associated with the user button.
+
 #### ledButtonInterrupt
+In terms of functionality, this app is similar to [ledButton](#ledbutton) app. The main difference is that the button press is registered via an interrupt instead of an infinite loop.
+
 #### spi
 #### spiInterrupt
 #### i2c
