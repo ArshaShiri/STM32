@@ -1,5 +1,5 @@
 # Project Goal
-This project aims to build a nubmer of drivers for **STM32F407 Discovery** using modern C++. 
+This project aims to build a number of drivers for **STM32F407 Discovery** using modern C++. 
 
 ## Table of Contents
 * [Description](#description)
@@ -44,5 +44,5 @@ The following arguments can be passed to this script:
 
 ## Flash
 To flash the apps described in the [Apps](#apps) section, run the `load.sh` script under `STM32F407Discovery`  
-The `-p` argument followed by the app's name should pass to the script.
+The `-p` argument followed by the app's name should be passed to the script as a command line argument.
 
