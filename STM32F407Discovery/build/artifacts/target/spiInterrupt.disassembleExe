@@ -32,7 +32,7 @@ Disassembly of section .text:
  800017c:	01 03 00 08 01 03 00 08 01 03 00 08                 ............
 
 08000188 <start_of_constructors>:
- 8000188:	08000905 	.word	0x08000905
+ 8000188:	080008cd 	.word	0x080008cd
 
 0800018c <__frame_dummy_init_array_entry>:
  800018c:	080001f9                                ....
@@ -81,7 +81,7 @@ Disassembly of section .text:
  80001ea:	bd10      	pop	{r4, pc}
  80001ec:	2000043c 	.word	0x2000043c
  80001f0:	00000000 	.word	0x00000000
- 80001f4:	08000988 	.word	0x08000988
+ 80001f4:	08000954 	.word	0x08000954
 
 080001f8 <frame_dummy>:
  80001f8:	b508      	push	{r3, lr}
@@ -94,7 +94,7 @@ Disassembly of section .text:
  800020a:	e7cf      	b.n	80001ac <register_tm_clones>
  800020c:	00000000 	.word	0x00000000
  8000210:	20000440 	.word	0x20000440
- 8000214:	08000988 	.word	0x08000988
+ 8000214:	08000954 	.word	0x08000954
 
 08000218 <_stack_init>:
  8000218:	f5a3 3a80 	sub.w	sl, r3, #65536	; 0x10000
@@ -222,7 +222,7 @@ Disassembly of section .text:
  800033a:	bd38      	pop	{r3, r4, r5, pc}
  800033c:	20000438 	.word	0x20000438
  8000340:	20000000 	.word	0x20000000
- 8000344:	08000994 	.word	0x08000994
+ 8000344:	08000960 	.word	0x08000960
  8000348:	2000043c 	.word	0x2000043c
  800034c:	20000468 	.word	0x20000468
  8000350:	08000188 	.word	0x08000188
@@ -249,7 +249,7 @@ Disassembly of section .text:
  800037c:	4620      	mov	r0, r4
  800037e:	f000 f9b5 	bl	80006ec <_exit>
  8000382:	bf00      	nop
- 8000384:	08000960 	.word	0x08000960
+ 8000384:	0800091c 	.word	0x0800091c
 
 08000388 <__libc_fini_array>:
  8000388:	b538      	push	{r3, r4, r5, lr}
@@ -266,7 +266,7 @@ Disassembly of section .text:
  80003a0:	2c00      	cmp	r4, #0
  80003a2:	d1f9      	bne.n	8000398 <__libc_fini_array+0x10>
  80003a4:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
- 80003a8:	f000 babc 	b.w	8000924 <_fini>
+ 80003a8:	f000 baa0 	b.w	80008ec <_fini>
 	...
 
 080003b4 <__libc_init_array>:
@@ -285,7 +285,7 @@ Disassembly of section .text:
  80003ce:	4e09      	ldr	r6, [pc, #36]	; (80003f4 <__libc_init_array+0x40>)
  80003d0:	4d09      	ldr	r5, [pc, #36]	; (80003f8 <__libc_init_array+0x44>)
  80003d2:	1b76      	subs	r6, r6, r5
- 80003d4:	f000 faa0 	bl	8000918 <_init>
+ 80003d4:	f000 fa84 	bl	80008e0 <_init>
  80003d8:	10b6      	asrs	r6, r6, #2
  80003da:	d006      	beq.n	80003ea <__libc_init_array+0x36>
  80003dc:	2400      	movs	r4, #0
@@ -500,7 +500,7 @@ Disassembly of section .text:
  8000630:	e7d6      	b.n	80005e0 <__register_exitproc+0xc>
  8000632:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
  8000636:	e7dd      	b.n	80005f4 <__register_exitproc+0x20>
- 8000638:	08000960 	.word	0x08000960
+ 8000638:	0800091c 	.word	0x0800091c
 
 0800063c <__call_exitprocs>:
  800063c:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -571,7 +571,7 @@ Disassembly of section .text:
  80006e2:	4790      	blx	r2
  80006e4:	e7e0      	b.n	80006a8 <__call_exitprocs+0x6c>
  80006e6:	bf00      	nop
- 80006e8:	08000960 	.word	0x08000960
+ 80006e8:	0800091c 	.word	0x0800091c
 
 080006ec <_exit>:
  80006ec:	e7fe      	b.n	80006ec <_exit>
@@ -696,77 +696,60 @@ Disassembly of section .text:
  8000894:	40003000 	.word	0x40003000
 
 08000898 <main>:
- 8000898:	b500      	push	{lr}
- 800089a:	b085      	sub	sp, #20
- 800089c:	f7ff ff28 	bl	80006f0 <_ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction5EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh13EEEvv>
- 80008a0:	f7ff ff6c 	bl	800077c <_ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction5EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh15EEEvv>
- 80008a4:	f7ff ffb0 	bl	8000808 <_ZN3SPIIL9SPINumber1EE4initIXtl11SPIInitDataL15MasterSelection0EL21BidirectionalDataMode0EL15BaudRateControl0EL15DataFrameFormat0EL10ClockPhase0EL13ClockPolarity0EL19SoftwareSlaveSelect1EEEEEvv>
- 80008a8:	4b11      	ldr	r3, [pc, #68]	; (80008f0 <main+0x58>)
- 80008aa:	e893 0007 	ldmia.w	r3, {r0, r1, r2}
- 80008ae:	ab01      	add	r3, sp, #4
- 80008b0:	c303      	stmia	r3!, {r0, r1}
- 80008b2:	4910      	ldr	r1, [pc, #64]	; (80008f4 <main+0x5c>)
- 80008b4:	801a      	strh	r2, [r3, #0]
- 80008b6:	f8d1 3800 	ldr.w	r3, [r1, #2048]	; 0x800
- 80008ba:	f413 6300 	ands.w	r3, r3, #2048	; 0x800
- 80008be:	d115      	bne.n	80008ec <main+0x54>
- 80008c0:	4a0d      	ldr	r2, [pc, #52]	; (80008f8 <main+0x60>)
- 80008c2:	200a      	movs	r0, #10
- 80008c4:	6010      	str	r0, [r2, #0]
- 80008c6:	4a0d      	ldr	r2, [pc, #52]	; (80008fc <main+0x64>)
- 80008c8:	480d      	ldr	r0, [pc, #52]	; (8000900 <main+0x68>)
- 80008ca:	6013      	str	r3, [r2, #0]
- 80008cc:	f04f 22e0 	mov.w	r2, #3758153728	; 0xe000e000
- 80008d0:	ab01      	add	r3, sp, #4
- 80008d2:	6003      	str	r3, [r0, #0]
- 80008d4:	f8d2 3104 	ldr.w	r3, [r2, #260]	; 0x104
- 80008d8:	f043 0310 	orr.w	r3, r3, #16
- 80008dc:	f8c2 3104 	str.w	r3, [r2, #260]	; 0x104
- 80008e0:	f8d1 3804 	ldr.w	r3, [r1, #2052]	; 0x804
- 80008e4:	f043 0380 	orr.w	r3, r3, #128	; 0x80
- 80008e8:	f8c1 3804 	str.w	r3, [r1, #2052]	; 0x804
- 80008ec:	e7fe      	b.n	80008ec <main+0x54>
+ 8000898:	b508      	push	{r3, lr}
+ 800089a:	f7ff ff29 	bl	80006f0 <_ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction5EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh13EEEvv>
+ 800089e:	f7ff ff6d 	bl	800077c <_ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction5EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh15EEEvv>
+ 80008a2:	f7ff ffb1 	bl	8000808 <_ZN3SPIIL9SPINumber1EE4initIXtl11SPIInitDataL15MasterSelection0EL21BidirectionalDataMode0EL15BaudRateControl0EL15DataFrameFormat0EL10ClockPhase0EL13ClockPolarity0EL19SoftwareSlaveSelect1EEEEEvv>
+ 80008a6:	4807      	ldr	r0, [pc, #28]	; (80008c4 <main+0x2c>)
+ 80008a8:	4a07      	ldr	r2, [pc, #28]	; (80008c8 <main+0x30>)
+ 80008aa:	2148      	movs	r1, #72	; 0x48
+ 80008ac:	f8d2 3808 	ldr.w	r3, [r2, #2056]	; 0x808
+ 80008b0:	079b      	lsls	r3, r3, #30
+ 80008b2:	d5fb      	bpl.n	80008ac <main+0x14>
+ 80008b4:	f8c2 180c 	str.w	r1, [r2, #2060]	; 0x80c
+ 80008b8:	f810 1f01 	ldrb.w	r1, [r0, #1]!
+ 80008bc:	2900      	cmp	r1, #0
+ 80008be:	d1f5      	bne.n	80008ac <main+0x14>
+ 80008c0:	e7fe      	b.n	80008c0 <main+0x28>
+ 80008c2:	bf00      	nop
+ 80008c4:	08000944 	.word	0x08000944
+ 80008c8:	40003000 	.word	0x40003000
+
+080008cc <register_fini>:
+ 80008cc:	4b02      	ldr	r3, [pc, #8]	; (80008d8 <register_fini+0xc>)
+ 80008ce:	b113      	cbz	r3, 80008d6 <register_fini+0xa>
+ 80008d0:	4802      	ldr	r0, [pc, #8]	; (80008dc <register_fini+0x10>)
+ 80008d2:	f7ff bd43 	b.w	800035c <atexit>
+ 80008d6:	4770      	bx	lr
+ 80008d8:	00000000 	.word	0x00000000
+ 80008dc:	08000389 	.word	0x08000389
+
+080008e0 <_init>:
+ 80008e0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80008e2:	bf00      	nop
+ 80008e4:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80008e6:	bc08      	pop	{r3}
+ 80008e8:	469e      	mov	lr, r3
+ 80008ea:	4770      	bx	lr
+
+080008ec <_fini>:
+ 80008ec:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
  80008ee:	bf00      	nop
- 80008f0:	08000954 	.word	0x08000954
- 80008f4:	40003000 	.word	0x40003000
- 80008f8:	20000464 	.word	0x20000464
- 80008fc:	20000460 	.word	0x20000460
- 8000900:	2000045c 	.word	0x2000045c
+ 80008f0:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80008f2:	bc08      	pop	{r3}
+ 80008f4:	469e      	mov	lr, r3
+ 80008f6:	4770      	bx	lr
 
-08000904 <register_fini>:
- 8000904:	4b02      	ldr	r3, [pc, #8]	; (8000910 <register_fini+0xc>)
- 8000906:	b113      	cbz	r3, 800090e <register_fini+0xa>
- 8000908:	4802      	ldr	r0, [pc, #8]	; (8000914 <register_fini+0x10>)
- 800090a:	f7ff bd27 	b.w	800035c <atexit>
- 800090e:	4770      	bx	lr
- 8000910:	00000000 	.word	0x00000000
- 8000914:	08000389 	.word	0x08000389
+080008f8 <all_implied_fbits>:
+ 80008f8:	3d3a 3d0a 3d0f 3d24 3d32 3d02 3d05 3d13     :=.=.=$=2=.=.=.=
+ 8000908:	3d0d 3d0c 3d23 3d11 3d26 3d01 3d17 3d08     .=.=#=.=&=.=.=.=
+ 8000918:	3d09 0000                                   .=..
 
-08000918 <_init>:
- 8000918:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800091a:	bf00      	nop
- 800091c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800091e:	bc08      	pop	{r3}
- 8000920:	469e      	mov	lr, r3
- 8000922:	4770      	bx	lr
+0800091c <_global_impure_ptr>:
+ 800091c:	0010 2000                                   ... 
 
-08000924 <_fini>:
- 8000924:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8000926:	bf00      	nop
- 8000928:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800092a:	bc08      	pop	{r3}
- 800092c:	469e      	mov	lr, r3
- 800092e:	4770      	bx	lr
-
-08000930 <all_implied_fbits>:
- 8000930:	3d3a 3d0a 3d0f 3d24 3d32 3d02 3d05 3d13     :=.=.=$=2=.=.=.=
- 8000940:	3d0d 3d0c 3d23 3d11 3d26 3d01 3d17 3d08     .=.=#=.=&=.=.=.=
- 8000950:	3d09 0000 0f00 f136 054e 0706 0908 0000     .=....6.N.......
-
-08000960 <_global_impure_ptr>:
- 8000960:	0010 2000                                   ... 
-
-08000964 <all_implied_fbits>:
- 8000964:	3d3a 3d0a 3d0f 3d24 3d32 3d02 3d05 3d13     :=.=.=$=2=.=.=.=
- 8000974:	3d0d 3d0c 3d23 3d11 3d26 3d01 3d17 3d08     .=.=#=.=&=.=.=.=
- 8000984:	3d09 0000                                   .=..
+08000920 <all_implied_fbits>:
+ 8000920:	3d3a 3d0a 3d0f 3d24 3d32 3d02 3d05 3d13     :=.=.=$=2=.=.=.=
+ 8000930:	3d0d 3d0c 3d23 3d11 3d26 3d01 3d17 3d08     .=.=#=.=&=.=.=.=
+ 8000940:	3d09 0000 6548 6c6c 206f 6f57 6c72 2164     .=..Hello World!
+ 8000950:	0000 0000                                   ....

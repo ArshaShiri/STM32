@@ -59,7 +59,7 @@ END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
 
-.text           0x0000000008000000      0x988
+.text           0x0000000008000000      0x954
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x188 CMakeFiles/spiInterrupt.dir/__/__/targetSpecific/startup.cpp.obj
                 0x0000000008000000                isr_vector
@@ -202,59 +202,60 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .text._ZN3SPIIL9SPINumber1EE4initIXtl11SPIInitDataL15MasterSelection0EL21BidirectionalDataMode0EL15BaudRateControl0EL15DataFrameFormat0EL10ClockPhase0EL13ClockPolarity0EL19SoftwareSlaveSelect1EEEEEvv
                 0x0000000008000808       0x90 CMakeFiles/spiInterrupt.dir/spiInterrupt.cpp.obj
                 0x0000000008000808                void SPI<(SPINumber)1>::init<SPIInitData{(MasterSelection)0, (BidirectionalDataMode)0, (BaudRateControl)0, (DataFrameFormat)0, (ClockPhase)0, (ClockPolarity)0, (SoftwareSlaveSelect)1}>()
- .text.startup  0x0000000008000898       0x6c CMakeFiles/spiInterrupt.dir/spiInterrupt.cpp.obj
+ .text.startup  0x0000000008000898       0x34 CMakeFiles/spiInterrupt.dir/spiInterrupt.cpp.obj
                 0x0000000008000898                main
- .text.startup  0x0000000008000904       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .text.startup  0x00000000080008cc       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
  *(.init)
- .init          0x0000000008000918        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008000918                _init
- .init          0x000000000800091c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x00000000080008e0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x00000000080008e0                _init
+ .init          0x00000000080008e4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008000924        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008000924                _fini
- .fini          0x0000000008000928        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .fini          0x00000000080008ec        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x00000000080008ec                _fini
+ .fini          0x00000000080008f0        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.rodata)
- .rodata        0x0000000008000930       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .rodata        0x0000000008000954        0xa CMakeFiles/spiInterrupt.dir/spiInterrupt.cpp.obj
- *fill*         0x000000000800095e        0x2 
- .rodata        0x0000000008000960        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                0x0000000008000960                _global_impure_ptr
- .rodata        0x0000000008000964       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .rodata        0x00000000080008f8       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x000000000800091c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x000000000800091c                _global_impure_ptr
+ .rodata        0x0000000008000920       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  *(.rodata.*)
-                0x0000000008000988                . = ALIGN (0x4)
-                0x0000000008000988                end_of_text = .
-                0x0000000008000994                load_address_of_data = LOADADDR (.data)
+ .rodata.str1.4
+                0x0000000008000944        0xd CMakeFiles/spiInterrupt.dir/spiInterrupt.cpp.obj
+                0x0000000008000954                . = ALIGN (0x4)
+ *fill*         0x0000000008000951        0x3 
+                0x0000000008000954                end_of_text = .
+                0x0000000008000960                load_address_of_data = LOADADDR (.data)
 
-.glue_7         0x0000000008000988        0x0
- .glue_7        0x0000000008000988        0x0 linker stubs
+.glue_7         0x0000000008000954        0x0
+ .glue_7        0x0000000008000954        0x0 linker stubs
 
-.glue_7t        0x0000000008000988        0x0
- .glue_7t       0x0000000008000988        0x0 linker stubs
+.glue_7t        0x0000000008000954        0x0
+ .glue_7t       0x0000000008000954        0x0 linker stubs
 
-.vfp11_veneer   0x0000000008000988        0x0
- .vfp11_veneer  0x0000000008000988        0x0 linker stubs
+.vfp11_veneer   0x0000000008000954        0x0
+ .vfp11_veneer  0x0000000008000954        0x0 linker stubs
 
-.v4_bx          0x0000000008000988        0x0
- .v4_bx         0x0000000008000988        0x0 linker stubs
+.v4_bx          0x0000000008000954        0x0
+ .v4_bx         0x0000000008000954        0x0 linker stubs
 
-.iplt           0x0000000008000988        0x0
- .iplt          0x0000000008000988        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0000000008000954        0x0
+ .iplt          0x0000000008000954        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.eh_frame       0x0000000008000988        0x4
- .eh_frame      0x0000000008000988        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x0000000008000988        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+.eh_frame       0x0000000008000954        0x4
+ .eh_frame      0x0000000008000954        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008000954        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.ARM.extab      0x000000000800098c        0x0
- .ARM.extab     0x000000000800098c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.extab      0x0000000008000958        0x0
+ .ARM.extab     0x0000000008000958        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 
-.ARM.exidx      0x000000000800098c        0x8
- .ARM.exidx     0x000000000800098c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.exidx      0x0000000008000958        0x8
+ .ARM.exidx     0x0000000008000958        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
                                          0x10 (size before relaxing)
 
-.rel.dyn        0x0000000008000994        0x0
- .rel.iplt      0x0000000008000994        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008000960        0x0
+ .rel.iplt      0x0000000008000960        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x0000000020000000      0x438 load address 0x0000000008000994
+.data           0x0000000020000000      0x438 load address 0x0000000008000960
                 0x0000000020000000                start_of_data = .
  *(.data)
  .data          0x0000000020000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
@@ -281,20 +282,20 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000438                . = ALIGN (0x4)
                 0x0000000020000438                end_of_data = .
 
-.fini_array     0x0000000020000438        0x4 load address 0x0000000008000dcc
+.fini_array     0x0000000020000438        0x4 load address 0x0000000008000d98
  .fini_array    0x0000000020000438        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
 .tm_clone_table
-                0x000000002000043c        0x0 load address 0x0000000008000dd0
+                0x000000002000043c        0x0 load address 0x0000000008000d9c
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x000000002000043c        0x0 load address 0x0000000008000dd0
+.igot.plt       0x000000002000043c        0x0 load address 0x0000000008000d9c
  .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.bss            0x000000002000043c       0x2c load address 0x0000000008000dd0
+.bss            0x000000002000043c       0x2c load address 0x0000000008000d9c
                 0x000000002000043c                start_of_bss = .
                 0x000000002000043c                __bss_start__ = start_of_bss
  *(.bss)

@@ -39,8 +39,8 @@ int main()
                                   SoftwareSlaveSelect::enabled };
 
   SPI<SPINumber::spi2>::init<initData>();
-
   SPI<SPINumber::spi2>::sendString("Hello World!");
+
   while (true)
     ;
 

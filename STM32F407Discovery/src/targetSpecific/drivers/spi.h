@@ -121,6 +121,20 @@ public:
       sendChar(*character++);
   }
 
+  static void sendStringViaInterrupt(const char *character)
+  {
+    sizeOfData = 0;
+    while (*character)
+      sizeOfData++;
+
+    idxOfData = 0;
+    data8bit = character;
+
+    Interrupt::enableIRQ<spiNumberToIRQ.at(spiNumber)>();
+    SPIRegisters<RegisterType>::setControlRegister2Bit<ControlRegister2Property::txeie, true>(
+      spiNumberToBaseAddress.at(spiNumber));
+  }
+
 private:
   template<bool set>
   static void setSPIClock()
