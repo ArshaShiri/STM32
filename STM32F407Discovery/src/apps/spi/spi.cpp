@@ -40,9 +40,7 @@ int main()
 
   SPI<SPINumber::spi2>::init<initData>();
 
-  const std::array<std::uint8_t, 10> data{ { 0, 15, 54, 241, 78, 5, 6, 7, 8, 9 } };
-  SPI<SPINumber::spi2>::sendData(data);
-
+  SPI<SPINumber::spi2>::sendString("Hello World!");
   while (true)
     ;
 

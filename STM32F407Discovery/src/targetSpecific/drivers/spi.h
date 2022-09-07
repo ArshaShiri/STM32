@@ -115,6 +115,12 @@ public:
       spiNumberToBaseAddress.at(spiNumber));
   }
 
+  static void sendString(const char *character)
+  {
+    while (*character)
+      sendChar(*character++);
+  }
+
 private:
   template<bool set>
   static void setSPIClock()
@@ -191,6 +197,14 @@ private:
         ;
       SPIRegisters<RegisterType>::writeToDataRegister(spiNumberToBaseAddress.at(spiNumber), dataEl);
     }
+  }
+
+  static void sendChar(char data)
+  {
+    while (!SPIRegisters<RegisterType>::isTransmitBufferEmpty(spiNumberToBaseAddress.at(spiNumber)))
+      ;
+
+    SPIRegisters<RegisterType>::writeToDataRegister(spiNumberToBaseAddress.at(spiNumber), static_cast<uint16_t>(data));
   }
 
   static void sendNextData()
