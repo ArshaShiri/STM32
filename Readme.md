@@ -25,18 +25,29 @@ This project aims to build a number of drivers for **STM32F407 Discovery** using
 * [spiInterrupt](#spiinterrupt)
 * [i2c](#i2c)
 
-#### led
+### led
 This app makes the green LED blink. This app tests the GPIO drivers. A software timer is used to control the blinking frequency.
 
-#### ledButton
+### ledButton
 This app toggles the green LED by pressing the user button on the board. A software timer is used to debounce the button. The program registers the button press in an infinite loop by reading the pin associated with the user button.
 
-#### ledButtonInterrupt
+### ledButtonInterrupt
 In terms of functionality, this app is similar to [ledButton](#ledbutton) app. The main difference is that the button press is registered via an interrupt instead of an infinite loop.
 
-#### spi
-#### spiInterrupt
-#### i2c
+### spi
+This app tests sending data as a master. The string "Hello world!" is sent as a master. To test the correctness of the application, the MOSI and SCLK lines are analyzed via a logic analyzer.  
+
+The following pins are configured for SPI communication:  
+```
+PB15 --> MOSI
+PB13 --> SCLK
+```
+The logic analyzer caputre can be observed below:  
+  
+![image](https://user-images.githubusercontent.com/18715119/188941634-9885dc0d-8d28-4f82-8ce9-27f48e996917.png)
+
+### spiInterrupt
+### i2c
 
 ## Build
 
