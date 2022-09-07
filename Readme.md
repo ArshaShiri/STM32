@@ -44,7 +44,7 @@ PB13 --> SCLK
 ```
 The logic analyzer capture can be observed below:  
   
-![image](https://user-images.githubusercontent.com/18715119/188941634-9885dc0d-8d28-4f82-8ce9-27f48e996917.png)
+![image](https://user-images.githubusercontent.com/18715119/188942438-63972092-d89a-4fc3-97dc-b6fba6d920cd.png)  
 
 ### spiInterrupt
 In terms of functionality, this app is similar to [spi](#spi) app. The main difference is that the sending of data is done via interrupts.
