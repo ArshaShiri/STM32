@@ -1,0 +1,1014 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+                              CMakeFiles/i2c.dir/i2c.cpp.obj (__aeabi_dadd)
+/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+                              CMakeFiles/i2c.dir/i2c.cpp.obj (__aeabi_ddiv)
+/usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+                              CMakeFiles/i2c.dir/i2c.cpp.obj (__aeabi_d2uiz)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (atexit)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (exit)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (__libc_fini_array)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (__libc_init_array)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                              CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj (memmove)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (memset)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o) (__register_exitproc)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (__call_exitprocs)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008000000 0x0000000000100000 xr
+SRAM             0x0000000020000000 0x0000000000020000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+LOAD CMakeFiles/i2c.dir/i2c.cpp.obj
+LOAD CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libstdc++.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+END GROUP
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+
+.text           0x0000000008000000     0x2564
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x188 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000000                isr_vector
+                0x0000000008000188                start_of_constructors = .
+ *(SORT_BY_NAME(.init_array.*))
+ .init_array.00000
+                0x0000000008000188        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x000000000800018c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008000190                end_of_constructors = .
+ *(.text)
+ .text          0x0000000008000190        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .text          0x0000000008000190       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .text          0x0000000008000218       0x70 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+                0x0000000008000218                _stack_init
+                0x0000000008000220                _mainCRTStartup
+                0x0000000008000220                _start
+ .text          0x0000000008000288       0xa0 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080002ba                main
+ .text          0x0000000008000328       0xe8 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080003f0                RTC_Alarm_IRQHandler
+                0x00000000080003f0                HASH_RNG_IRQHandler
+                0x00000000080003f0                EXTI2_IRQHandler
+                0x00000000080003f0                TIM8_CC_IRQHandler
+                0x00000000080003f0                DebugMon_Handler
+                0x00000000080003f0                TIM1_CC_IRQHandler
+                0x00000000080003f0                DMA2_Stream5_IRQHandler
+                0x00000000080003f0                HardFault_Handler
+                0x00000000080003f0                DMA1_Stream5_IRQHandler
+                0x00000000080003f0                SysTick_Handler
+                0x00000000080003f0                PVD_IRQHandler
+                0x00000000080003f0                SDIO_IRQHandler
+                0x00000000080003f0                TAMP_STAMP_IRQHandler
+                0x00000000080003f0                PendSV_Handler
+                0x00000000080003f0                NMI_Handler
+                0x00000000080003f0                CAN2_RX1_IRQHandler
+                0x00000000080003f0                EXTI3_IRQHandler
+                0x00000000080003f0                TIM8_TRG_COM_TIM14_IRQHandler
+                0x00000000080003f0                TIM1_UP_TIM10_IRQHandler
+                0x00000000080003f0                TIM8_UP_TIM13_IRQHandler
+                0x00000000080003f0                I2C3_ER_IRQHandler
+                0x00000000080003f0                EXTI0_IRQHandler
+                0x00000000080003f0                I2C2_EV_IRQHandler
+                0x00000000080003f0                DMA1_Stream2_IRQHandler
+                0x00000000080003f0                CAN1_RX0_IRQHandler
+                0x00000000080003f0                FPU_IRQHandler
+                0x00000000080003f0                OTG_HS_WKUP_IRQHandler
+                0x00000000080003f0                UsageFault_Handler
+                0x00000000080003f0                CAN2_SCE_IRQHandler
+                0x00000000080003f0                DMA2_Stream2_IRQHandler
+                0x00000000080003f0                SPI1_IRQHandler
+                0x00000000080003f0                TIM6_DAC_IRQHandler
+                0x00000000080003f0                TIM1_BRK_TIM9_IRQHandler
+                0x00000000080003f0                DCMI_IRQHandler
+                0x00000000080003f0                CAN2_RX0_IRQHandler
+                0x00000000080003f0                DMA2_Stream3_IRQHandler
+                0x00000000080003f0                defaulHandler
+                0x00000000080003f0                USART6_IRQHandler
+                0x00000000080003f0                USART3_IRQHandler
+                0x00000000080003f0                CRYP_IRQHandler
+                0x00000000080003f0                CAN1_RX1_IRQHandler
+                0x00000000080003f0                UART5_IRQHandler
+                0x00000000080003f0                DMA2_Stream0_IRQHandler
+                0x00000000080003f0                TIM4_IRQHandler
+                0x00000000080003f0                I2C1_EV_IRQHandler
+                0x00000000080003f0                DMA1_Stream6_IRQHandler
+                0x00000000080003f0                DMA1_Stream1_IRQHandler
+                0x00000000080003f0                UART4_IRQHandler
+                0x00000000080003f0                TIM3_IRQHandler
+                0x00000000080003f0                RCC_IRQHandler
+                0x00000000080003f0                TIM8_BRK_TIM12_IRQHandler
+                0x00000000080003f0                EXTI15_10_IRQHandler
+                0x00000000080003f0                ADC_IRQHandler
+                0x00000000080003f0                DMA1_Stream7_IRQHandler
+                0x00000000080003f0                TIM7_IRQHandler
+                0x00000000080003f0                CAN2_TX_IRQHandler
+                0x00000000080003f0                TIM5_IRQHandler
+                0x00000000080003f0                DMA2_Stream7_IRQHandler
+                0x00000000080003f0                I2C3_EV_IRQHandler
+                0x00000000080003f0                EXTI9_5_IRQHandler
+                0x00000000080003f0                RTC_WKUP_IRQHandler
+                0x00000000080003f0                ETH_WKUP_IRQHandler
+                0x00000000080003f0                SPI2_IRQHandler
+                0x00000000080003f0                OTG_HS_EP1_IN_IRQHandler
+                0x00000000080003f0                MemManage_Handler
+                0x00000000080003f0                DMA1_Stream0_IRQHandler
+                0x00000000080003f0                CAN1_TX_IRQHandler
+                0x00000000080003f0                SVC_Handler
+                0x00000000080003f0                EXTI4_IRQHandler
+                0x00000000080003f0                FSMC_IRQHandler
+                0x00000000080003f0                ETH_IRQHandler
+                0x00000000080003f0                OTG_HS_EP1_OUT_IRQHandler
+                0x00000000080003f0                WWDG_IRQHandler
+                0x00000000080003f0                TIM2_IRQHandler
+                0x00000000080003f0                OTG_FS_WKUP_IRQHandler
+                0x00000000080003f0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x00000000080003f0                OTG_HS_IRQHandler
+                0x00000000080003f0                EXTI1_IRQHandler
+                0x00000000080003f0                USART2_IRQHandler
+                0x00000000080003f0                I2C2_ER_IRQHandler
+                0x00000000080003f0                DMA2_Stream1_IRQHandler
+                0x00000000080003f0                CAN1_SCE_IRQHandler
+                0x00000000080003f0                DMA2_Stream4_IRQHandler
+                0x00000000080003f0                BusFault_Handler
+                0x00000000080003f0                USART1_IRQHandler
+                0x00000000080003f0                OTG_FS_IRQHandler
+                0x00000000080003f0                SPI3_IRQHandler
+                0x00000000080003f0                DMA1_Stream4_IRQHandler
+                0x00000000080003f0                I2C1_ER_IRQHandler
+                0x00000000080003f0                DMA2_Stream6_IRQHandler
+                0x00000000080003f0                DMA1_Stream3_IRQHandler
+                0x00000000080003f6                Reset_Handler
+ .text          0x0000000008000410      0x378 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+                0x0000000008000410                __aeabi_drsub
+                0x0000000008000418                __aeabi_dsub
+                0x0000000008000418                __subdf3
+                0x000000000800041c                __adddf3
+                0x000000000800041c                __aeabi_dadd
+                0x0000000008000694                __aeabi_ui2d
+                0x0000000008000694                __floatunsidf
+                0x00000000080006b4                __floatsidf
+                0x00000000080006b4                __aeabi_i2d
+                0x00000000080006d8                __extendsfdf2
+                0x00000000080006d8                __aeabi_f2d
+                0x000000000800071c                __aeabi_ul2d
+                0x000000000800071c                __floatundidf
+                0x000000000800072c                __floatdidf
+                0x000000000800072c                __aeabi_l2d
+ .text          0x0000000008000788      0x424 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+                0x0000000008000788                __aeabi_dmul
+                0x0000000008000788                __muldf3
+                0x00000000080009dc                __aeabi_ddiv
+                0x00000000080009dc                __divdf3
+ .text          0x0000000008000bac       0x40 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000008000bac                __fixunsdfsi
+                0x0000000008000bac                __aeabi_d2uiz
+ .text          0x0000000008000bec        0xc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+                0x0000000008000bec                atexit
+ .text          0x0000000008000bf8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+                0x0000000008000bf8                exit
+ .text          0x0000000008000c18       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+                0x0000000008000c18                __libc_fini_array
+ .text          0x0000000008000c44        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .text          0x0000000008000c44       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x0000000008000c44                __libc_init_array
+ .text          0x0000000008000c8c       0xf8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                0x0000000008000c8c                memmove
+ .text          0x0000000008000d84       0xa4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000008000d84                memset
+ .text          0x0000000008000e28       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+                0x0000000008000e28                __register_exitproc
+ .text          0x0000000008000e90       0xb0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x0000000008000e90                __call_exitprocs
+ .text          0x0000000008000f40        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                0x0000000008000f40                _exit
+ .text          0x0000000008000f44        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .text          0x0000000008000f44        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.text.*)
+ .text._ZN18RCCRegistersTarget14getAPB1ClockHZEv
+                0x0000000008000f44       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000f44                RCCRegistersTarget::getAPB1ClockHZ()
+ .text._ZN6I2CLCD4initEv
+                0x0000000008000f58       0x60 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000f58                I2CLCD::init()
+ .text._ZN6I2CLCD5clearEv
+                0x0000000008000fb8        0xe CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000fb8                I2CLCD::clear()
+ .text._ZN6I2CLCD10shiftRightEv
+                0x0000000008000fc6        0xe CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000fc6                I2CLCD::shiftRight()
+ .text._ZN6I2CLCD9shiftLeftEv
+                0x0000000008000fd4        0xe CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000fd4                I2CLCD::shiftLeft()
+ .text._ZN6I2CLCD10sendStringEPKc
+                0x0000000008000fe2       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008000fe2                I2CLCD::sendString(char const*)
+ .text._ZN6I2CLCD11sendCommandEc
+                0x000000000800100a       0x98 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800100a                I2CLCD::sendCommand(char)
+ .text._ZN6I2CLCD8sendCharEc
+                0x00000000080010a2       0x98 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080010a2                I2CLCD::sendChar(char)
+ .text._ZN14RegisterAccessImmE6regSetEmm
+                0x000000000800113a       0x1e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800113a                RegisterAccess<unsigned long, unsigned long>::regSet(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE6regAndEmm
+                0x0000000008001158       0x2c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001158                RegisterAccess<unsigned long, unsigned long>::regAnd(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE5regOrEmm
+                0x0000000008001184       0x2c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001184                RegisterAccess<unsigned long, unsigned long>::regOr(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE6regGetEm
+                0x00000000080011b0       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080011b0                RegisterAccess<unsigned long, unsigned long>::regGet(unsigned long)
+ .text._ZN14RegisterAccessImmE9regBitSetEmm
+                0x00000000080011ca       0x56 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080011ca                RegisterAccess<unsigned long, unsigned long>::regBitSet(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE11regBitClearEmm
+                0x0000000008001220       0x58 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001220                RegisterAccess<unsigned long, unsigned long>::regBitClear(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE9regBitGetEmm
+                0x0000000008001278       0x50 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001278                RegisterAccess<unsigned long, unsigned long>::regBitGet(unsigned long, unsigned long)
+ .text._ZN12RCCRegistersImE14getAPB1ClockHZEm
+                0x00000000080012c8       0x58 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080012c8                RCCRegisters<unsigned long>::getAPB1ClockHZ(unsigned long)
+ .text._Z13softwareDelayILj10000EEvv
+                0x0000000008001320       0x2e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001320                void softwareDelay<10000u>()
+ .text._ZNSt5arrayIhLj4EEixEj
+                0x000000000800134e       0x1e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800134e                std::array<unsigned char, 4u>::operator[](unsigned int)
+ .text._ZN3I2CIL9I2CNumber0EE14masterSendDataILj4EEEvRKSt5arrayIhXT_EEh
+                0x000000000800136c      0x138 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800136c                void I2C<(I2CNumber)0>::masterSendData<4u>(std::array<unsigned char, 4u> const&, unsigned char)
+ .text._ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction4EL10OutputType1EL11OutputSpeed2EL21PullupPullDownControl1EEELh7EEEvv
+                0x00000000080014a4       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080014a4                void GPIO<1073873920ul>::init<GPIOInitData{(PeripheralAHB1)1, (PortMode)2, (AlternateFunction)4, (OutputType)1, (OutputSpeed)2, (PullupPullDownControl)1}, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE4initIXtl12GPIOInitDataL14PeripheralAHB11EL8PortMode2EL17AlternateFunction4EL10OutputType1EL11OutputSpeed2EL21PullupPullDownControl1EEELh6EEEvv
+                0x00000000080014c4       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080014c4                void GPIO<1073873920ul>::init<GPIOInitData{(PeripheralAHB1)1, (PortMode)2, (AlternateFunction)4, (OutputType)1, (OutputSpeed)2, (PullupPullDownControl)1}, (unsigned char)6>()
+ .text._ZN3I2CIL9I2CNumber0EE4initIXtl11I2CInitDataL11Acknowledge0ELh97ELm100000EEEEEvv
+                0x00000000080014e4       0xc4 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080014e4                void I2C<(I2CNumber)0>::init<I2CInitData{(Acknowledge)0, (unsigned char)97, 100000ul}>()
+ .text._ZN6I2CLCD17setCursorLocationILh1ELh2EEEvv
+                0x00000000080015a8       0x18 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080015a8                void I2CLCD::setCursorLocation<(unsigned char)1, (unsigned char)2>()
+ .text._Z13softwareDelayILj1000000EEvv
+                0x00000000080015c0       0x30 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080015c0                void softwareDelay<1000000u>()
+ .text._ZN14RegisterAccessImmE6memoryEm
+                0x00000000080015f0       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080015f0                RegisterAccess<unsigned long, unsigned long>::memory(unsigned long)
+ .text._ZN12RCCRegistersImE26getSystemClockSwitchStatusEm
+                0x0000000008001604       0x30 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001604                RCCRegisters<unsigned long>::getSystemClockSwitchStatus(unsigned long)
+ .text._ZN12RCCRegistersImE15getAHBPrescalerEm
+                0x0000000008001634       0x8e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001634                RCCRegisters<unsigned long>::getAHBPrescaler(unsigned long)
+ .text._ZN12RCCRegistersImE16getAPB1PrescalerEm
+                0x00000000080016c2       0x62 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080016c2                RCCRegisters<unsigned long>::getAPB1Prescaler(unsigned long)
+ .text._ZNSt14__array_traitsIhLj4EE6_S_refERA4_Khj
+                0x0000000008001724       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001724                std::__array_traits<unsigned char, 4u>::_S_ref(unsigned char const (&) [4], unsigned int)
+ .text._ZNKSt5arrayISt4pairI9I2CNumbermELj3EE3endEv
+                0x000000000800173e       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800173e                std::array<std::pair<I2CNumber, unsigned long>, 3u>::end() const
+ .text._ZNK9StaticMapI9I2CNumbermLj3EE2atERKS0_
+                0x0000000008001758       0x54 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001758                StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const
+ .text._ZN12I2CRegistersImE22setControlRegister1BitIL24ControlRegister1Property7E14StartConditionLS3_1EEEvm
+                0x00000000080017ac       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080017ac                void I2CRegisters<unsigned long>::setControlRegister1Bit<(ControlRegister1Property)7, StartCondition, (StartCondition)1>(unsigned long)
+ .text._ZN12I2CRegistersImE25isStartConditionGeneratedEm
+                0x00000000080017cc       0x22 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080017cc                I2CRegisters<unsigned long>::isStartConditionGenerated(unsigned long)
+ *fill*         0x00000000080017ee        0x2 
+ .text._ZN3I2CIL9I2CNumber0EE19executeAddressPhaseEh
+                0x00000000080017f0       0x6c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080017f0                I2C<(I2CNumber)0>::executeAddressPhase(unsigned char)
+ .text._ZN3I2CIL9I2CNumber0EE13clearADDRFLagEv
+                0x000000000800185c       0x40 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800185c                I2C<(I2CNumber)0>::clearADDRFLag()
+ .text._ZNKSt5arrayIhLj4EE5beginEv
+                0x000000000800189c       0x18 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800189c                std::array<unsigned char, 4u>::begin() const
+ .text._ZNKSt5arrayIhLj4EE3endEv
+                0x00000000080018b4       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080018b4                std::array<unsigned char, 4u>::end() const
+ .text._ZN12I2CRegistersImE19isDataRegisterEmptyEm
+                0x00000000080018ce       0x22 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080018ce                I2CRegisters<unsigned long>::isDataRegisterEmpty(unsigned long)
+ .text._ZN12I2CRegistersImE19writeToDataRegisterEmh
+                0x00000000080018f0       0x22 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080018f0                I2CRegisters<unsigned long>::writeToDataRegister(unsigned long, unsigned char)
+ .text._ZN12I2CRegistersImE22isByteTransferFinishedEm
+                0x0000000008001912       0x22 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001912                I2CRegisters<unsigned long>::isByteTransferFinished(unsigned long)
+ .text._ZN12I2CRegistersImE22setControlRegister1BitIL24ControlRegister1Property8E13StopConditionLS3_1EEEvm
+                0x0000000008001934       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001934                void I2CRegisters<unsigned long>::setControlRegister1Bit<(ControlRegister1Property)8, StopCondition, (StopCondition)1>(unsigned long)
+ .text._ZN4GPIOILm1073873920EE8setClockIL14PeripheralAHB11ELb1EEEvv
+                0x0000000008001954        0xc CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001954                void GPIO<1073873920ul>::setClock<(PeripheralAHB1)1, true>()
+ .text._ZN4GPIOILm1073873920EE11setPortModeIL8PortMode2ELh7EEEvv
+                0x0000000008001960       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001960                void GPIO<1073873920ul>::setPortMode<(PortMode)2, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE20setAlternateFunctionIL17AlternateFunction4ELh7EEEvv
+                0x0000000008001974       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001974                void GPIO<1073873920ul>::setAlternateFunction<(AlternateFunction)4, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE13setOutputTypeIL10OutputType1ELh7EEEvv
+                0x0000000008001988       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001988                void GPIO<1073873920ul>::setOutputType<(OutputType)1, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE14setOutputSpeedIL11OutputSpeed2ELh7EEEvv
+                0x000000000800199c       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800199c                void GPIO<1073873920ul>::setOutputSpeed<(OutputSpeed)2, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE17setPullupPullDownIL21PullupPullDownControl1ELh7EEEvv
+                0x00000000080019b0       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080019b0                void GPIO<1073873920ul>::setPullupPullDown<(PullupPullDownControl)1, (unsigned char)7>()
+ .text._ZN4GPIOILm1073873920EE11setPortModeIL8PortMode2ELh6EEEvv
+                0x00000000080019c4       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080019c4                void GPIO<1073873920ul>::setPortMode<(PortMode)2, (unsigned char)6>()
+ .text._ZN4GPIOILm1073873920EE20setAlternateFunctionIL17AlternateFunction4ELh6EEEvv
+                0x00000000080019d8       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080019d8                void GPIO<1073873920ul>::setAlternateFunction<(AlternateFunction)4, (unsigned char)6>()
+ .text._ZN4GPIOILm1073873920EE13setOutputTypeIL10OutputType1ELh6EEEvv
+                0x00000000080019ec       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080019ec                void GPIO<1073873920ul>::setOutputType<(OutputType)1, (unsigned char)6>()
+ .text._ZN4GPIOILm1073873920EE14setOutputSpeedIL11OutputSpeed2ELh6EEEvv
+                0x0000000008001a00       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001a00                void GPIO<1073873920ul>::setOutputSpeed<(OutputSpeed)2, (unsigned char)6>()
+ .text._ZN4GPIOILm1073873920EE17setPullupPullDownIL21PullupPullDownControl1ELh6EEEvv
+                0x0000000008001a14       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001a14                void GPIO<1073873920ul>::setPullupPullDown<(PullupPullDownControl)1, (unsigned char)6>()
+ .text._ZN3I2CIL9I2CNumber0EE11setI2CClockILb1EEEvv
+                0x0000000008001a28       0x10 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001a28                void I2C<(I2CNumber)0>::setI2CClock<true>()
+ .text._ZN3I2CIL9I2CNumber0EE18setAcknowledgementIL11Acknowledge0EEEvv
+                0x0000000008001a38       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001a38                void I2C<(I2CNumber)0>::setAcknowledgement<(Acknowledge)0>()
+ .text._ZN12I2CRegistersImE27setPeripheralClockFrequencyEmh
+                0x0000000008001a60       0x44 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001a60                I2CRegisters<unsigned long>::setPeripheralClockFrequency(unsigned long, unsigned char)
+ .text._ZN12I2CRegistersImE13setOwnAddressEmh
+                0x0000000008001aa4       0x48 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001aa4                I2CRegisters<unsigned long>::setOwnAddress(unsigned long, unsigned char)
+ .text._ZN12I2CRegistersImE20keepBit14OfOAR1AsSetEm
+                0x0000000008001aec       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001aec                I2CRegisters<unsigned long>::keepBit14OfOAR1AsSet(unsigned long)
+ .text._ZN12I2CRegistersImE14setSerialClockEmmm17FastModeDutyCycle
+                0x0000000008001b0c       0xa8 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001b0c                I2CRegisters<unsigned long>::setSerialClock(unsigned long, unsigned long, unsigned long, FastModeDutyCycle)
+ *fill*         0x0000000008001bb4        0x4 
+ .text._ZN12I2CRegistersImE8setTRiseEmmm
+                0x0000000008001bb8       0xc0 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001bb8                I2CRegisters<unsigned long>::setTRise(unsigned long, unsigned long, unsigned long)
+ .text._ZN3I2CIL9I2CNumber0EE12setI2CEnableEv
+                0x0000000008001c78       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001c78                I2C<(I2CNumber)0>::setI2CEnable()
+ .text._ZNKSt5arrayISt4pairI9I2CNumbermELj3EE5beginEv
+                0x0000000008001ca0       0x18 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001ca0                std::array<std::pair<I2CNumber, unsigned long>, 3u>::begin() const
+ .text._ZSt7find_ifIPKSt4pairI9I2CNumbermEZNK9StaticMapIS1_mLj3EE2atERKS1_EUlRKT_E_ES9_S9_S9_T0_
+                0x0000000008001cb8       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001cb8                std::pair<I2CNumber, unsigned long> const* std::find_if<std::pair<I2CNumber, unsigned long> const*, StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>(std::pair<I2CNumber, unsigned long> const*, std::pair<I2CNumber, unsigned long> const*, StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1})
+ .text._ZNSt14__array_traitsISt4pairI9I2CNumbermELj3EE6_S_ptrERA3_KS2_
+                0x0000000008001ce0       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001ce0                std::__array_traits<std::pair<I2CNumber, unsigned long>, 3u>::_S_ptr(std::pair<I2CNumber, unsigned long> const (&) [3])
+ .text._ZNKSt5arrayISt4pairI9I2CNumbermELj3EE4dataEv
+                0x0000000008001cf4       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001cf4                std::array<std::pair<I2CNumber, unsigned long>, 3u>::data() const
+ .text._ZN12I2CRegistersImE5doSetILb1EEEvmm
+                0x0000000008001d0e       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d0e                void I2CRegisters<unsigned long>::doSet<true>(unsigned long, unsigned long)
+ .text._ZN12I2CRegistersImE13isAddressSentEm
+                0x0000000008001d28       0x22 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d28                I2CRegisters<unsigned long>::isAddressSent(unsigned long)
+ .text._ZN12I2CRegistersImE19readStatusRegister1Em
+                0x0000000008001d4a       0x1c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d4a                I2CRegisters<unsigned long>::readStatusRegister1(unsigned long)
+ .text._ZN12I2CRegistersImE19readStatusRegister2Em
+                0x0000000008001d66       0x1c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d66                I2CRegisters<unsigned long>::readStatusRegister2(unsigned long)
+ .text._ZNSt14__array_traitsIhLj4EE6_S_ptrERA4_Kh
+                0x0000000008001d82       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d82                std::__array_traits<unsigned char, 4u>::_S_ptr(unsigned char const (&) [4])
+ .text._ZNKSt5arrayIhLj4EE4dataEv
+                0x0000000008001d96       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001d96                std::array<unsigned char, 4u>::data() const
+ .text._ZN14RegisterAccessImhE6regSetEmh
+                0x0000000008001db0       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001db0                RegisterAccess<unsigned long, unsigned char>::regSet(unsigned long, unsigned char)
+ .text._ZN18RCCRegistersTarget19setPeripheralOnAHB1IL14PeripheralAHB11ELb1EEEvv
+                0x0000000008001dd0       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001dd0                void RCCRegistersTarget::setPeripheralOnAHB1<(PeripheralAHB1)1, true>()
+ .text._ZN13GPIORegistersImE11setPortModeIL8PortMode2ELh7EEEvm
+                0x0000000008001de4       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001de4                void GPIORegisters<unsigned long>::setPortMode<(PortMode)2, (unsigned char)7>(unsigned long)
+ .text._ZN13GPIORegistersImE20setAlternateFunctionIL17AlternateFunction4ELh7EEEvm
+                0x0000000008001e0c       0x2c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001e0c                void GPIORegisters<unsigned long>::setAlternateFunction<(AlternateFunction)4, (unsigned char)7>(unsigned long)
+ .text._ZN13GPIORegistersImE13setOutputTypeIL10OutputType1ELh7EEEvm
+                0x0000000008001e38       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001e38                void GPIORegisters<unsigned long>::setOutputType<(OutputType)1, (unsigned char)7>(unsigned long)
+ .text._ZN13GPIORegistersImE14setOutputSpeedIL11OutputSpeed2ELh7EEEvm
+                0x0000000008001e62       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001e62                void GPIORegisters<unsigned long>::setOutputSpeed<(OutputSpeed)2, (unsigned char)7>(unsigned long)
+ .text._ZN13GPIORegistersImE17setPullupPullDownIL21PullupPullDownControl1ELh7EEEvm
+                0x0000000008001e8c       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001e8c                void GPIORegisters<unsigned long>::setPullupPullDown<(PullupPullDownControl)1, (unsigned char)7>(unsigned long)
+ .text._ZN13GPIORegistersImE11setPortModeIL8PortMode2ELh6EEEvm
+                0x0000000008001eb6       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001eb6                void GPIORegisters<unsigned long>::setPortMode<(PortMode)2, (unsigned char)6>(unsigned long)
+ .text._ZN13GPIORegistersImE20setAlternateFunctionIL17AlternateFunction4ELh6EEEvm
+                0x0000000008001ede       0x2c CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001ede                void GPIORegisters<unsigned long>::setAlternateFunction<(AlternateFunction)4, (unsigned char)6>(unsigned long)
+ .text._ZN13GPIORegistersImE13setOutputTypeIL10OutputType1ELh6EEEvm
+                0x0000000008001f0a       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001f0a                void GPIORegisters<unsigned long>::setOutputType<(OutputType)1, (unsigned char)6>(unsigned long)
+ .text._ZN13GPIORegistersImE14setOutputSpeedIL11OutputSpeed2ELh6EEEvm
+                0x0000000008001f34       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001f34                void GPIORegisters<unsigned long>::setOutputSpeed<(OutputSpeed)2, (unsigned char)6>(unsigned long)
+ .text._ZN13GPIORegistersImE17setPullupPullDownIL21PullupPullDownControl1ELh6EEEvm
+                0x0000000008001f5e       0x2a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001f5e                void GPIORegisters<unsigned long>::setPullupPullDown<(PullupPullDownControl)1, (unsigned char)6>(unsigned long)
+ .text._ZN18RCCRegistersTarget19setPeripheralOnAPB1IL14PeripheralAPB10ELb1EEEvv
+                0x0000000008001f88       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001f88                void RCCRegistersTarget::setPeripheralOnAPB1<(PeripheralAPB1)0, true>()
+ .text._ZN18RCCRegistersTarget19setPeripheralOnAPB1IL14PeripheralAPB12ELb1EEEvv
+                0x0000000008001f9c       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001f9c                void RCCRegistersTarget::setPeripheralOnAPB1<(PeripheralAPB1)2, true>()
+ .text._ZN12I2CRegistersImE22setControlRegister1BitIL24ControlRegister1Property9E11AcknowledgeLS3_0EEEvm
+                0x0000000008001fb0       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001fb0                void I2CRegisters<unsigned long>::setControlRegister1Bit<(ControlRegister1Property)9, Acknowledge, (Acknowledge)0>(unsigned long)
+ .text._ZN12I2CRegistersImE22setControlRegister1BitIL24ControlRegister1Property0E10PeripheralLS3_0EEEvm
+                0x0000000008001fd0       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001fd0                void I2CRegisters<unsigned long>::setControlRegister1Bit<(ControlRegister1Property)0, Peripheral, (Peripheral)0>(unsigned long)
+ .text._ZN9__gnu_cxx5__ops11__pred_iterIZNK9StaticMapI9I2CNumbermLj3EE2atERKS3_EUlRKT_E_EENS0_10_Iter_predIS7_EES7_
+                0x0000000008001ff0       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008001ff0                __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}> __gnu_cxx::__ops::__pred_iter<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>(StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1})
+ .text._ZSt9__find_ifIPKSt4pairI9I2CNumbermEN9__gnu_cxx5__ops10_Iter_predIZNK9StaticMapIS1_mLj3EE2atERKS1_EUlRKT_E_EEESC_SC_SC_T0_
+                0x0000000008002018       0x2e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008002018                std::pair<I2CNumber, unsigned long> const* std::__find_if<std::pair<I2CNumber, unsigned long> const*, __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}> >(std::pair<I2CNumber, unsigned long> const*, std::pair<I2CNumber, unsigned long> const*, __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>)
+ .text._ZN14RegisterAccessImhE6memoryEm
+                0x0000000008002046       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008002046                RegisterAccess<unsigned long, unsigned char>::memory(unsigned long)
+ .text._ZN12RCCRegistersImE19setPeripheralOnAHB1IL14PeripheralAHB11ELb1EEEvm
+                0x000000000800205a       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800205a                void RCCRegisters<unsigned long>::setPeripheralOnAHB1<(PeripheralAHB1)1, true>(unsigned long)
+ .text._ZN12RCCRegistersImE19setPeripheralOnAPB1IL14PeripheralAPB10ELb1EEEvm
+                0x000000000800207a       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800207a                void RCCRegisters<unsigned long>::setPeripheralOnAPB1<(PeripheralAPB1)0, true>(unsigned long)
+ .text._ZN12RCCRegistersImE19setPeripheralOnAPB1IL14PeripheralAPB12ELb1EEEvm
+                0x000000000800209a       0x20 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800209a                void RCCRegisters<unsigned long>::setPeripheralOnAPB1<(PeripheralAPB1)2, true>(unsigned long)
+ .text._ZSt4moveIRZNK9StaticMapI9I2CNumbermLj3EE2atERKS1_EUlRKT_E_EONSt16remove_referenceIS5_E4typeEOS5_
+                0x00000000080020ba       0x14 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080020ba                std::remove_reference<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}&>::type&& std::move<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}&>(StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}&)
+ .text._ZN9__gnu_cxx5__ops10_Iter_predIZNK9StaticMapI9I2CNumbermLj3EE2atERKS3_EUlRKT_E_EC2ESA_
+                0x00000000080020ce       0x24 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080020ce                __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>::_Iter_pred(StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1})
+                0x00000000080020ce                __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>::_Iter_pred(StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1})
+ .text._ZSt19__iterator_categoryIPKSt4pairI9I2CNumbermEENSt15iterator_traitsIT_E17iterator_categoryERKS6_
+                0x00000000080020f2       0x12 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x00000000080020f2                std::iterator_traits<std::pair<I2CNumber, unsigned long> const*>::iterator_category std::__iterator_category<std::pair<I2CNumber, unsigned long> const*>(std::pair<I2CNumber, unsigned long> const* const&)
+ .text._ZZNK9StaticMapI9I2CNumbermLj3EE2atERKS0_ENKUlRKT_E_clISt4pairIS0_mEEEDaS6_
+                0x0000000008002104       0x28 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x0000000008002104                auto StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}::operator()<std::pair<I2CNumber, unsigned long> >(std::pair<I2CNumber, unsigned long> const&) const
+ .text._ZN9__gnu_cxx5__ops10_Iter_predIZNK9StaticMapI9I2CNumbermLj3EE2atERKS3_EUlRKT_E_EclIPKSt4pairIS3_mEEEbS7_
+                0x000000000800212c       0x1e CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800212c                bool __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>::operator()<std::pair<I2CNumber, unsigned long> const*>(std::pair<I2CNumber, unsigned long> const*)
+ .text._ZSt9__find_ifIPKSt4pairI9I2CNumbermEN9__gnu_cxx5__ops10_Iter_predIZNK9StaticMapIS1_mLj3EE2atERKS1_EUlRKT_E_EEESC_SC_SC_T0_St26random_access_iterator_tag
+                0x000000000800214a      0x102 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800214a                std::pair<I2CNumber, unsigned long> const* std::__find_if<std::pair<I2CNumber, unsigned long> const*, __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}> >(std::pair<I2CNumber, unsigned long> const*, std::pair<I2CNumber, unsigned long> const*, __gnu_cxx::__ops::_Iter_pred<StaticMap<I2CNumber, unsigned long, 3u>::at(I2CNumber const&) const::{lambda(auto:1 const&)#1}>, std::random_access_iterator_tag)
+ .text._ZN12RCCRegistersImE5doSetILb1EEEvmm
+                0x000000000800224c       0x1a CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800224c                void RCCRegisters<unsigned long>::doSet<true>(unsigned long, unsigned long)
+ .text._ZSt21is_constant_evaluatedv
+                0x0000000008002266        0xe CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002266                std::is_constant_evaluated()
+ .text._ZSt4copyIPmS0_ET0_T_S2_S1_
+                0x0000000008002274       0x30 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002274                unsigned long* std::copy<unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt12__miter_baseIPmET_S1_
+                0x00000000080022a4       0x14 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080022a4                unsigned long* std::__miter_base<unsigned long*>(unsigned long*)
+ .text._ZSt13__copy_move_aILb0EPmS0_ET1_T0_S2_S1_
+                0x00000000080022b8       0x46 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080022b8                unsigned long* std::__copy_move_a<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt4fillIPmmEvT_S1_RKT0_
+                0x00000000080022fe       0x1e CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080022fe                void std::fill<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZSt12__niter_baseIPmET_S1_
+                0x000000000800231c       0x14 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x000000000800231c                unsigned long* std::__niter_base<unsigned long*>(unsigned long*)
+ .text._ZSt14__copy_move_a1ILb0EPmS0_ET1_T0_S2_S1_
+                0x0000000008002330       0x20 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002330                unsigned long* std::__copy_move_a1<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt12__niter_wrapIPmET_RKS1_S1_
+                0x0000000008002350       0x16 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002350                unsigned long* std::__niter_wrap<unsigned long*>(unsigned long* const&, unsigned long*)
+ .text._ZSt8__fill_aIPmmEvT_S1_RKT0_
+                0x0000000008002366       0x1e CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002366                void std::__fill_a<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZSt14__copy_move_a2ILb0EPmS0_ET1_T0_S2_S1_
+                0x0000000008002384       0x3a CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002384                unsigned long* std::__copy_move_a2<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt9__fill_a1IPmmEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT0_E7__valueEvE6__typeET_S8_RKS4_
+                0x00000000080023be       0x32 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080023be                __gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZNSt11__copy_moveILb0ELb0ESt26random_access_iterator_tagE8__copy_mIPmS3_EET0_T_S5_S4_
+                0x00000000080023f0       0x44 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x00000000080023f0                unsigned long* std::__copy_move<false, false, std::random_access_iterator_tag>::__copy_m<unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mImEEPT_PKS3_S6_S4_
+                0x0000000008002434       0x3a CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008002434                unsigned long* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned long>(unsigned long const*, unsigned long const*, unsigned long*)
+ *fill*         0x000000000800246e        0x2 
+ .text.startup  0x0000000008002470       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ *(.init)
+ .init          0x0000000008002484        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008002484                _init
+ .init          0x0000000008002488        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.fini)
+ .fini          0x0000000008002490        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008002490                _fini
+ .fini          0x0000000008002494        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.rodata)
+ .rodata        0x000000000800249c       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x00000000080024c0       0x40 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .rodata        0x0000000008002500       0x24 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .rodata        0x0000000008002524        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000008002524                _global_impure_ptr
+ .rodata        0x0000000008002528       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ *(.rodata.*)
+ .rodata._ZN3I2CIL9I2CNumber0EE22i2cNumberToBaseAddressE
+                0x000000000800254c       0x18 CMakeFiles/i2c.dir/i2c.cpp.obj
+                0x000000000800254c                I2C<(I2CNumber)0>::i2cNumberToBaseAddress
+                0x0000000008002564                . = ALIGN (0x4)
+                0x0000000008002564                end_of_text = .
+                0x0000000008002570                load_address_of_data = LOADADDR (.data)
+
+.glue_7         0x0000000008002564        0x0
+ .glue_7        0x0000000008002564        0x0 linker stubs
+
+.glue_7t        0x0000000008002564        0x0
+ .glue_7t       0x0000000008002564        0x0 linker stubs
+
+.vfp11_veneer   0x0000000008002564        0x0
+ .vfp11_veneer  0x0000000008002564        0x0 linker stubs
+
+.v4_bx          0x0000000008002564        0x0
+ .v4_bx         0x0000000008002564        0x0 linker stubs
+
+.iplt           0x0000000008002564        0x0
+ .iplt          0x0000000008002564        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.eh_frame       0x0000000008002564        0x4
+ .eh_frame      0x0000000008002564        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008002564        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+
+.ARM.extab      0x0000000008002568        0x0
+ .ARM.extab     0x0000000008002568        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+
+.ARM.exidx      0x0000000008002568        0x8
+ .ARM.exidx     0x0000000008002568        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+                                         0x10 (size before relaxing)
+
+.rel.dyn        0x0000000008002570        0x0
+ .rel.iplt      0x0000000008002570        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.data           0x0000000020000000      0x438 load address 0x0000000008002570
+                0x0000000020000000                start_of_data = .
+ *(.data)
+ .data          0x0000000020000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .data          0x0000000020000000        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000020000000                __dso_handle
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .data          0x0000000020000004        0x0 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .data          0x0000000020000004        0x0 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ *fill*         0x0000000020000004        0x4 
+ .data          0x0000000020000008      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000020000008                _impure_ptr
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.data.*)
+                0x0000000020000438                . = ALIGN (0x4)
+                0x0000000020000438                end_of_data = .
+
+.fini_array     0x0000000020000438        0x4 load address 0x00000000080029a8
+ .fini_array    0x0000000020000438        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.tm_clone_table
+                0x000000002000043c        0x0 load address 0x00000000080029ac
+ .tm_clone_table
+                0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .tm_clone_table
+                0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+
+.igot.plt       0x000000002000043c        0x0 load address 0x00000000080029ac
+ .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.bss            0x000000002000043c       0x1c load address 0x00000000080029ac
+                0x000000002000043c                start_of_bss = .
+                0x000000002000043c                __bss_start__ = start_of_bss
+ *(.bss)
+ .bss           0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .bss           0x000000002000043c       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .bss           0x0000000020000458        0x0 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .bss           0x0000000020000458        0x0 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.bss.*)
+ *(.COMMON)
+                0x0000000020000458                . = ALIGN (0x4)
+                0x0000000020000458                end_of_bss = .
+                0x0000000020000458                __bss_end__ = end_of_bss
+                0x0000000020000458                . = ALIGN (0x4)
+                0x0000000020000458                end = .
+                0x0000000020000458                __end__ = .
+OUTPUT(i2c.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x0000000000000000       0x2a
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x000000000000004c       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .ARM.attributes
+                0x0000000000000068       0x2e CMakeFiles/i2c.dir/i2c.cpp.obj
+ .ARM.attributes
+                0x0000000000000096       0x2e CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .ARM.attributes
+                0x00000000000000c4       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000000000000e2       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000000000000100       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x000000000000011e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000000000000014c       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000000000000017a       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000000001a8       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000000001d6       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000204       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x0000000000000232       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000260       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x000000000000028e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000000000002bc       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000000000002ea       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .ARM.attributes
+                0x0000000000000318       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .comment       0x0000000000000033       0x34 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+
+.debug_line     0x0000000000000000     0x2b58
+ .debug_line    0x0000000000000000       0x87 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .debug_line    0x0000000000000087     0x13a3 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_line    0x000000000000142a      0x602 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_line    0x0000000000001a2c      0x186 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x0000000000001bb2      0x19b /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x0000000000001d4d       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_line    0x0000000000001dc2       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_line    0x0000000000001e82      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_line    0x0000000000001ffb       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_line    0x00000000000020e8       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_line    0x00000000000021cc      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_line    0x0000000000002304      0x1ee /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_line    0x00000000000024f2      0x1bf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_line    0x00000000000026b1      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_line    0x000000000000284f      0x294 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000002ae3       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+.debug_info     0x0000000000000000    0x10728
+ .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .debug_info    0x0000000000000026     0xa5d5 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_info    0x000000000000a5fb     0x33f3 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_info    0x000000000000d9ee       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x000000000000da14       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x000000000000da3a       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_info    0x000000000000da60      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_info    0x000000000000db60      0x969 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_info    0x000000000000e4c9      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_info    0x000000000000e5cb      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_info    0x000000000000eef5      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_info    0x000000000000f00f      0x152 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_info    0x000000000000f161      0x137 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_info    0x000000000000f298      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_info    0x000000000000fc48      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000010685       0xa3 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x1db5
+ .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .debug_abbrev  0x0000000000000014      0x997 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_abbrev  0x00000000000009ab      0x6e9 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_abbrev  0x0000000000001094       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_abbrev  0x00000000000010a8       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_abbrev  0x00000000000010bc       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_abbrev  0x00000000000010d0       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000001187      0x20c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000001393       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_abbrev  0x0000000000001462      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_abbrev  0x000000000000161a       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_abbrev  0x00000000000016e6       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_abbrev  0x00000000000017a6       0xb4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_abbrev  0x000000000000185a      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000001a99      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000001d4b       0x6a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+.debug_aranges  0x0000000000000000      0x580
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .debug_aranges
+                0x0000000000000020      0x338 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_aranges
+                0x0000000000000358       0x88 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_aranges
+                0x00000000000003e0       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_aranges
+                0x0000000000000400       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_aranges
+                0x0000000000000420       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_aranges
+                0x0000000000000440       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_aranges
+                0x0000000000000460       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000480       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_aranges
+                0x00000000000004a0       0x18 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_aranges
+                0x00000000000004b8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_aranges
+                0x00000000000004d8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_aranges
+                0x00000000000004f8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_aranges
+                0x0000000000000518       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x0000000000000538       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000560       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+.debug_str      0x0000000000000000     0xdae8
+ .debug_str     0x0000000000000000       0x95 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .debug_str     0x0000000000000095     0xc7e3 CMakeFiles/i2c.dir/i2c.cpp.obj
+                                       0xcbcd (size before relaxing)
+ .debug_str     0x000000000000c878      0xba6 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+                                       0x2e52 (size before relaxing)
+ .debug_str     0x000000000000d41e       0x9c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+                                         0xa8 (size before relaxing)
+ .debug_str     0x000000000000d4ba       0xa8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_str     0x000000000000d4ba       0xa8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_str     0x000000000000d4ba      0x142 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+                                        0x1de (size before relaxing)
+ .debug_str     0x000000000000d5fc       0x61 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+                                        0x585 (size before relaxing)
+ .debug_str     0x000000000000d65d       0xbe /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+                                        0x1d6 (size before relaxing)
+ .debug_str     0x000000000000d71b       0x98 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                                        0x57c (size before relaxing)
+ .debug_str     0x000000000000d7b3       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                                        0x200 (size before relaxing)
+ .debug_str     0x000000000000d849       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x000000000000d909       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                                        0x1b5 (size before relaxing)
+ .debug_str     0x000000000000d951       0x36 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+                                        0x5b6 (size before relaxing)
+ .debug_str     0x000000000000d987       0x7c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+                                        0x5e2 (size before relaxing)
+ .debug_str     0x000000000000da03       0xe5 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                                        0x17b (size before relaxing)
+
+.debug_ranges   0x0000000000000000      0x3f0
+ .debug_ranges  0x0000000000000000      0x328 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_ranges  0x0000000000000328       0x78 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_ranges  0x00000000000003a0       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+
+.debug_frame    0x0000000000000000     0x13d4
+ .debug_frame   0x0000000000000000      0xe18 CMakeFiles/i2c.dir/i2c.cpp.obj
+ .debug_frame   0x0000000000000e18      0x2e4 CMakeFiles/i2c.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_frame   0x00000000000010fc       0xac /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000011a8       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00000000000011f8       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x000000000000121c       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_frame   0x000000000000123c       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_frame   0x0000000000001264       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_frame   0x0000000000001298       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_frame   0x00000000000012c4       0x40 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000001304       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000001330       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000001364       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000013b4       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+.debug_loc      0x0000000000000000      0x9ec
+ .debug_loc     0x0000000000000000       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_loc     0x0000000000000032       0x22 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_loc     0x0000000000000054       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_loc     0x00000000000000bc       0xba /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_loc     0x0000000000000176      0x34f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_loc     0x00000000000004c5      0x22c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_loc     0x00000000000006f1      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_loc     0x0000000000000829      0x1ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_loc     0x00000000000009d7       0x15 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)

@@ -1,30 +1,79 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (atexit)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (exit)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (__libc_fini_array)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o) (_global_impure_ptr)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (__libc_init_array)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
-                              CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj (memcpy)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                              CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj (memmove)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
                               /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (memset)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
-                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o) (__register_exitproc)
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
-                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o) (__call_exitprocs)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o) (__register_exitproc)
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (__call_exitprocs)
 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
-                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o) (_exit)
+                              /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o) (_exit)
 
 Discarded input sections
 
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
 
 Memory Configuration
 
@@ -44,6 +93,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/no
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 START GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
 END GROUP
 START GROUP
@@ -54,14 +104,14 @@ END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
 
-.text           0x0000000008000000      0x7f0
+.text           0x0000000008000000      0xefc
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x188 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
                 0x0000000008000000                isr_vector
                 0x0000000008000188                start_of_constructors = .
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0000000008000188        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x0000000008000188        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
  .init_array    0x000000000800018c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x0000000008000190                end_of_constructors = .
@@ -72,179 +122,331 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000008000218                _stack_init
                 0x0000000008000220                _mainCRTStartup
                 0x0000000008000220                _start
- .text          0x0000000008000288        0x0 CMakeFiles/ledButton.dir/ledButton.cpp.obj
- .text          0x0000000008000288       0x5c CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
-                0x0000000008000288                RTC_Alarm_IRQHandler
-                0x0000000008000288                HASH_RNG_IRQHandler
-                0x0000000008000288                EXTI2_IRQHandler
-                0x0000000008000288                TIM8_CC_IRQHandler
-                0x0000000008000288                DebugMon_Handler
-                0x0000000008000288                TIM1_CC_IRQHandler
-                0x0000000008000288                DMA2_Stream5_IRQHandler
-                0x0000000008000288                HardFault_Handler
-                0x0000000008000288                DMA1_Stream5_IRQHandler
-                0x0000000008000288                SysTick_Handler
-                0x0000000008000288                PVD_IRQHandler
-                0x0000000008000288                SDIO_IRQHandler
-                0x0000000008000288                TAMP_STAMP_IRQHandler
-                0x0000000008000288                PendSV_Handler
-                0x0000000008000288                NMI_Handler
-                0x0000000008000288                CAN2_RX1_IRQHandler
-                0x0000000008000288                EXTI3_IRQHandler
-                0x0000000008000288                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0000000008000288                TIM1_UP_TIM10_IRQHandler
-                0x0000000008000288                TIM8_UP_TIM13_IRQHandler
-                0x0000000008000288                I2C3_ER_IRQHandler
-                0x0000000008000288                EXTI0_IRQHandler
-                0x0000000008000288                I2C2_EV_IRQHandler
-                0x0000000008000288                DMA1_Stream2_IRQHandler
-                0x0000000008000288                CAN1_RX0_IRQHandler
-                0x0000000008000288                FPU_IRQHandler
-                0x0000000008000288                OTG_HS_WKUP_IRQHandler
-                0x0000000008000288                UsageFault_Handler
-                0x0000000008000288                CAN2_SCE_IRQHandler
-                0x0000000008000288                DMA2_Stream2_IRQHandler
-                0x0000000008000288                SPI1_IRQHandler
-                0x0000000008000288                TIM6_DAC_IRQHandler
-                0x0000000008000288                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008000288                DCMI_IRQHandler
-                0x0000000008000288                CAN2_RX0_IRQHandler
-                0x0000000008000288                DMA2_Stream3_IRQHandler
-                0x0000000008000288                defaulHandler
-                0x0000000008000288                USART6_IRQHandler
-                0x0000000008000288                USART3_IRQHandler
-                0x0000000008000288                CRYP_IRQHandler
-                0x0000000008000288                CAN1_RX1_IRQHandler
-                0x0000000008000288                UART5_IRQHandler
-                0x0000000008000288                DMA2_Stream0_IRQHandler
-                0x0000000008000288                TIM4_IRQHandler
-                0x0000000008000288                I2C1_EV_IRQHandler
-                0x0000000008000288                DMA1_Stream6_IRQHandler
-                0x0000000008000288                DMA1_Stream1_IRQHandler
-                0x0000000008000288                UART4_IRQHandler
-                0x0000000008000288                TIM3_IRQHandler
-                0x0000000008000288                RCC_IRQHandler
-                0x0000000008000288                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008000288                EXTI15_10_IRQHandler
-                0x0000000008000288                ADC_IRQHandler
-                0x0000000008000288                DMA1_Stream7_IRQHandler
-                0x0000000008000288                TIM7_IRQHandler
-                0x0000000008000288                CAN2_TX_IRQHandler
-                0x0000000008000288                TIM5_IRQHandler
-                0x0000000008000288                DMA2_Stream7_IRQHandler
-                0x0000000008000288                I2C3_EV_IRQHandler
-                0x0000000008000288                EXTI9_5_IRQHandler
-                0x0000000008000288                RTC_WKUP_IRQHandler
-                0x0000000008000288                ETH_WKUP_IRQHandler
-                0x0000000008000288                SPI2_IRQHandler
-                0x0000000008000288                OTG_HS_EP1_IN_IRQHandler
-                0x0000000008000288                MemManage_Handler
-                0x0000000008000288                DMA1_Stream0_IRQHandler
-                0x0000000008000288                CAN1_TX_IRQHandler
-                0x0000000008000288                SVC_Handler
-                0x0000000008000288                EXTI4_IRQHandler
-                0x0000000008000288                FSMC_IRQHandler
-                0x0000000008000288                ETH_IRQHandler
-                0x0000000008000288                OTG_HS_EP1_OUT_IRQHandler
-                0x0000000008000288                WWDG_IRQHandler
-                0x0000000008000288                TIM2_IRQHandler
-                0x0000000008000288                OTG_FS_WKUP_IRQHandler
-                0x0000000008000288                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008000288                OTG_HS_IRQHandler
-                0x0000000008000288                EXTI1_IRQHandler
-                0x0000000008000288                USART2_IRQHandler
-                0x0000000008000288                I2C2_ER_IRQHandler
-                0x0000000008000288                DMA2_Stream1_IRQHandler
-                0x0000000008000288                CAN1_SCE_IRQHandler
-                0x0000000008000288                DMA2_Stream4_IRQHandler
-                0x0000000008000288                BusFault_Handler
-                0x0000000008000288                USART1_IRQHandler
-                0x0000000008000288                OTG_FS_IRQHandler
-                0x0000000008000288                SPI3_IRQHandler
-                0x0000000008000288                DMA1_Stream4_IRQHandler
-                0x0000000008000288                I2C1_ER_IRQHandler
-                0x0000000008000288                DMA2_Stream6_IRQHandler
-                0x0000000008000288                DMA1_Stream3_IRQHandler
-                0x000000000800028c                Reset_Handler
- .text          0x00000000080002e4        0xc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
-                0x00000000080002e4                atexit
- .text          0x00000000080002f0       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
-                0x00000000080002f0                exit
- .text          0x0000000008000310       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
-                0x0000000008000310                __libc_fini_array
- .text          0x000000000800033c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .text          0x000000000800033c       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
-                0x000000000800033c                __libc_init_array
- .text          0x0000000008000384      0x134 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
-                0x0000000008000384                memcpy
- .text          0x00000000080004b8       0xa4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
-                0x00000000080004b8                memset
- .text          0x000000000800055c       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
-                0x000000000800055c                __register_exitproc
- .text          0x00000000080005c4       0xb0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
-                0x00000000080005c4                __call_exitprocs
- .text          0x0000000008000674        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
-                0x0000000008000674                _exit
- .text          0x0000000008000678        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
- .text          0x0000000008000678        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .text          0x0000000008000288       0x3a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800029c                main
+ *fill*         0x00000000080002c2        0x2 
+ .text          0x00000000080002c4       0xe8 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x000000000800038c                RTC_Alarm_IRQHandler
+                0x000000000800038c                HASH_RNG_IRQHandler
+                0x000000000800038c                EXTI2_IRQHandler
+                0x000000000800038c                TIM8_CC_IRQHandler
+                0x000000000800038c                DebugMon_Handler
+                0x000000000800038c                TIM1_CC_IRQHandler
+                0x000000000800038c                DMA2_Stream5_IRQHandler
+                0x000000000800038c                HardFault_Handler
+                0x000000000800038c                DMA1_Stream5_IRQHandler
+                0x000000000800038c                SysTick_Handler
+                0x000000000800038c                PVD_IRQHandler
+                0x000000000800038c                SDIO_IRQHandler
+                0x000000000800038c                TAMP_STAMP_IRQHandler
+                0x000000000800038c                PendSV_Handler
+                0x000000000800038c                NMI_Handler
+                0x000000000800038c                CAN2_RX1_IRQHandler
+                0x000000000800038c                EXTI3_IRQHandler
+                0x000000000800038c                TIM8_TRG_COM_TIM14_IRQHandler
+                0x000000000800038c                TIM1_UP_TIM10_IRQHandler
+                0x000000000800038c                TIM8_UP_TIM13_IRQHandler
+                0x000000000800038c                I2C3_ER_IRQHandler
+                0x000000000800038c                EXTI0_IRQHandler
+                0x000000000800038c                I2C2_EV_IRQHandler
+                0x000000000800038c                DMA1_Stream2_IRQHandler
+                0x000000000800038c                CAN1_RX0_IRQHandler
+                0x000000000800038c                FPU_IRQHandler
+                0x000000000800038c                OTG_HS_WKUP_IRQHandler
+                0x000000000800038c                UsageFault_Handler
+                0x000000000800038c                CAN2_SCE_IRQHandler
+                0x000000000800038c                DMA2_Stream2_IRQHandler
+                0x000000000800038c                SPI1_IRQHandler
+                0x000000000800038c                TIM6_DAC_IRQHandler
+                0x000000000800038c                TIM1_BRK_TIM9_IRQHandler
+                0x000000000800038c                DCMI_IRQHandler
+                0x000000000800038c                CAN2_RX0_IRQHandler
+                0x000000000800038c                DMA2_Stream3_IRQHandler
+                0x000000000800038c                defaulHandler
+                0x000000000800038c                USART6_IRQHandler
+                0x000000000800038c                USART3_IRQHandler
+                0x000000000800038c                CRYP_IRQHandler
+                0x000000000800038c                CAN1_RX1_IRQHandler
+                0x000000000800038c                UART5_IRQHandler
+                0x000000000800038c                DMA2_Stream0_IRQHandler
+                0x000000000800038c                TIM4_IRQHandler
+                0x000000000800038c                I2C1_EV_IRQHandler
+                0x000000000800038c                DMA1_Stream6_IRQHandler
+                0x000000000800038c                DMA1_Stream1_IRQHandler
+                0x000000000800038c                UART4_IRQHandler
+                0x000000000800038c                TIM3_IRQHandler
+                0x000000000800038c                RCC_IRQHandler
+                0x000000000800038c                TIM8_BRK_TIM12_IRQHandler
+                0x000000000800038c                EXTI15_10_IRQHandler
+                0x000000000800038c                ADC_IRQHandler
+                0x000000000800038c                DMA1_Stream7_IRQHandler
+                0x000000000800038c                TIM7_IRQHandler
+                0x000000000800038c                CAN2_TX_IRQHandler
+                0x000000000800038c                TIM5_IRQHandler
+                0x000000000800038c                DMA2_Stream7_IRQHandler
+                0x000000000800038c                I2C3_EV_IRQHandler
+                0x000000000800038c                EXTI9_5_IRQHandler
+                0x000000000800038c                RTC_WKUP_IRQHandler
+                0x000000000800038c                ETH_WKUP_IRQHandler
+                0x000000000800038c                SPI2_IRQHandler
+                0x000000000800038c                OTG_HS_EP1_IN_IRQHandler
+                0x000000000800038c                MemManage_Handler
+                0x000000000800038c                DMA1_Stream0_IRQHandler
+                0x000000000800038c                CAN1_TX_IRQHandler
+                0x000000000800038c                SVC_Handler
+                0x000000000800038c                EXTI4_IRQHandler
+                0x000000000800038c                FSMC_IRQHandler
+                0x000000000800038c                ETH_IRQHandler
+                0x000000000800038c                OTG_HS_EP1_OUT_IRQHandler
+                0x000000000800038c                WWDG_IRQHandler
+                0x000000000800038c                TIM2_IRQHandler
+                0x000000000800038c                OTG_FS_WKUP_IRQHandler
+                0x000000000800038c                TIM1_TRG_COM_TIM11_IRQHandler
+                0x000000000800038c                OTG_HS_IRQHandler
+                0x000000000800038c                EXTI1_IRQHandler
+                0x000000000800038c                USART2_IRQHandler
+                0x000000000800038c                I2C2_ER_IRQHandler
+                0x000000000800038c                DMA2_Stream1_IRQHandler
+                0x000000000800038c                CAN1_SCE_IRQHandler
+                0x000000000800038c                DMA2_Stream4_IRQHandler
+                0x000000000800038c                BusFault_Handler
+                0x000000000800038c                USART1_IRQHandler
+                0x000000000800038c                OTG_FS_IRQHandler
+                0x000000000800038c                SPI3_IRQHandler
+                0x000000000800038c                DMA1_Stream4_IRQHandler
+                0x000000000800038c                I2C1_ER_IRQHandler
+                0x000000000800038c                DMA2_Stream6_IRQHandler
+                0x000000000800038c                DMA1_Stream3_IRQHandler
+                0x0000000008000392                Reset_Handler
+ .text          0x00000000080003ac        0xc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+                0x00000000080003ac                atexit
+ .text          0x00000000080003b8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+                0x00000000080003b8                exit
+ .text          0x00000000080003d8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+                0x00000000080003d8                __libc_fini_array
+ .text          0x0000000008000404        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .text          0x0000000008000404       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+                0x0000000008000404                __libc_init_array
+ .text          0x000000000800044c       0xf8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                0x000000000800044c                memmove
+ .text          0x0000000008000544       0xa4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000008000544                memset
+ .text          0x00000000080005e8       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+                0x00000000080005e8                __register_exitproc
+ .text          0x0000000008000650       0xb0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x0000000008000650                __call_exitprocs
+ .text          0x0000000008000700        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                0x0000000008000700                _exit
+ .text          0x0000000008000704        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .text          0x0000000008000704        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.text.*)
+ .text._ZN14RegisterAccessImmE6regAndEmm
+                0x0000000008000704       0x2c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000704                RegisterAccess<unsigned long, unsigned long>::regAnd(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE5regOrEmm
+                0x0000000008000730       0x2c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000730                RegisterAccess<unsigned long, unsigned long>::regOr(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE6regGetEm
+                0x000000000800075c       0x1a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800075c                RegisterAccess<unsigned long, unsigned long>::regGet(unsigned long)
+ .text._ZN14RegisterAccessImmE9regBitSetEmm
+                0x0000000008000776       0x56 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000776                RegisterAccess<unsigned long, unsigned long>::regBitSet(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE11regBitClearEmm
+                0x00000000080007cc       0x58 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080007cc                RegisterAccess<unsigned long, unsigned long>::regBitClear(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE12regBitToggleEmm
+                0x0000000008000824       0x56 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000824                RegisterAccess<unsigned long, unsigned long>::regBitToggle(unsigned long, unsigned long)
+ .text._ZN14RegisterAccessImmE9regBitGetEmm
+                0x000000000800087a       0x50 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800087a                RegisterAccess<unsigned long, unsigned long>::regBitGet(unsigned long, unsigned long)
  .text._ZN4GPIOILm1073875968EE4initIXtl12GPIOInitDataL14PeripheralAHB13EL8PortMode1EL17AlternateFunction0EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh12EEEvv
-                0x0000000008000678       0x74 CMakeFiles/ledButton.dir/ledButton.cpp.obj
-                0x0000000008000678                void GPIO<1073875968ul>::init<GPIOInitData{(PeripheralAHB1)3, (PortMode)1, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)12>()
+                0x00000000080008ca       0x1c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080008ca                void GPIO<1073875968ul>::init<GPIOInitData{(PeripheralAHB1)3, (PortMode)1, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)12>()
  .text._ZN4GPIOILm1073872896EE4initIXtl12GPIOInitDataL14PeripheralAHB10EL8PortMode0EL17AlternateFunction0EL10OutputType0EL11OutputSpeed2EL21PullupPullDownControl0EEELh0EEEvv
-                0x00000000080006ec       0x50 CMakeFiles/ledButton.dir/ledButton.cpp.obj
-                0x00000000080006ec                void GPIO<1073872896ul>::init<GPIOInitData{(PeripheralAHB1)0, (PortMode)0, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)0>()
- .text.startup  0x000000000800073c       0x3c CMakeFiles/ledButton.dir/ledButton.cpp.obj
-                0x000000000800073c                main
- .text.startup  0x0000000008000778       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x00000000080008e6       0x1c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080008e6                void GPIO<1073872896ul>::init<GPIOInitData{(PeripheralAHB1)0, (PortMode)0, (AlternateFunction)0, (OutputType)0, (OutputSpeed)2, (PullupPullDownControl)0}, (unsigned char)0>()
+ *fill*         0x0000000008000902        0x2 
+ .text._ZN4GPIOILm1073872896EE12readInputPinILh0EEEbv
+                0x0000000008000904       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000904                bool GPIO<1073872896ul>::readInputPin<(unsigned char)0>()
+ .text._Z13softwareDelayILj500000EEvv
+                0x0000000008000918       0x30 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000918                void softwareDelay<500000u>()
+ .text._ZN4GPIOILm1073875968EE15toggleOutputPinILh12EEEvv
+                0x0000000008000948       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000948                void GPIO<1073875968ul>::toggleOutputPin<(unsigned char)12>()
+ .text._ZN14RegisterAccessImmE6memoryEm
+                0x000000000800095c       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800095c                RegisterAccess<unsigned long, unsigned long>::memory(unsigned long)
+ .text._ZN4GPIOILm1073875968EE8setClockIL14PeripheralAHB13ELb1EEEvv
+                0x0000000008000970        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000970                void GPIO<1073875968ul>::setClock<(PeripheralAHB1)3, true>()
+ .text._ZN4GPIOILm1073875968EE11setPortModeIL8PortMode1ELh12EEEvv
+                0x000000000800097c       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x000000000800097c                void GPIO<1073875968ul>::setPortMode<(PortMode)1, (unsigned char)12>()
+ .text._ZN4GPIOILm1073875968EE13setOutputTypeIL10OutputType0ELh12EEEvv
+                0x0000000008000990       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000990                void GPIO<1073875968ul>::setOutputType<(OutputType)0, (unsigned char)12>()
+ .text._ZN4GPIOILm1073875968EE14setOutputSpeedIL11OutputSpeed2ELh12EEEvv
+                0x00000000080009a4       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080009a4                void GPIO<1073875968ul>::setOutputSpeed<(OutputSpeed)2, (unsigned char)12>()
+ .text._ZN4GPIOILm1073875968EE17setPullupPullDownIL21PullupPullDownControl0ELh12EEEvv
+                0x00000000080009b8       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080009b8                void GPIO<1073875968ul>::setPullupPullDown<(PullupPullDownControl)0, (unsigned char)12>()
+ .text._ZN4GPIOILm1073872896EE8setClockIL14PeripheralAHB10ELb1EEEvv
+                0x00000000080009cc        0xc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080009cc                void GPIO<1073872896ul>::setClock<(PeripheralAHB1)0, true>()
+ .text._ZN4GPIOILm1073872896EE11setPortModeIL8PortMode0ELh0EEEvv
+                0x00000000080009d8       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080009d8                void GPIO<1073872896ul>::setPortMode<(PortMode)0, (unsigned char)0>()
+ .text._ZN4GPIOILm1073872896EE13setOutputTypeIL10OutputType0ELh0EEEvv
+                0x00000000080009ec       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x00000000080009ec                void GPIO<1073872896ul>::setOutputType<(OutputType)0, (unsigned char)0>()
+ .text._ZN4GPIOILm1073872896EE14setOutputSpeedIL11OutputSpeed2ELh0EEEvv
+                0x0000000008000a00       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a00                void GPIO<1073872896ul>::setOutputSpeed<(OutputSpeed)2, (unsigned char)0>()
+ .text._ZN4GPIOILm1073872896EE17setPullupPullDownIL21PullupPullDownControl0ELh0EEEvv
+                0x0000000008000a14       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a14                void GPIO<1073872896ul>::setPullupPullDown<(PullupPullDownControl)0, (unsigned char)0>()
+ .text._ZN13GPIORegistersImE12readInputPinILh0EEEbm
+                0x0000000008000a28       0x1e CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a28                bool GPIORegisters<unsigned long>::readInputPin<(unsigned char)0>(unsigned long)
+ .text._ZN13GPIORegistersImE15toggleOutputPinILh12EEEvm
+                0x0000000008000a46       0x1c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a46                void GPIORegisters<unsigned long>::toggleOutputPin<(unsigned char)12>(unsigned long)
+ *fill*         0x0000000008000a62        0x2 
+ .text._ZN18RCCRegistersTarget19setPeripheralOnAHB1IL14PeripheralAHB13ELb1EEEvv
+                0x0000000008000a64       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a64                void RCCRegistersTarget::setPeripheralOnAHB1<(PeripheralAHB1)3, true>()
+ .text._ZN13GPIORegistersImE11setPortModeIL8PortMode1ELh12EEEvm
+                0x0000000008000a78       0x28 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000a78                void GPIORegisters<unsigned long>::setPortMode<(PortMode)1, (unsigned char)12>(unsigned long)
+ .text._ZN13GPIORegistersImE13setOutputTypeIL10OutputType0ELh12EEEvm
+                0x0000000008000aa0       0x2a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000aa0                void GPIORegisters<unsigned long>::setOutputType<(OutputType)0, (unsigned char)12>(unsigned long)
+ .text._ZN13GPIORegistersImE14setOutputSpeedIL11OutputSpeed2ELh12EEEvm
+                0x0000000008000aca       0x2a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000aca                void GPIORegisters<unsigned long>::setOutputSpeed<(OutputSpeed)2, (unsigned char)12>(unsigned long)
+ .text._ZN13GPIORegistersImE17setPullupPullDownIL21PullupPullDownControl0ELh12EEEvm
+                0x0000000008000af4       0x28 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000af4                void GPIORegisters<unsigned long>::setPullupPullDown<(PullupPullDownControl)0, (unsigned char)12>(unsigned long)
+ .text._ZN18RCCRegistersTarget19setPeripheralOnAHB1IL14PeripheralAHB10ELb1EEEvv
+                0x0000000008000b1c       0x14 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000b1c                void RCCRegistersTarget::setPeripheralOnAHB1<(PeripheralAHB1)0, true>()
+ .text._ZN13GPIORegistersImE11setPortModeIL8PortMode0ELh0EEEvm
+                0x0000000008000b30       0x26 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000b30                void GPIORegisters<unsigned long>::setPortMode<(PortMode)0, (unsigned char)0>(unsigned long)
+ .text._ZN13GPIORegistersImE13setOutputTypeIL10OutputType0ELh0EEEvm
+                0x0000000008000b56       0x2a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000b56                void GPIORegisters<unsigned long>::setOutputType<(OutputType)0, (unsigned char)0>(unsigned long)
+ .text._ZN13GPIORegistersImE14setOutputSpeedIL11OutputSpeed2ELh0EEEvm
+                0x0000000008000b80       0x28 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000b80                void GPIORegisters<unsigned long>::setOutputSpeed<(OutputSpeed)2, (unsigned char)0>(unsigned long)
+ .text._ZN13GPIORegistersImE17setPullupPullDownIL21PullupPullDownControl0ELh0EEEvm
+                0x0000000008000ba8       0x28 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000ba8                void GPIORegisters<unsigned long>::setPullupPullDown<(PullupPullDownControl)0, (unsigned char)0>(unsigned long)
+ .text._ZN12RCCRegistersImE19setPeripheralOnAHB1IL14PeripheralAHB13ELb1EEEvm
+                0x0000000008000bd0       0x20 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000bd0                void RCCRegisters<unsigned long>::setPeripheralOnAHB1<(PeripheralAHB1)3, true>(unsigned long)
+ .text._ZN12RCCRegistersImE19setPeripheralOnAHB1IL14PeripheralAHB10ELb1EEEvm
+                0x0000000008000bf0       0x20 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000bf0                void RCCRegisters<unsigned long>::setPeripheralOnAHB1<(PeripheralAHB1)0, true>(unsigned long)
+ .text._ZN12RCCRegistersImE5doSetILb1EEEvmm
+                0x0000000008000c10       0x1a CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                0x0000000008000c10                void RCCRegisters<unsigned long>::doSet<true>(unsigned long, unsigned long)
+ .text._ZSt21is_constant_evaluatedv
+                0x0000000008000c2a        0xe CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000c2a                std::is_constant_evaluated()
+ .text._ZSt4copyIPmS0_ET0_T_S2_S1_
+                0x0000000008000c38       0x30 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000c38                unsigned long* std::copy<unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt12__miter_baseIPmET_S1_
+                0x0000000008000c68       0x14 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000c68                unsigned long* std::__miter_base<unsigned long*>(unsigned long*)
+ .text._ZSt13__copy_move_aILb0EPmS0_ET1_T0_S2_S1_
+                0x0000000008000c7c       0x46 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000c7c                unsigned long* std::__copy_move_a<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt4fillIPmmEvT_S1_RKT0_
+                0x0000000008000cc2       0x1e CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000cc2                void std::fill<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZSt12__niter_baseIPmET_S1_
+                0x0000000008000ce0       0x14 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000ce0                unsigned long* std::__niter_base<unsigned long*>(unsigned long*)
+ .text._ZSt14__copy_move_a1ILb0EPmS0_ET1_T0_S2_S1_
+                0x0000000008000cf4       0x20 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000cf4                unsigned long* std::__copy_move_a1<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt12__niter_wrapIPmET_RKS1_S1_
+                0x0000000008000d14       0x16 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000d14                unsigned long* std::__niter_wrap<unsigned long*>(unsigned long* const&, unsigned long*)
+ .text._ZSt8__fill_aIPmmEvT_S1_RKT0_
+                0x0000000008000d2a       0x1e CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000d2a                void std::__fill_a<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZSt14__copy_move_a2ILb0EPmS0_ET1_T0_S2_S1_
+                0x0000000008000d48       0x3a CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000d48                unsigned long* std::__copy_move_a2<false, unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZSt9__fill_a1IPmmEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT0_E7__valueEvE6__typeET_S8_RKS4_
+                0x0000000008000d82       0x32 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000d82                __gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)
+ .text._ZNSt11__copy_moveILb0ELb0ESt26random_access_iterator_tagE8__copy_mIPmS3_EET0_T_S5_S4_
+                0x0000000008000db4       0x44 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000db4                unsigned long* std::__copy_move<false, false, std::random_access_iterator_tag>::__copy_m<unsigned long*, unsigned long*>(unsigned long*, unsigned long*, unsigned long*)
+ .text._ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mImEEPT_PKS3_S6_S4_
+                0x0000000008000df8       0x3a CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                0x0000000008000df8                unsigned long* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned long>(unsigned long const*, unsigned long const*, unsigned long*)
+ *fill*         0x0000000008000e32        0x2 
+ .text.startup  0x0000000008000e34       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  *(.init)
- .init          0x000000000800078c        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x000000000800078c                _init
- .init          0x0000000008000790        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x0000000008000e48        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008000e48                _init
+ .init          0x0000000008000e4c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008000798        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x0000000008000798                _fini
- .fini          0x000000000800079c        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .fini          0x0000000008000e54        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000008000e54                _fini
+ .fini          0x0000000008000e58        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  *(.rodata)
- .rodata        0x00000000080007a4       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .rodata        0x00000000080007c8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
-                0x00000000080007c8                _global_impure_ptr
- .rodata        0x00000000080007cc       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .rodata        0x0000000008000e60       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x0000000008000e84       0x2c CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .rodata        0x0000000008000eb0       0x24 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .rodata        0x0000000008000ed4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000008000ed4                _global_impure_ptr
+ .rodata        0x0000000008000ed8       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  *(.rodata.*)
-                0x00000000080007f0                . = ALIGN (0x4)
-                0x00000000080007f0                end_of_text = .
-                0x00000000080007fc                load_address_of_data = LOADADDR (.data)
+                0x0000000008000efc                . = ALIGN (0x4)
+                0x0000000008000efc                end_of_text = .
+                0x0000000008000f08                load_address_of_data = LOADADDR (.data)
 
-.glue_7         0x00000000080007f0        0x0
- .glue_7        0x00000000080007f0        0x0 linker stubs
+.glue_7         0x0000000008000efc        0x0
+ .glue_7        0x0000000008000efc        0x0 linker stubs
 
-.glue_7t        0x00000000080007f0        0x0
- .glue_7t       0x00000000080007f0        0x0 linker stubs
+.glue_7t        0x0000000008000efc        0x0
+ .glue_7t       0x0000000008000efc        0x0 linker stubs
 
-.vfp11_veneer   0x00000000080007f0        0x0
- .vfp11_veneer  0x00000000080007f0        0x0 linker stubs
+.vfp11_veneer   0x0000000008000efc        0x0
+ .vfp11_veneer  0x0000000008000efc        0x0 linker stubs
 
-.v4_bx          0x00000000080007f0        0x0
- .v4_bx         0x00000000080007f0        0x0 linker stubs
+.v4_bx          0x0000000008000efc        0x0
+ .v4_bx         0x0000000008000efc        0x0 linker stubs
 
-.iplt           0x00000000080007f0        0x0
- .iplt          0x00000000080007f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x0000000008000efc        0x0
+ .iplt          0x0000000008000efc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.eh_frame       0x00000000080007f0        0x4
- .eh_frame      0x00000000080007f0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
- .eh_frame      0x00000000080007f0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+.eh_frame       0x0000000008000efc        0x4
+ .eh_frame      0x0000000008000efc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008000efc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.ARM.extab      0x00000000080007f4        0x0
- .ARM.extab     0x00000000080007f4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.extab      0x0000000008000f00        0x0
+ .ARM.extab     0x0000000008000f00        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 
-.ARM.exidx      0x00000000080007f4        0x8
- .ARM.exidx     0x00000000080007f4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+.ARM.exidx      0x0000000008000f00        0x8
+ .ARM.exidx     0x0000000008000f00        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
                                          0x10 (size before relaxing)
 
-.rel.dyn        0x00000000080007fc        0x0
- .rel.iplt      0x00000000080007fc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008000f08        0x0
+ .rel.iplt      0x0000000008000f08        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.data           0x0000000020000000      0x438 load address 0x00000000080007fc
+.data           0x0000000020000000      0x438 load address 0x0000000008000f08
                 0x0000000020000000                start_of_data = .
  *(.data)
  .data          0x0000000020000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
@@ -253,17 +455,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .data          0x0000000020000004        0x0 CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .data          0x0000000020000004        0x0 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
- .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .data          0x0000000020000004        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
  *fill*         0x0000000020000004        0x4 
- .data          0x0000000020000008      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .data          0x0000000020000008      0x430 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
                 0x0000000020000008                _impure_ptr
- .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
- .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
  .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  .data          0x0000000020000438        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
@@ -271,20 +473,20 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
                 0x0000000020000438                . = ALIGN (0x4)
                 0x0000000020000438                end_of_data = .
 
-.fini_array     0x0000000020000438        0x4 load address 0x0000000008000c34
+.fini_array     0x0000000020000438        0x4 load address 0x0000000008001340
  .fini_array    0x0000000020000438        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
 .tm_clone_table
-                0x000000002000043c        0x0 load address 0x0000000008000c38
+                0x000000002000043c        0x0 load address 0x0000000008001344
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.igot.plt       0x000000002000043c        0x0 load address 0x0000000008000c38
+.igot.plt       0x000000002000043c        0x0 load address 0x0000000008001344
  .igot.plt      0x000000002000043c        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.bss            0x000000002000043c       0x1c load address 0x0000000008000c38
+.bss            0x000000002000043c       0x1c load address 0x0000000008001344
                 0x000000002000043c                start_of_bss = .
                 0x000000002000043c                __bss_start__ = start_of_bss
  *(.bss)
@@ -293,15 +495,15 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
  .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .bss           0x0000000020000458        0x0 CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .bss           0x0000000020000458        0x0 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
  .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  .bss           0x0000000020000458        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
@@ -329,151 +531,172 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000096       0x2e CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
  .ARM.attributes
-                0x00000000000000c4       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+                0x00000000000000c4       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
  .ARM.attributes
-                0x00000000000000f2       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+                0x00000000000000f2       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
  .ARM.attributes
-                0x0000000000000120       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+                0x0000000000000120       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
  .ARM.attributes
-                0x000000000000014e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x000000000000014e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
  .ARM.attributes
-                0x000000000000017c       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+                0x000000000000017c       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
  .ARM.attributes
-                0x00000000000001aa       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
+                0x00000000000001aa       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000000000001c6       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+                0x00000000000001d8       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000000000001f4       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+                0x0000000000000206       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
  .ARM.attributes
-                0x0000000000000222       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x0000000000000234       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  .ARM.attributes
-                0x0000000000000250       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                0x0000000000000262       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
  .ARM.attributes
-                0x000000000000027e       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+                0x0000000000000290       0x2e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
  .ARM.attributes
-                0x00000000000002ac       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+                0x00000000000002be       0x1e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
 
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
                                          0x34 (size before relaxing)
  .comment       0x0000000000000033       0x34 CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .comment       0x0000000000000033       0x34 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
 
-.debug_line     0x0000000000000000      0xced
+.debug_line     0x0000000000000000     0x1d91
  .debug_line    0x0000000000000000       0x87 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_line    0x0000000000000087       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_line    0x0000000000000147      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .debug_line    0x00000000000002c0       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_line    0x00000000000003ad       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_line    0x0000000000000491      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_line    0x00000000000005c9       0xbe /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
- .debug_line    0x0000000000000687      0x1bf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .debug_line    0x0000000000000846      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_line    0x00000000000009e4      0x294 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .debug_line    0x0000000000000c78       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .debug_line    0x0000000000000087      0x972 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .debug_line    0x00000000000009f9      0x602 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_line    0x0000000000000ffb       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_line    0x00000000000010bb      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_line    0x0000000000001234       0xed /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_line    0x0000000000001321       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_line    0x0000000000001405      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_line    0x000000000000153d      0x1ee /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_line    0x000000000000172b      0x1bf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_line    0x00000000000018ea      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000001a88      0x294 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_line    0x0000000000001d1c       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
 
-.debug_info     0x0000000000000000     0x2bc2
+.debug_info     0x0000000000000000     0xd2bd
  .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_info    0x0000000000000026      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_info    0x0000000000000126      0x969 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .debug_info    0x0000000000000a8f      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_info    0x0000000000000b91      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_info    0x00000000000014bb      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_info    0x00000000000015d5       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
- .debug_info    0x00000000000015fb      0x137 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .debug_info    0x0000000000001732      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_info    0x00000000000020e2      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .debug_info    0x0000000000002b1f       0xa3 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .debug_info    0x0000000000000026     0x71dc CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .debug_info    0x0000000000007202     0x33f3 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_info    0x000000000000a5f5      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_info    0x000000000000a6f5      0x969 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_info    0x000000000000b05e      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_info    0x000000000000b160      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_info    0x000000000000ba8a      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_info    0x000000000000bba4      0x152 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_info    0x000000000000bcf6      0x137 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_info    0x000000000000be2d      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_info    0x000000000000c7dd      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_info    0x000000000000d21a       0xa3 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
 
-.debug_abbrev   0x0000000000000000      0xc4d
+.debug_abbrev   0x0000000000000000     0x1b11
  .debug_abbrev  0x0000000000000000       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_abbrev  0x0000000000000014       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_abbrev  0x00000000000000cb      0x20c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .debug_abbrev  0x00000000000002d7       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_abbrev  0x00000000000003a6      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
- .debug_abbrev  0x000000000000055e       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_abbrev  0x000000000000062a       0x14 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
- .debug_abbrev  0x000000000000063e       0xb4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .debug_abbrev  0x00000000000006f2      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x0000000000000931      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .debug_abbrev  0x0000000000000be3       0x6a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .debug_abbrev  0x0000000000000014      0x72f CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .debug_abbrev  0x0000000000000743      0x6e9 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_abbrev  0x0000000000000e2c       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000000ee3      0x20c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_abbrev  0x00000000000010ef       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_abbrev  0x00000000000011be      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000001376       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_abbrev  0x0000000000001442       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_abbrev  0x0000000000001502       0xb4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_abbrev  0x00000000000015b6      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_abbrev  0x00000000000017f5      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x0000000000001aa7       0x6a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
 
-.debug_aranges  0x0000000000000000      0x160
+.debug_aranges  0x0000000000000000      0x338
  .debug_aranges
                 0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
  .debug_aranges
-                0x0000000000000020       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+                0x0000000000000020      0x150 CMakeFiles/ledButton.dir/ledButton.cpp.obj
  .debug_aranges
-                0x0000000000000040       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+                0x0000000000000170       0x88 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
  .debug_aranges
-                0x0000000000000060       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+                0x00000000000001f8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
  .debug_aranges
-                0x0000000000000080       0x18 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+                0x0000000000000218       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
  .debug_aranges
-                0x0000000000000098       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+                0x0000000000000238       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
  .debug_aranges
-                0x00000000000000b8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
+                0x0000000000000258       0x18 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
  .debug_aranges
-                0x00000000000000d8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+                0x0000000000000270       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
  .debug_aranges
-                0x00000000000000f8       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+                0x0000000000000290       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
  .debug_aranges
-                0x0000000000000118       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+                0x00000000000002b0       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
  .debug_aranges
-                0x0000000000000140       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                0x00000000000002d0       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x00000000000002f0       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x0000000000000318       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
 
-.debug_str      0x0000000000000000      0xb13
+.debug_str      0x0000000000000000     0x9c79
  .debug_str     0x0000000000000000       0x95 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
- .debug_str     0x0000000000000095      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
+ .debug_str     0x0000000000000095     0x8969 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+                                       0x8cbb (size before relaxing)
+ .debug_str     0x00000000000089fe      0xc4d CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+                                       0x2e58 (size before relaxing)
+ .debug_str     0x000000000000964b      0x142 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
                                         0x1de (size before relaxing)
- .debug_str     0x0000000000000233      0x406 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
+ .debug_str     0x000000000000978d       0x61 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
                                         0x585 (size before relaxing)
- .debug_str     0x0000000000000639       0xc5 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
+ .debug_str     0x00000000000097ee       0xbe /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
                                         0x1d6 (size before relaxing)
- .debug_str     0x00000000000006fe       0x98 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-impure.o)
+ .debug_str     0x00000000000098ac       0x98 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-impure.o)
                                         0x57c (size before relaxing)
- .debug_str     0x0000000000000796       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
+ .debug_str     0x0000000000009944       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
                                         0x200 (size before relaxing)
- .debug_str     0x000000000000082c       0xa2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memcpy.o)
-                                         0xae (size before relaxing)
- .debug_str     0x00000000000008ce       0xa9 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
+ .debug_str     0x00000000000099da       0xc0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+                                        0x1d4 (size before relaxing)
+ .debug_str     0x0000000000009a9a       0x48 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
                                         0x1b5 (size before relaxing)
- .debug_str     0x0000000000000977       0x3b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
+ .debug_str     0x0000000000009ae2       0x36 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
                                         0x5b6 (size before relaxing)
- .debug_str     0x00000000000009b2       0x7c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x0000000000009b18       0x7c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
                                         0x5e2 (size before relaxing)
- .debug_str     0x0000000000000a2e       0xe5 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .debug_str     0x0000000000009b94       0xe5 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
                                         0x17b (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x69d
- .debug_loc     0x0000000000000000       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_loc     0x0000000000000032       0x22 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .debug_loc     0x0000000000000054       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_loc     0x00000000000000bc       0xba /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_loc     0x0000000000000176      0x22c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .debug_loc     0x00000000000003a2      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_loc     0x00000000000004da      0x1ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .debug_loc     0x0000000000000688       0x15 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+.debug_ranges   0x0000000000000000      0x208
+ .debug_ranges  0x0000000000000000      0x140 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .debug_ranges  0x0000000000000140       0x78 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_ranges  0x00000000000001b8       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
 
-.debug_frame    0x0000000000000000      0x178
- .debug_frame   0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-atexit.o)
- .debug_frame   0x0000000000000020       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-exit.o)
- .debug_frame   0x0000000000000048       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-fini.o)
- .debug_frame   0x000000000000007c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-init.o)
- .debug_frame   0x00000000000000a8       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-memset.o)
- .debug_frame   0x00000000000000d4       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__atexit.o)
- .debug_frame   0x0000000000000108       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000000158       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+.debug_frame    0x0000000000000000      0x9fc
+ .debug_frame   0x0000000000000000      0x560 CMakeFiles/ledButton.dir/ledButton.cpp.obj
+ .debug_frame   0x0000000000000560      0x2e4 CMakeFiles/ledButton.dir/__/__/targetSpecific/startup.cpp.obj
+ .debug_frame   0x0000000000000844       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000864       0x28 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_frame   0x000000000000088c       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_frame   0x00000000000008c0       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_frame   0x00000000000008ec       0x40 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_frame   0x000000000000092c       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000958       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_frame   0x000000000000098c       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000000009dc       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
 
-.debug_ranges   0x0000000000000000       0x50
- .debug_ranges  0x0000000000000000       0x50 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a(lib_a-__call_atexit.o)
+.debug_loc      0x0000000000000000      0x9ec
+ .debug_loc     0x0000000000000000       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_loc     0x0000000000000032       0x22 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-exit.o)
+ .debug_loc     0x0000000000000054       0x68 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-fini.o)
+ .debug_loc     0x00000000000000bc       0xba /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-init.o)
+ .debug_loc     0x0000000000000176      0x34f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memmove.o)
+ .debug_loc     0x00000000000004c5      0x22c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-memset.o)
+ .debug_loc     0x00000000000006f1      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__atexit.o)
+ .debug_loc     0x0000000000000829      0x1ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_loc     0x00000000000009d7       0x15 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)

@@ -1,37 +1,37 @@
 
-/home/arsha/Repos/STM32/STM32F407Discovery/build/target/src/apps/spi/spi.elf:     file format elf32-littlearm
+/home/arsha/Repos/STM32/STM32F407Discovery/build/target/src/apps/i2c/i2c.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000015b8  08000000  08000000  00010000  2**2
+  0 .text         00002564  08000000  08000000  00010000  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .eh_frame     00000004  080015b8  080015b8  000115b8  2**2
+  1 .eh_frame     00000004  08002564  08002564  00012564  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  2 .ARM.exidx    00000008  080015bc  080015bc  000115bc  2**2
+  2 .ARM.exidx    00000008  08002568  08002568  00012568  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .data         00000438  20000000  080015c4  00020000  2**3
+  3 .data         00000438  20000000  08002570  00020000  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  4 .fini_array   00000004  20000438  080019fc  00020438  2**2
+  4 .fini_array   00000004  20000438  080029a8  00020438  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  5 .bss          0000001c  2000043c  08001a00  0002043c  2**2
+  5 .bss          0000001c  2000043c  080029ac  0002043c  2**2
                   ALLOC
   6 .ARM.attributes 0000002a  00000000  00000000  0002043c  2**0
                   CONTENTS, READONLY
   7 .comment      00000033  00000000  00000000  00020466  2**0
                   CONTENTS, READONLY
-  8 .debug_line   00002323  00000000  00000000  00020499  2**0
+  8 .debug_line   00002b58  00000000  00000000  00020499  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_info   00010bbd  00000000  00000000  000227bc  2**0
+  9 .debug_info   00010728  00000000  00000000  00022ff1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_abbrev 00001d01  00000000  00000000  00033379  2**0
+ 10 .debug_abbrev 00001db5  00000000  00000000  00033719  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_aranges 00000478  00000000  00000000  00035080  2**3
+ 11 .debug_aranges 00000580  00000000  00000000  000354d0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_str    0000f007  00000000  00000000  000354f8  2**0
+ 12 .debug_str    0000dae8  00000000  00000000  00035a50  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_ranges 00000348  00000000  00000000  000444ff  2**0
+ 13 .debug_ranges 000003f0  00000000  00000000  00043538  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_frame  00000fcc  00000000  00000000  00044848  2**2
+ 14 .debug_frame  000013d4  00000000  00000000  00043928  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_loc    000009ec  00000000  00000000  00045814  2**0
+ 15 .debug_loc    000009ec  00000000  00000000  00044cfc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
