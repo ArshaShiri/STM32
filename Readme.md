@@ -23,7 +23,7 @@ This project aims to build a number of drivers for **STM32F407 Discovery** using
 * [ledButtonInterrupt](#ledbuttoninterrupt)
 * [spi](#spi)
 * [spiInterrupt](#spiinterrupt)
-* [i2c](#i2c)
+* [I²C](#i2c)
 
 ### led
 This app makes the green LED blink. This app tests the GPIO drivers. A software timer is used to control the blinking frequency.
@@ -49,7 +49,15 @@ The logic analyzer capture can be observed below:
 ### spiInterrupt
 In terms of functionality, this app is similar to [spi](#spi) app. The main difference is that the sending of data is done via interrupts.
 
-### i2c
+### I²C
+This app uses I²C to show the string "Hello World!" on a 20X4 LCD with PCF8574T I2C device.  
+The following pins are configured for I²C communication:  
+```
+PB6 --> I2C1_SCL
+PB7 --> I2C1_SDA
+```
+
+![i2c (1)](https://user-images.githubusercontent.com/18715119/190234515-02a0c055-6a33-497c-8d78-c44afc9cad59.gif)
 
 ## Build
 
